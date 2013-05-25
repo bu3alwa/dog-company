@@ -74,6 +74,11 @@
     </div>
     <!-- end sidebar -->
   </div>
+  <!-- start footer -->
+  <div id="footer">
+  </div>
+  <!-- end footer -->  
+  </div>
   </div>
 </body>
 </html>
