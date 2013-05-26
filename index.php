@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Dog-company</title>
-  <meta charset="<?php bloginfo('charset') ?>" />
+	<meta charset="<?php bloginfo('charset') ?>" />
 
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name') ); ?></title>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -34,18 +34,19 @@
 <!-- header starts here -->
 	<div id="container">
 	<div id="header">
-      <div id="logo">
+      <div id="logo" class="container centered padded">
+	  <img src="./images/DC_white.png" width="400"></img>
       </div>
-      <div id="countdown">
+      <div id="countdown"  class="container centered">
       </div>
-      <div id="nav-bar">
-        <ul class="left-nav">
+      <div id="nav-bar" class="row container">
+        <ul class="pull-left">
           <a href="./">Home</a>
           <a href="./forum">Forum</a>
           <a href="./about-us">About us</a>
           <a href="./contact-us">contact us</a>
-        </ul class="right-nav">
-        <ul>
+        </ul>
+        <ul class="pull-right">
           <a>Sign in</a>
           <a>Register</a>
        </ul>
@@ -54,11 +55,12 @@
 <!-- end of header -->
 <!-- start of horizontal sidebar -->
   <div id="horizontal-sidebar">
+	
   </div>
 <!-- end horizontal sidebar -->
 <!-- start main content -->
-  <div id="content">
-    <div id="main">
+  <div id="content"  class="container centered whole padded">
+    <div id="main" class="two third padded">
 			   <!-- Start the Loop. -->
 		 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -110,15 +112,24 @@
 		 <?php endif; ?>
     </div>
     <!-- sidebar -->
-    <div id="sidebar">
+    <div id="sidebar" class="one third padded">
+	<h1>Sidebar will be here</h1>
     </div>
     <!-- end sidebar -->
   </div>
+  </div>  
   <!-- start footer -->
-  <div id="footer">
+  <div id="footer" class="row padded">
+  <div id="footer-content" class="container">
+  <ul>
+  <li>test 1</li>
+  <li>test 1</li>
+  <li>test 1</li>
+  </ul>
+  </div>
   </div>
   <!-- end footer -->  
-  </div>
+
   </div>
 </body>
 </html>
