@@ -1,0 +1,21 @@
+#header
+{width:100%px;height:170px;background-color:#161616;}
+#navbar
+{width:100%;margin-top:125px;}
+.left-nav a
+{float:left;margin:auto;padding: 10px;}
+.left-nav a:hover
+{color:ffa21c;}
+.right-nav a
+{float:right;margin:auto;}
+.right-nav a:hover
+{color:ffa21c;}
+#horizontal-sidebar
+{width:100%;height:390px;background-color:#222222} 
+#content {
+-moz-box-shadow: 0 0 5px 5px #888;
+-webkit-box-shadow: 0 0 5px 5px#888;
+box-shadow: 0 0 5px 5px #888;
+}
+#footer
+{width:100%px;height:300px;background-color:#161616;}
