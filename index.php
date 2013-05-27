@@ -1,135 +1,124 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Dog-company</title>
-	<meta charset="<?php bloginfo('charset') ?>" />
-
+	<head>
+	<title>Dog-company</title>
 	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name') ); ?></title>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <link rel="apple-touch-icon" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-57x57-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-72x72-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-114x114-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-144x144-precomposed.png" />
-  <!-- Modernizr -->
-  <script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
-  <!-- jQuery -->
-  <script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/jquery-1.9.1.min.js"></script>
-  <!-- GroundworkCSS -->
-  <link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork.css">
-  <!--[if IE]>
-  <link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork-ie.css">
-  <![endif]-->
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/html5shiv.min.js"></script>
-  <![endif]-->
-  <!--[if IE 7]>
-  <link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
-  <![endif]-->
+	<meta charset="<?php bloginfo('charset') ?>" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="apple-touch-icon" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-57x57-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-114x114-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-144x144-precomposed.png" />
+	<!-- Modernizr -->
+	<script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/jquery-1.9.1.min.js"></script>
+	<!-- GroundworkCSS -->
+	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork.css">
+	<!--[if IE]>
+	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork-ie.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/html5shiv.min.js"></script>
+	<![endif]-->
+	<!--[if IE 7]>
+	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
+	<![endif]-->
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css" />
 </head>
-<body>
-<!-- header starts here -->
-	<div id="container">
-	<div id="header">
-      <div id="logo" class="container centered padded">
-	  <img src="./images/DC_white.png" width="400"></img>
-      </div>
-      <div id="countdown"  class="container centered">
-      </div>
-      <div id="nav-bar" class="row container">
-        <ul class="pull-left">
-          <a href="./">Home</a>
-          <a href="./forum">Forum</a>
-          <a href="./about-us">About us</a>
-          <a href="./contact-us">contact us</a>
-        </ul>
-        <ul class="pull-right">
-          <a>Sign in</a>
-          <a>Register</a>
-       </ul>
-      </div>
-    </div>
-<!-- end of header -->
-<!-- start of horizontal sidebar -->
-  <div id="horizontal-sidebar">
-	
-  </div>
-<!-- end horizontal sidebar -->
-<!-- start main content -->
-  <div id="content"  class="container centered whole padded">
-    <div id="main" class="two third padded">
-			   <!-- Start the Loop. -->
-		 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<body>
+		<!-- header starts here -->
+		<div id="container">
+			<section id="header">
+				<article id="logo" class="container centered padded">
+					<img src="./images/DC_white.png" width="400"></img>
+				</article>
+				<article id="countdown"  class="container centered">
+				</article>
+				<nav id="nav-bar" class="row container">
+					<ul class="pull-left">
+					<a href="./">Home</a>
+					<a href="./forum">Forum</a>
+					<a href="./about-us">About us</a>
+					<a href="./contact-us">contact us</a>
+					</ul>
+					<ul class="pull-right">
+					<a>Sign in</a>
+					<a>Register</a>
+					</ul>
+				</nav>
+			</section>
+			<!-- end of header -->
+			<!-- start of horizontal sidebar -->
+			<section id="horizontal-sidebar">
 
-		 <!-- Test if the current post is in category 3. -->
-		 <!-- If it is, the div box is given the CSS class "post-cat-three". -->
-		 <!-- Otherwise, the div box is given the CSS class "post". -->
+			</section>
+			<!-- end horizontal sidebar -->
+			<!-- start main content -->
+			<section id="content"  class="container centered whole padded">
+				<article id="main" class="two third padded">
+					<!-- Start the Loop. -->
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		 <?php if ( in_category('3') ) { ?>
-				   <div class="post-cat-three">
-		 <?php } else { ?>
-				   <div class="post">
-		 <?php } ?>
+					<!-- Test if the current post is in category 3. -->
+					<!-- If it is, the div box is given the CSS class "post-cat-three". -->
+					<!-- Otherwise, the div box is given the CSS class "post". -->
 
+					<?php if ( in_category('3') ) { ?>
+					<article class="post-cat-three">
+						<?php } else { ?>
+						<article class="post">
+							<?php } ?>
+							<!-- Display the Title as a link to the Post's permalink. -->
+							<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-		 <!-- Display the Title as a link to the Post's permalink. -->
+							<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+							<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
 
-		 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+							<!-- Display the Post's content in a div box. -->
+							<article class="entry">
+								<?php the_content(); ?>
+							</article>
 
-
-		 <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-
-		 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-
-
-		 <!-- Display the Post's content in a div box. -->
-
-		 <div class="entry">
-		   <?php the_content(); ?>
-		 </div>
+							<!-- Display a comma separated list of the Post's Categories. -->
+							<p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+						</article> <!-- closes the first div box -->
 
 
-		 <!-- Display a comma separated list of the Post's Categories. -->
+						<!-- Stop The Loop (but note the "else:" - see next line). -->
 
-		 <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-		 </div> <!-- closes the first div box -->
-
-
-		 <!-- Stop The Loop (but note the "else:" - see next line). -->
-
-		 <?php endwhile; else: ?>
+						<?php endwhile; else: ?>
 
 
-		 <!-- The very first "if" tested to see if there were any Posts to -->
-		 <!-- display.  This "else" part tells what do if there weren't any. -->
-		 <p>Sorry, no posts matched your criteria.</p>
+						<!-- The very first "if" tested to see if there were any Posts to -->
+						<!-- display.  This "else" part tells what do if there weren't any. -->
+						<p>Sorry, no posts matched your criteria.</p>
 
 
-		 <!-- REALLY stop The Loop. -->
-		 <?php endif; ?>
-    </div>
-    <!-- sidebar -->
-    <div id="sidebar" class="one third padded">
-	<h1>Sidebar will be here</h1>
-    </div>
-    <!-- end sidebar -->
-  </div>
-  </div>  
-  <!-- start footer -->
-  <div id="footer" class="row padded">
-  <div id="footer-content" class="container">
-  <ul>
-  <li>test 1</li>
-  <li>test 1</li>
-  <li>test 1</li>
-  </ul>
-  </div>
-  </div>
-  <!-- end footer -->  
-
-  </div>
-</body>
+						<!-- REALLY stop The Loop. -->
+						<?php endif; ?>
+					</article>
+					<!-- sidebar -->
+					<section id="sidebar" class="one third padded">
+						<h1>Sidebar will be here</h1>
+					</section>
+					<!-- end sidebar -->
+				</article>
+			</section>  
+			<!-- start footer -->
+			<section id="footer" class="row padded">
+				<article id="footer-content" class="container">
+				<ul>
+				<li>test 1</li>
+				<li>test 1</li>
+				<li>test 1</li>
+				</ul>
+				</article>
+			</section>
+			<!-- end footer -->  
+		</div>
+	</body>
 </html>
