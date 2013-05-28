@@ -32,13 +32,13 @@
 	<body>
 		<!-- header starts here -->
 		<div id="container">
-			<section id="header">
+			<header>
 				<article id="logo" class="container centered padded">
 					<img src="./images/DC_white.png" width="400"></img>
 				</article>
 				<article id="countdown"  class="container centered">
 				</article>
-				<nav id="nav-bar" class="row container">
+				<nav class="row container">
 					<ul class="pull-left">
 					<a href="./">Home</a>
 					<a href="./forum">Forum</a>
@@ -50,10 +50,10 @@
 					<a>Register</a>
 					</ul>
 				</nav>
-			</section>
+			</header>
 			<!-- end of header -->
 			<!-- start of horizontal sidebar -->
-			<section id="horizontal-sidebar">
+			<section id="horizontal-sidebar" class="pad-bottom">
 
 			</section>
 			<!-- end horizontal sidebar -->
@@ -62,7 +62,6 @@
 				<article id="main" class="two third padded">
 					<!-- Start the Loop. -->
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
 					<!-- Test if the current post is in category 3. -->
 					<!-- If it is, the div box is given the CSS class "post-cat-three". -->
 					<!-- Otherwise, the div box is given the CSS class "post". -->
@@ -103,13 +102,15 @@
 					</article>
 					<!-- sidebar -->
 					<section id="sidebar" class="one third padded">
-						<h1>Sidebar will be here</h1>
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('right-sidebar') ) : ?>
+						<!-- static content goes here if sidebar is inactive -->
+						<?php endif; ?>
 					</section>
 					<!-- end sidebar -->
 				</article>
 			</section>  
 			<!-- start footer -->
-			<section id="footer" class="row padded">
+			<footer class="row padded">
 				<article id="footer-content" class="container">
 				<ul>
 				<li>test 1</li>
@@ -117,7 +118,7 @@
 				<li>test 1</li>
 				</ul>
 				</article>
-			</section>
+			</footer>
 			<!-- end footer -->  
 		</div>
 	</body>
