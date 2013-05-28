@@ -3,7 +3,7 @@ header
 nav
 {width:100%;margin-top:125px;}
 .nav-fixed
-{position:fixed !important; top:0 !important;width:100%;background-color:#161616;height:33px;}
+{position:fixed !important; top:0 !important;float:none !important; width:100%;background-color:#161616;height:33px;z-index:9000;}
 .left-nav a
 {float:left;margin:auto;padding: 10px;}
 .left-nav a:hover
