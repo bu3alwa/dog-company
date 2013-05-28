@@ -1,7 +1,9 @@
 header
-{width:100%px;height:150px;background-color:#161616;}
+{width:100%px;height:145px;background-color:#161616;}
 nav
 {width:100%;margin-top:125px;}
+.nav-fixed
+{position:fixed !important; top:0 !important;width:100%;background-color:#161616;height:33px;}
 .left-nav a
 {float:left;margin:auto;padding: 10px;}
 .left-nav a:hover
