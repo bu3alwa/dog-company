@@ -24,28 +24,31 @@
 	<![endif]-->
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css" />
 	<script type="text/javascript">
-		function fix_top_bar(){
-			var barWidth = $('.nav-fixed').width();
-			$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
-		}
+				function fix_top_bar(){
+					var barWidth = $('.nav-fixed').width();
+					$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+				}
 
-		$('document').ready(function() {
-				$(window).scroll(function() {
-					if ($('body').scrollTop() > 112) {
+				$('document').ready(function() {
+						$(window).scroll(function() {
+							var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
+							if (scrollTop > 112) {
 
-						$('nav').addClass('nav-fixed');
-						fix_top_bar();								
-						}else{
-						$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
-						$('nav').removeClass('nav-fixed');
-					}
-				});
-			
-			fix_top_bar();
-			$(window).resize(function(){
-				  fix_top_bar();  
-			});
-			});
+								$('nav').addClass('nav-fixed');
+								fix_top_bar();								
+								}else{
+									$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
+								$('nav').removeClass('nav-fixed');
+							}
+						});
+					
+					fix_top_bar();
+					$(window).resize(function(){
+						  fix_top_bar();  
+					});
+					
+					});
+
 	</script>
 </head>
 	<body>
