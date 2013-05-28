@@ -24,16 +24,28 @@
 	<![endif]-->
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css" />
 	<script type="text/javascript">
-	$('document').ready(function() {
-		$(window).scroll(function() {
-			if ($(window).scrollTop() > 140) {
+		function fix_top_bar(){
+			var barWidth = $('.nav-fixed').width();
+			$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+		}
 
-				$('nav').addClass('nav-fixed');
-													
-				}else{
-				$('nav').removeClass('nav-fixed');
-			}
-	})});
+		$('document').ready(function() {
+				$(window).scroll(function() {
+					if ($('body').scrollTop() > 112) {
+
+						$('nav').addClass('nav-fixed');
+						fix_top_bar();								
+						}else{
+						$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
+						$('nav').removeClass('nav-fixed');
+					}
+				});
+			
+			fix_top_bar();
+			$(window).resize(function(){
+				  fix_top_bar();  
+			});
+			});
 	</script>
 </head>
 	<body>
@@ -48,9 +60,9 @@
 				<nav class="row container double pad-right pad-left">
 					<ul class="pull-left">
 					<a href="./">Home</a>
-					<a href="./forum">Forum</a>
-					<a href="./about-us">About us</a>
-					<a href="./contact-us">contact us</a>
+					<a>Main Menu</a>
+					<a>Forums</a>
+					<a href="./video">Video</a>
 					</ul>
 					<ul class="pull-right">
 					<a>Sign in</a>
