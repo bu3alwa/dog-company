@@ -7,11 +7,6 @@
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<link rel="apple-touch-icon" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-precomposed.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-57x57-precomposed.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-72x72-precomposed.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-114x114-precomposed.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="./wp-content/themes/dog-company/images/apple-icons/apple-touch-icon-144x144-precomposed.png" />
 	<!-- Modernizr -->
 	<script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
 	<!-- jQuery -->
@@ -28,17 +23,29 @@
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
 	<![endif]-->
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css" />
+	<script type="text/javascript">
+	$('document').ready(function() {
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 140) {
+
+				$('nav').addClass('nav-fixed');
+													
+				}else{
+				$('nav').removeClass('nav-fixed');
+			}
+	})});
+	</script>
 </head>
 	<body>
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<article id="logo" class="container centered padded">
+				<article id="logo" class="container centered padded double gap-bottom">
 					<img src="./images/DC_white.png" width="400"></img>
 				</article>
 				<article id="countdown"  class="container centered">
 				</article>
-				<nav class="row container">
+				<nav class="row container double pad-right pad-left">
 					<ul class="pull-left">
 					<a href="./">Home</a>
 					<a href="./forum">Forum</a>
