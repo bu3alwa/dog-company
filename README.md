@@ -1,6 +1,11 @@
 dog-company
 ===========
 Notes:
+Resources
+-
+-
+-
+
 
 Objectives:
 - Create new home for Dog Company (DC).
