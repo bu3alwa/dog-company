@@ -2,6 +2,18 @@ dog-company
 ===========
 Notes:
 
-We should look at getting together and designing the layout of each phase of website as it responds to its size.
-That way it will save time as we design the template. We wouldn't want to run into a design fault halfway through,
-as that would just slow down development further.
+Objectives:
+- Create new home for Dog Company (DC).
+- Show that DC is not an Arma exclusive community but a group of gamers playing many things.
+- Have a minimum of 2 forums designs (Arma & Eve) plus and homepage to connect them.
+- Creat a local blog for nova and friends
+
+
+Website Content and Design Requirments:
+- Homepage login via phpBB
+- Color palette
+- Layout designs
+- Working calendar that allows for members to sign up to events via a button
+- A countdown till the next operation
+- Link the blog to the front page
+- Add a sliding DC advert image slider
