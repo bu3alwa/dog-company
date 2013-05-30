@@ -1,3 +1,16 @@
+/* Fonts */
+@font-face /* Menu font */
+{
+    font-family: 'DevilBreeze';
+    src: url('./wp-content/themes/dog-company/font/devilbreeze_demi.eot');
+    src: url('./wp-content/themes/dog-company/font/devilbreeze_demi.eot?#iefix') format('embedded-opentype'),
+         url('./wp-content/themes/dog-company/font/devilbreeze_demi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Styles */
 header
 {width:100%px;height:145px;background-color:#161616;}
 nav
