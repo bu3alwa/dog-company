@@ -22,3 +22,5 @@ Website Content and Design Requirements:
 - Link the blog to the front page
 - Add a sliding DC advert image slider
 - A squad roster of sorts (use XML)
+- Work on Javascript slider
+- 
