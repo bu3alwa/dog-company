@@ -23,4 +23,6 @@ Website Content and Design Requirements:
 - Add a sliding DC advert image slider
 - A squad roster of sorts (use XML)
 - Work on Javascript slider
-- 
+
+
+
