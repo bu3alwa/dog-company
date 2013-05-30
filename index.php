@@ -22,7 +22,7 @@
 	<!--[if IE 7]>
 	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
 	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css" />
+	<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/style.css" />
 	<script type="text/javascript">
 				function fix_top_bar(){
 					var barWidth = $('.nav-fixed').width();
@@ -56,7 +56,7 @@
 		<div id="container">
 			<header>
 				<article id="logo" class="container centered padded double gap-bottom">
-					<img src="./images/DC_white.png" width="400"></img>
+					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 				</article>
 				<article id="countdown"  class="container centered">
 				</article>
