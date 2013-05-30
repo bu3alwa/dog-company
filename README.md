@@ -4,6 +4,7 @@ dog-company
 Notes
 Resources:
 Devil Breeze Font = http://www.dafont.com/devil-breeze.font
+Neou Font = http://www.dafont.com/neou.font
 
 
 Objectives:
