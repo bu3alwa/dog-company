@@ -17,7 +17,7 @@ html, body, div, span, header, footer, aside, nav, menu, section, article, detai
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+/*  font: inherit;*/
   vertical-align: baseline;
 }
 
@@ -1892,6 +1892,7 @@ big, .big, .large, big, .big {
  *  Twitter: http://twitter.com/fortaweso_me
  *  Work: Lead Product Designer @ http://kyruus.com
  */
+ /*
 @font-face {
   font-family: 'FontAwesome';
   src: url("../font/fontawesome-webfont.eot?v=3.0.1");
@@ -1899,12 +1900,12 @@ big, .big, .large, big, .big {
   font-weight: normal;
   font-style: normal;
 }
-
+*/
 /*  Font Awesome styles
     ------------------------------------------------------- */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
+ /* font-family: FontAwesome; */
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3186,26 +3187,26 @@ ul.icons li [class*=" icon-"] {
   content: "\f115";
 }
 
-@font-face {
+/*@font-face {
   font-family: "AverageSans";
   font-style: normal;
   font-weight: normal;
   src: url("../font/average-sans-webfont#iefix");
   src: url("../font/average-sans-webfont.eot") format("embedded-opentype"), url("../font/average-sans-webfont.woff") format("woff"), url("../font/average-sans-webfont.ttf") format("truetype");
-}
+}*/
 
 .AverageSans {
   /* might add inline-font-files() at some point */
   font-family: AverageSans, Arial, Helvetica, Geneva, sans-serif;
 }
 
-@font-face {
+/*@font-face {
   font-family: "AmericanTypewriter";
   font-style: normal;
   font-weight: normal;
   src: url("../font/americantypewriterstd-bold#iefix");
   src: url("../font/americantypewriterstd-bold.eot") format("embedded-opentype"), url("../font/americantypewriterstd-bold.woff") format("woff"), url("../font/americantypewriterstd-bold.ttf") format("truetype");
-}
+}*/
 
 .AmericanTypewriter {
   /* might add inline-font-files() at some point */
@@ -3320,7 +3321,7 @@ ul.list li:before {
   display: inline-block;
   width: 1.1em;
   margin-right: 0.25em;
-  font-family: FontAwesome;
+/*  font-family: FontAwesome;*/
   font-weight: normal;
   font-style: normal;
   font-size: 1.1em;
@@ -3603,7 +3604,7 @@ a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle 
   background: #1dabb8;
   border: 1px solid #198d98;
   color: white;
-  font-family: Helvetica, Arial, Geneva, sans-serif;
+/*  font-family: Helvetica, Arial, Geneva, sans-serif;*/
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -4743,7 +4744,7 @@ nav ul li.menu > a:after, .nav ul li.menu > a:after {
   display: inline-block;
   width: 1.1em;
   margin-left: 0.25em;
-  font-family: FontAwesome;
+/*  font-family: FontAwesome; */
   font-weight: normal;
   font-style: normal;
   font-size: 1.1em;
@@ -6205,7 +6206,7 @@ input, .input, select, textarea, .select, .textarea {
   width: 100%;
   margin: 0;
   padding: 0.4em;
-  font-family: monospace;
+/*  font-family: monospace;*/
   line-height: 1.5;
   height: 2.25em;
   background: white;
@@ -6301,7 +6302,7 @@ textarea, .textarea {
   border: none;
   background: none;
   padding: 0.4em;
-  font-family: monospace;
+/*  font-family: monospace;*/
   line-height: 1.5;
   height: 2.25em;
   padding-right: 2.5em;
@@ -6328,7 +6329,7 @@ textarea, .textarea {
   text-overflow: ellipsis;
   margin: 0;
   padding: 0.4em;
-  font-family: monospace;
+/*  font-family: monospace; */
   line-height: 1.25;
   height: 2.25em;
   text-align: center;
@@ -7072,7 +7073,7 @@ button::-moz-focus-inner {
   color: white;
   font-style: normal;
   font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
+/*  font-family: Arial, Baskerville, monospace; */
 }
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
