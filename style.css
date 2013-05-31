@@ -10,9 +10,32 @@
     font-weight: normal;
     font-style: normal;
 }
- 
+@font-face /* Body head font */
+{
+    font-family: 'NeouBold';
+    src: url('./font/neou-bold.eot');
+    src: url('./font/neou-bold.eot') format('embedded-opentype'),
+         url('./font/neou-bold.woff') format('woff'),
+         url('./font/neou-bold.ttf') format('truetype'),
+         url('./font/neou-bold.svg#DevilBreeze') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face /* Body font */
+{
+    font-family: 'NeouThin';
+    src: url('./font/neou-thin.eot');
+    src: url('./font/neou-thin.eot') format('embedded-opentype'),
+         url('./font/neou-thin.woff') format('woff'),
+         url('./font/neou-thin.ttf') format('truetype'),
+         url('./font/neou-thin.svg#DevilBreeze') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Styles */
+
+/* Header */
 header{
     width:100%px;
 	height:145px;
@@ -22,6 +45,16 @@ nav{
 	width:100%;
 	margin-top:125px;
 	font-family: DevilBreeze !important;
+	font-size: 20px;
+	padding-bottom: ;
+}
+a#menu, a#menu:visited  {
+	color: white;
+	text-decoration: none;
+}
+a#menu:hover, a#menu:focus {
+	text-decoration: none;
+	color: #489ac1;
 }
 .nav-fixed{
 	position:fixed !important;
@@ -31,6 +64,7 @@ nav{
 	background-color:#161616;
 	height:33px;
 	z-index:9000;
+	padding-bottom: 10px;
 }
 .left-nav a{
 	float:left;
@@ -47,11 +81,17 @@ nav{
 .right-nav a:hover{
 	color:ffa21c;
 }
+
+/* H-Sidebar */
+
 #horizontal-sidebar{
 	width:100%;
 	height:390px;
 	background-color:#222222
-} 
+}
+
+/* Main Body */
+
 #content {
 	overflow:hidden;
 	margin: 15px 0px;
@@ -59,8 +99,11 @@ nav{
 	-webkit-box-shadow: 0 0 5px 5px#888;
 	box-shadow: 0 0 5px 5px #888;
 }
+
+/* Footer */
+
 footer{
-	width:100%px;
+	width:100%;
 	height:300px;
 	background-color:#161616;
 }
