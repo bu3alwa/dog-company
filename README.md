@@ -3,9 +3,9 @@ dog-company
 
 Notes
 Resources:
-Devil Breeze Font = http://www.dafont.com/devil-breeze.font
-Neou Font = http://www.dafont.com/neou.font
-Font converting website = http://convertfonts.com/ //Use this to convert the multiple files.
+-Devil Breeze Font = http://www.dafont.com/devil-breeze.font
+-Neou Font = http://www.dafont.com/neou.font
+-Font converting website = http://convertfonts.com/ //Use this to convert the multiple files.
 
 Objectives:
 - Create new home for Dog Company (DC).
