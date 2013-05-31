@@ -51,6 +51,24 @@
 					});
 
 	</script>
+		<!-- slider -->
+	<script type="text/javascript">
+		$(window).load(function() {
+		$('.flexslider').flexslider({
+		animation: "slide",
+		selector: ".ls_def_ibanner > img",
+		animationLoop: true,
+		});
+		});
+	</script>
+	<!-- resize menu text -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="jquery.fittext.js"></script>
+	<script>
+		jQuery("#responsive_headline").fitText(.8, { minFontSize: '80%', maxFontSize: '150%'});
+		$(nav.a).on('resize.fittext orientationchange.fittext', resizer);
+		resizer();
+	</script>
 	</head>
 	<body>
 		<!-- header starts here -->
@@ -61,15 +79,15 @@
 				</article>
 				<nav class="row container double pad-right pad-left" >
 					<ul id="pull-left">
-					<a id="menu" href="./">hoMe</a>
-					<a id="menu" href="">huB</a>
-					<a id="menu" href="">Forums</a>
-					<a id="menu" href="">video</a>
+					<a href="./">hoMe</a>
+					<a href="">huB</a>
+					<a href="">Forums</a>
+					<a href="">video</a>
 					</ul>
 					
 					<ul class="pull-right">
-					<a id="menu" href="">Sign in</a>
-					<a id="menu" href="">Register</a>
+					<a href="">Sign in</a>
+					<a href="">Register</a>
 					</ul>
 				</nav>
 			</header>
