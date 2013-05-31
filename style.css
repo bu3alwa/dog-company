@@ -53,11 +53,11 @@ nav{
 	background-color:#222222
 } 
 #content {
-overflow:hidden;
-margin: 15px 0px;
--moz-box-shadow: 0 0 5px 5px #888;
--webkit-box-shadow: 0 0 5px 5px#888;
-box-shadow: 0 0 5px 5px #888;
+	overflow:hidden;
+	margin: 15px 0px;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
 }
 footer{
 	width:100%px;
