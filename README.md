@@ -7,6 +7,7 @@ Resources:
 - Neou Font = http://www.dafont.com/neou.font
 - Font converting website = http://convertfonts.com/
   - Use this to convert the multiple files.
+- Find a fall back font in cases a browser is not compatible with CSS3
 
 Objectives:
 - Create new home for Dog Company (DC).
@@ -25,6 +26,5 @@ Website Content and Design Requirements:
 - Add a sliding DC advert image slider
 - A squad roster of sorts (use XML)
 - Work on Javascript slider
-
 
 
