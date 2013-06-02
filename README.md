@@ -27,6 +27,7 @@ Website Content and Design Requirements:
 - A squad roster of sorts (use XML)
 - Work on Javascript slider
 - Line that seperates each post (Homepage)
+- Look at rasing the min Avatar size from 6.0Kb to something higher (Need to talk to Nova about this)
 
 Site Layout - Menu
 - Home
