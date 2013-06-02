@@ -46,7 +46,6 @@ nav{
 	margin-top:125px;
 	font-family: DevilBreeze !important;
 	font-size: 20px;
-	padding-bottom: ;
 }
 nav a, nav a:visited  {
 	color: white;
@@ -66,10 +65,30 @@ nav a:hover, nav a:focus {
 	z-index:9000;
 	padding-bottom: 10px;
 }
+/* Drop down menu Navigation */
+nav a:hover > #drop-down li{
+	visibility:visible;
+	opacity:1;
+}
+#drop-down li{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	visibility:hidden;
+	opacity: 0;
+	position:absolute;
+	z-index: 9001;
+	width: 400px;
+	-webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    transition:opacity 0.2s linear, visibility 0.2s linear;     
+}
 
-/* H-Sidebar */
 
-#horizontal-sidebar{
+/* Slider */
+
+#slider{
 	width:100%;
 	height:390px;
 	background-color:#222222
