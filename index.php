@@ -80,7 +80,8 @@
 				<nav class="row container double pad-right pad-left" >
 					<ul id="pull-left">
 					<a href="./">hoMe</a>
-					<a href="">huB</a>
+					<a href="">Forums</a>
+					<a href="">Info</a>
 					 <ul id="drop-down">
 						<li><a>Test 1</a></li>
 						<li><a>Test 2</a></li>
@@ -88,8 +89,7 @@
 						<li><a>Test 4</a></li>
 						<li><a>Test 5</a></li>
 					 </ul>
-					<a href="">Forums</a>
-					<a href="">video</a>
+					<a href="">Media</a>
 					</ul>
 					
 					<ul class="pull-right">
