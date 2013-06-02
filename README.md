@@ -33,6 +33,9 @@ Site Layout - Menu
 - Foums
 - Info
   - About Us
+  - Blog
   - FAQ
   - History
 - Media
+  - Youtube
+  - Recent Ops
