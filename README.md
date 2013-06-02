@@ -34,6 +34,8 @@ Site Layout - Menu
 - Foums
 - Info
   - About Us
+  - Roster
+  - Arma XML
   - Blog
   - FAQ
   - History
