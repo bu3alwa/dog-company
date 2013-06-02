@@ -1,7 +1,5 @@
 dog-company
 ===========
-
-Notes
 Resources:
 - Devil Breeze Font = http://www.dafont.com/devil-breeze.font
 - Neou Font = http://www.dafont.com/neou.font
@@ -13,8 +11,10 @@ Objectives:
 - Create new home for Dog Company (DC).
 - Show that DC is not an Arma exclusive community but a group of gamers playing many things.
 - Have a minimum of 2 forums designs (Arma & Eve) plus and homepage to connect them.
-  - We may not have an EVE forum but a "Other games" forum.
+  - We may not have an EVE forum but a "Other Games" forum.
+  - Other Games (EVE, World of Tanks, Wargame, CoH2
 - Create a local blog for nova and friends
+- Link both phpBB
 
 Website Content and Design Requirements:
 - Homepage login via phpBB
@@ -26,5 +26,6 @@ Website Content and Design Requirements:
 - Add a sliding DC advert image slider
 - A squad roster of sorts (use XML)
 - Work on Javascript slider
-
+- Line that seperates each post (Homepage)
+- 
 
