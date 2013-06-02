@@ -159,7 +159,7 @@
 					</article>
 					<!-- sidebar -->
 					<section id="sidebar" class="one third padded">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('right-sidebar') ) : ?>
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar') ) : ?>
 						<!-- static content goes here if sidebar is inactive -->
 						<?php endif; ?>
 					</section>
