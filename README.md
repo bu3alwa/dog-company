@@ -27,5 +27,12 @@ Website Content and Design Requirements:
 - A squad roster of sorts (use XML)
 - Work on Javascript slider
 - Line that seperates each post (Homepage)
-- 
 
+Site Layout - Menu
+- Home
+- Foums
+- Info
+  - About Us
+  - FAQ
+  - History
+- Media
