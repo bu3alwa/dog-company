@@ -74,13 +74,20 @@
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<article id="logo" class="container centered padded double">
+				<article id="logo" class="container centered double padded">
 					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 				</article>
 				<nav class="row container double pad-right pad-left" >
 					<ul id="pull-left">
 					<a href="./">hoMe</a>
 					<a href="">huB</a>
+					 <ul id="drop-down">
+						<li><a>Test 1</a></li>
+						<li><a>Test 2</a></li>
+						<li><a>Test 3</a></li>
+						<li><a>Test 4</a></li>
+						<li><a>Test 5</a></li>
+					 </ul>
 					<a href="">Forums</a>
 					<a href="">video</a>
 					</ul>
@@ -93,8 +100,19 @@
 			</header>
 			<!-- end of header -->
 			<!-- start of horizontal sidebar -->
-			<section id="horizontal-sidebar" class="pad-bottom">
+			<section id="slider" class="pad-bottom">
+			<article class="two third">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('slider') ) : ?>
+						<!-- static content goes here if sidebar is inactive -->
+			<?php endif; ?>
+			</article>
+			<article class="one third">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('smallsidebar') ) : ?>
+						<!-- static content goes here if sidebar is inactive -->
+			<?php endif; ?>
+			</article>	
 			</section>
+
 			<!-- end horizontal sidebar -->
 			<!-- start main content -->
 			<section id="content"  class="container centered whole padded">
