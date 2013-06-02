@@ -91,7 +91,7 @@ nav a:hover > #drop-down li{
 #slider{
 	width:100%;
 	height:390px;
-	background-color:#222222
+	background-color:#222222;
 	overflow: hidden;
 }
 
