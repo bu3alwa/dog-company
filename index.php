@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dog-Company</title>
+		<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+		<?php wp_head(); 
+		add_filter('show_admin_bar', '__return_false');
+		?>
 		<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name') ); ?></title>
 		<meta charset="<?php bloginfo('charset') ?>" />
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
