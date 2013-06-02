@@ -104,6 +104,7 @@
 			<!-- end of header -->
 			<!-- start of horizontal sidebar -->
 			<section id="slider" class="pad-bottom">
+			<div class="container">
 			<article class="two third">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('slider') ) : ?>
 						<!-- static content goes here if sidebar is inactive -->
@@ -113,7 +114,8 @@
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('smallsidebar') ) : ?>
 						<!-- static content goes here if sidebar is inactive -->
 			<?php endif; ?>
-			</article>	
+			</article>
+			<div>
 			</section>
 
 			<!-- end horizontal sidebar -->
