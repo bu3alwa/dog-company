@@ -21,6 +21,7 @@
 		<!--[if IE]>
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork-ie.css">
 		<![endif]-->
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/html5shiv.min.js"></script>
 		<![endif]-->
@@ -54,52 +55,39 @@
 					});
 
 	</script>
-		<!-- slider -->
-	<script type="text/javascript">
-		$(window).load(function() {
-		$('.flexslider').flexslider({
-		animation: "slide",
-		selector: ".ls_def_ibanner > img",
-		animationLoop: true,
-		});
-		});
-	</script>
-	<!-- resize menu text -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="jquery.fittext.js"></script>
-	<script>
-		jQuery("#responsive_headline").fitText(.8, { minFontSize: '80%', maxFontSize: '150%'});
-		$(nav.a).on('resize.fittext orientationchange.fittext', resizer);
-		resizer();
-	</script>
+
 	</head>
 	<body>
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<article id="logo" class="container centered double padded">
+				<article id="logo" class="container centered double padded double gap-bottom">
 					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 				</article>
 				<nav class="row container double pad-right pad-left" >
 					<ul id="pull-left">
 					<a href="./">hoMe</a>
-					<a href="">Forums</a>
-					<a href="">Info</a>
+					<a href="#">Forums</a>
+					<a href="#">Info</a>
 					 <ul id="drop-down">
-						<li><a>Test 1</a></li>
-						<li><a>Test 2</a></li>
-						<li><a>Test 3</a></li>
-						<li><a>Test 4</a></li>
-						<li><a>Test 5</a></li>
+						<li><b>Test 1</b></li>
+						<li><b>Test 2</b></li>
+						<li><b>Test 3</b></li>
+						<li><b>Test 4</b></li>
+						<li><b>Test 5</b></li>
 					 </ul>
-					<a href="">Media</a>
+					<a href="#">Media</a>
 					</ul>
-					
 					<ul class="pull-right">
-					<a href="">Sign in</a>
-					<a href="">Register</a>
+					<a href="#">Sign in</a>
+					<a href="#">Register</a>
 					</ul>
 				</nav>
+					<!-- resize menu text -->
+ 	<script src="./wp-content/themes/dog-company/fit-text/jquery.fittext.js"></script>
+	<script type="text/javascript">
+		$('nav').fitText(3.0,{ minFontSize: '12px', maxFontSize: '15px' });
+	</script>
 			</header>
 			<!-- end of header -->
 			<!-- start of horizontal sidebar -->
