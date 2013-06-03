@@ -42,3 +42,7 @@ Site Layout - Menu
 - Media
   - Youtube
   - Recent Ops
+
+
+Notes:
+-recode the html5 so that older broswers can view our page.
