@@ -47,4 +47,4 @@ Site Layout - Menu
 Notes:
 - recode the html5 so that older broswers can view our page.
 - javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
-
+- add fittext to 'wp-content/themes/dog-company/' https://github.com/davatron5000/FitText.js.
