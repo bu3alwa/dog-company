@@ -45,7 +45,7 @@ Site Layout - Menu
 
 
 Notes:
--recode the html5 so that older broswers can view our page.
--javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
-
+- recode the html5 so that older broswers can view our page.
+- javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
+- I moved the nav to the bottom because with the text resize on the iphone it looks wrong. I'll explain the issue more when I talk to you.
 
