@@ -28,6 +28,8 @@ Website Content and Design Requirements:
 - Work on Javascript slider
 - Line that seperates each post (Homepage)
 - Look at rasing the min Avatar size from 6.0Kb to something higher (Need to talk to Nova about this)
+- Fix look up via letter (members search)
+- Fix text editor (List, h1 function is broken)
 
 Site Layout - Menu
 - Home
