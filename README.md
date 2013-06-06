@@ -34,7 +34,7 @@ Site Layout - Menu
 - Foums
 - Info
   - About Us
-  - Roster
+  - Roster (will list what trainning has been completed)
   - Arma XML
   - Blog
   - FAQ
