@@ -28,12 +28,6 @@ Website Content and Design Requirements:
 - Work on Javascript slider
 - Line that seperates each post (Homepage)
 - Look at rasing the min Avatar size from 6.0Kb to something higher (Need to talk to Nova about this)
-- Fix look up via letter (members search)
-- Fix text editor (List, h1 function is broken)
-- Fix image sizes (don't resize when posted
-- Allow youtube videos to be embed into posts
-- MCP
-  - Merging posts does not work
 
 Site Layout - Menu
 - Home
@@ -54,3 +48,12 @@ Notes:
 - recode the html5 so that older broswers can view our page.
 - javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
 - add fittext to 'wp-content/themes/dog-company/' https://github.com/davatron5000/FitText.js.
+
+What must be fiexed:
+- Fix look up via letter (members search)
+- Fix text editor (List, h1 function is broken)
+- Fix image sizes (don't resize when posted
+- Allow youtube videos to be embed into posts
+- MCP
+  - Merging posts does not work
+
