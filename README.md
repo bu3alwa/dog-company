@@ -30,8 +30,10 @@ Website Content and Design Requirements:
 - Look at rasing the min Avatar size from 6.0Kb to something higher (Need to talk to Nova about this)
 - Fix look up via letter (members search)
 - Fix text editor (List, h1 function is broken)
-- Fix image sizes
-- Allow youtube videos to be embed into posts.
+- Fix image sizes (don't resize when posted
+- Allow youtube videos to be embed into posts
+- MCP
+  - Merging posts does not work
 
 Site Layout - Menu
 - Home
