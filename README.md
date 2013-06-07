@@ -49,11 +49,11 @@ Notes:
 - javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
 - add fittext to 'wp-content/themes/dog-company/' https://github.com/davatron5000/FitText.js.
 
-What must be fiexed:
-- Fix look up via letter (members search)
-- Fix text editor (List, h1 function is broken)
-- Fix image sizes (don't resize when posted
+What must work in new theme:
+- look up via letter (members search)
+- text editor (List, h1 function is broken)
+- image sizes (don't resize when posted
 - Allow youtube videos to be embed into posts
 - MCP
-  - Merging posts does not work
+  - Merging posts
 
