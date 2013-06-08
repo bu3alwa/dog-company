@@ -110,7 +110,7 @@
 						<li><a href="./">hoMe</a></li>
 						<li><a href="#">Forums</a></li>
 						<li id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
-							<ul id="info-dropdown">
+							<ul id="info-dropdown" class="eighth">
 								<li><a>Test 1</a></li>
 								<li><a>Test 2</a></li>
 								<li><a>Test 3</a></li>
@@ -122,7 +122,7 @@
 						</ul>
 					<ul class="pull-right">
 						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
-							<ul id="login-dropdown">
+							<ul id="login-dropdown" class="eighth">
 							<li><a>Test 1</a></li>
 							<li><a>Test 2</a></li>
 							<li><a>Test 3</a></li>
