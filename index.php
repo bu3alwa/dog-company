@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-		<?php wp_head(); 
-		add_filter('show_admin_bar', '__return_false');
-		?>
+		<?php wp_head(); ?>
 		<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name') ); ?></title>
 		<meta charset="<?php bloginfo('charset') ?>" />
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -29,33 +27,74 @@
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
 		<![endif]-->
 		<script type="text/javascript">
-				function fix_top_bar(){
-					var barWidth = $('.nav-fixed').width();
-					$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+			//center top nav
+			function fix_top_bar(){
+				var barWidth = $('.nav-fixed').width();
+				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
 				}
 
-				$('document').ready(function() {
-						$(window).scroll(function() {
-							var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
-							if (scrollTop > 112) {
-
-								$('nav').addClass('nav-fixed');
-								fix_top_bar();								
-								}else{
-									$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
-								$('nav').removeClass('nav-fixed');
-							}
+			$('document').ready(function() {
+				//fix navbar to top when scroll
+				$(window).scroll(function() {
+						var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
+						if (scrollTop > 112) {
+						$('nav').addClass('nav-fixed');
+						fix_top_bar();								
+						}else{
+						$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
+						$('nav').removeClass('nav-fixed');
+						}
 						});
-					
-					fix_top_bar();
+				//run function to resize
+				fix_top_bar();
 					$(window).resize(function(){
 						  fix_top_bar();  
+				});
+				//menu drop-down
+				$('#info-navbar').hover(
+					function () {
+						$(this).addClass('hover');
+						$('#info-dropdown').css('visibility', 'visible');
+					}, function () {
+						$(this).removeClass('hover');
+						$('#info-dropdown').css('visibility', 'hidden');
+					});
+		
+					$('#login-navbar').hover(
+					function () {
+						$(this).addClass('hover');
+						$('#login-dropdown').css('visibility', 'visible');
+					}, function () {
+						$(this).removeClass('hover');
+						$('#login-dropdown').css('visibility', 'hidden');
 					});
 					
-					});
+					
+					});//end function
 
 	</script>
-
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$('#info-navbar').hover(
+	    function () {
+	        $(this).addClass('hover');
+	        $('#info-dropdown').css('visibility', 'visible');
+	    }, function () {
+	        $(this).removeClass('hover');
+	        $('#info-dropdown').css('visibility', 'hidden');
+	    });
+		
+		$('#login-navbar').hover(
+	    function () {
+	        $(this).addClass('hover');
+	        $('#login-dropdown').css('visibility', 'visible');
+	    }, function () {
+	        $(this).removeClass('hover');
+	        $('#login-dropdown').css('visibility', 'hidden');
+	    });
+		
+	});
+	</script>
 	</head>
 	<body>
 		<!-- header starts here -->
@@ -65,28 +104,35 @@
 					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 				</article>
 				<nav class="row container double pad-right pad-left" >
-					<ul id="pull-left">
-					<a href="./">hoMe</a>
-					<a href="#">Forums</a>
-					<a href="#">Info</a>
-					 <ul id="drop-down">
-						<li><b>Test 1</b></li>
-						<li><b>Test 2</b></li>
-						<li><b>Test 3</b></li>
-						<li><b>Test 4</b></li>
-						<li><b>Test 5</b></li>
-					 </ul>
-					<a href="#">Media</a>
-					</ul>
-					<ul class="pull-right">
-					<a href="#">Sign in</a>
-					<a href="#">Register</a>
+					<ul class="pull-left">
+						<a href="./">hoMe</a>
+						<a href="#">Forums</a>
+						<a id="info-navbar"href="javascript:void(0)" >Info</a>
+						 <ul id="info-dropdown" style="visibility:hidden;">
+							<li><a>Test 1</a></li>
+							<li><a>Test 2</a></li>
+							<li><a>Test 3</a></li>
+							<li><a>Test 4</a></li>
+							<li><a>Test 5</a></li>
+						 </ul>
+						<a href="#">Media</a>
+						</ul>
+						<ul class="pull-right">
+							<a id="login-navbar"href="javascript:void(0)" >Sign in</a>
+							<ul id="login-dropdown" style="visibility:hidden;">
+							<li><a>Test 1</a></li>
+							<li><a>Test 2</a></li>
+							<li><a>Test 3</a></li>
+							<li><a>Test 4</a></li>
+							<li><a>Test 5</a></li>
+						 </ul>
+							<a href="#">Register</a>
 					</ul>
 				</nav>
 					<!-- resize menu text -->
  	<script src="./wp-content/themes/dog-company/fit-text/jquery.fittext.js"></script>
 	<script type="text/javascript">
-		$('nav').fitText(3.0,{ minFontSize: '12px', maxFontSize: '15px' });
+		$('nav').fitText(3.0,{ minFontSize: '12px', maxFontSize: '18px' });
 	</script>
 			</header>
 			<!-- end of header -->
