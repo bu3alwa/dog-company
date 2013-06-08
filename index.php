@@ -12,6 +12,7 @@
 		<script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
 		<!-- jQuery -->
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.hoverIntent.js"></script>
 		<!-- DC Style -->
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css">
 		<!-- GroundworkCSS -->
@@ -32,6 +33,16 @@
 				var barWidth = $('.nav-fixed').width();
 				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
 				}
+			function openLog(){
+				$('#info-dropdown').hide();
+				$('#login-dropdown').toggle();
+				return false;
+			}
+			function openMenu(){
+				$('#login-dropdown').hide();
+				$('#info-dropdown').toggle();
+				return false;
+			}
 
 			$('document').ready(function() {
 				//fix navbar to top when scroll
@@ -51,49 +62,40 @@
 						  fix_top_bar();  
 				});
 				//menu drop-down
-				$('#info-navbar').hover(
-					function () {
-						$(this).addClass('hover');
-						$('#info-dropdown').css('visibility', 'visible');
-					}, function () {
-						$(this).removeClass('hover');
-						$('#info-dropdown').css('visibility', 'hidden');
-					});
-		
-					$('#login-navbar').hover(
-					function () {
-						$(this).addClass('hover');
-						$('#login-dropdown').css('visibility', 'visible');
-					}, function () {
-						$(this).removeClass('hover');
-						$('#login-dropdown').css('visibility', 'hidden');
-					});
+				function openInfo() {
+						$('#login-dropdown').hide();
+						$('#info-dropdown').show();
+				}
+				function openLogin() {
+						$('#info-dropdown').hide();
+						$('#login-dropdown').show();
+				}
+				function closeInfo() {
+						$('#info-dropdown').hide();
+				}
+				function closeLogin() {
+						$('#login-dropdown').hide();
+				}
+				var configInfo = {
+					over: openInfo,
+					timeout: 500,
+					out:closeInfo
+					
+				}
+				var configLogin = {
+					over: openLogin,
+					timeout: 500,
+					out:closeLogin
+				}
+				$('#info-navbar').hoverIntent(configInfo);
+				$('#login-navbar').hoverIntent(configLogin);
+					
+					});//end document ready function
 					
 					
-					});//end function
+					
+					
 
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		$('#info-navbar').hover(
-	    function () {
-	        $(this).addClass('hover');
-	        $('#info-dropdown').css('visibility', 'visible');
-	    }, function () {
-	        $(this).removeClass('hover');
-	        $('#info-dropdown').css('visibility', 'hidden');
-	    });
-		
-		$('#login-navbar').hover(
-	    function () {
-	        $(this).addClass('hover');
-	        $('#login-dropdown').css('visibility', 'visible');
-	    }, function () {
-	        $(this).removeClass('hover');
-	        $('#login-dropdown').css('visibility', 'hidden');
-	    });
-		
-	});
 	</script>
 	</head>
 	<body>
@@ -105,28 +107,30 @@
 				</article>
 				<nav class="row container double pad-right pad-left" >
 					<ul class="pull-left">
-						<a href="./">hoMe</a>
-						<a href="#">Forums</a>
-						<a id="info-navbar"href="javascript:void(0)" >Info</a>
-						 <ul id="info-dropdown" style="visibility:hidden;">
-							<li><a>Test 1</a></li>
-							<li><a>Test 2</a></li>
-							<li><a>Test 3</a></li>
-							<li><a>Test 4</a></li>
-							<li><a>Test 5</a></li>
-						 </ul>
-						<a href="#">Media</a>
+						<li><a href="./">hoMe</a></li>
+						<li><a href="#">Forums</a></li>
+						<li id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
+							<ul id="info-dropdown">
+								<li><a>Test 1</a></li>
+								<li><a>Test 2</a></li>
+								<li><a>Test 3</a></li>
+								<li><a>Test 4</a></li>
+								<li><a>Test 5</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Media</a></li>
 						</ul>
-						<ul class="pull-right">
-							<a id="login-navbar"href="javascript:void(0)" >Sign in</a>
-							<ul id="login-dropdown" style="visibility:hidden;">
+					<ul class="pull-right">
+						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
+							<ul id="login-dropdown">
 							<li><a>Test 1</a></li>
 							<li><a>Test 2</a></li>
 							<li><a>Test 3</a></li>
 							<li><a>Test 4</a></li>
 							<li><a>Test 5</a></li>
-						 </ul>
-							<a href="#">Register</a>
+							</ul>
+						</li>
+						<li><a href="#">Register</a></li>
 					</ul>
 				</nav>
 					<!-- resize menu text -->
