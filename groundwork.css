@@ -1,4 +1,5 @@
 /* =============================================
+/* =============================================
  *       GroundworkCSS by Gary Hepting
  *          Last Updated:2013-4-24
  * ===========================================*/
@@ -41,6 +42,10 @@ html, body, .document, .html, .body {
   background: white;
   margin: 0;
   padding: 0;
+}
+
+html{
+  margin-top: 0!important;
 }
 
 hr, .hr {
@@ -1636,13 +1641,13 @@ big, .big, .large, big, .big {
 }
 
 .disabled {
-  color: #d9d9d9;
+/*  color: #d9d9d9; */
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 .disabled:hover, .disabled:focus, .disabled:visited {
-  color: #d9d9d9;
+/*  color: #d9d9d9;*/
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
@@ -3225,16 +3230,15 @@ html {
 
 html, body, .document, .html, .body {
   font-family: Helvetica, Arial, Geneva, sans-serif;
-  color: #2b2b2d;
+/*  color: #2b2b2d; */
 }
 
 ::selection, ::-moz-selection {
-  background: #489ac1;
+/*  background: #489ac1; */
   color: white;
 }
 
 a, a:visited {
-  color: #489ac1;
   -ms-transition: color 0.25s;
   -o-transition: color 0.25s;
   -moz-transition: color 0.25s;
@@ -4645,7 +4649,7 @@ ol.button-list li a.disabled:visited {
   text-decoration: none;
   outline: none;
 }
-
+/*
 nav ul ul, .nav ul ul {
   display: none;
 }
@@ -4743,7 +4747,7 @@ nav ul li.menu > a:after, .nav ul li.menu > a:after {
   content: '\f0d7';
   display: inline-block;
   width: 1.1em;
-  margin-left: 0.25em;
+  margin-left: 0.25em;*/
 /*  font-family: FontAwesome; */
   font-weight: normal;
   font-style: normal;
@@ -4757,7 +4761,7 @@ nav ul li.menu > a:after, .nav ul li.menu > a:after {
   background-repeat: repeat;
   margin-top: 0;
 }
-nav ul li.menu.on > a, .nav ul li.menu.on > a, nav ul li.menu.on > a:visited, .nav ul li.menu.on > a:visited {
+/*nav ul li.menu.on > a, .nav ul li.menu.on > a, nav ul li.menu.on > a:visited, .nav ul li.menu.on > a:visited {
   background: #198d98;
   text-decoration: none;
 }
@@ -4975,7 +4979,7 @@ nav.inline ul li ul li:last-child a, .inline.nav ul li ul li:last-child a {
 nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: none;
 }
-
+*/
 .pagination ul {
   margin: 10px auto;
   display: block;
@@ -5111,7 +5115,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: gray !important;
 }
 .breadcrumbs li a:hover, .breadcrumbs li a:focus, .breadcrumbs li a:visited:hover, .breadcrumbs li a:visited:focus {
-  color: #489ac1;
+  /*color: #489ac1;*/
 }
 .breadcrumbs li:first-child a:before {
   display: none;
@@ -7663,7 +7667,7 @@ img.mfp-img {
     display: block;
     width: 100% !important;
   }
-  nav:not(.pagination) ul li:first-child > a, nav.inline ul li:first-child > a, .nav ul li:first-child > a, nav:not(.pagination) ul.row li:first-child > a, nav.inline ul.row li:first-child > a, .nav ul.row li:first-child > a {
+ /* nav:not(.pagination) ul li:first-child > a, nav.inline ul li:first-child > a, .nav ul li:first-child > a, nav:not(.pagination) ul.row li:first-child > a, nav.inline ul.row li:first-child > a, .nav ul.row li:first-child > a {
     -ms-border-radius: 4px 4px 0 0;
     -o-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
@@ -7733,7 +7737,7 @@ img.mfp-img {
     -webkit-border-radius: 4px;
     border-radius: 4px;
   }
-
+	*/
   nav.menu, .nav.menu {
     display: block;
     float: none;
