@@ -15,6 +15,7 @@ Objectives:
   - Other Games (EVE, World of Tanks, Wargame, CoH2
 - Create a local blog for nova and friends
 - Link both phpBB
+- stylize dropdown menu.
 
 Website Content and Design Requirements:
 - Homepage login via phpBB
