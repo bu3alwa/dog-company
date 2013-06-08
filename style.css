@@ -49,6 +49,12 @@ nav{
 	vertical-align: middle;
 	list-style-type:none;
 }
+nav ul{
+	list-style-type:none;
+}
+nav ul li{
+	display:inline;
+}
 nav a, nav a:visited  {
 	color: white;
 	text-decoration: none;
@@ -71,15 +77,17 @@ nav a:hover, nav a:focus {
 	padding-bottom: 10px;
 }
 /* Drop down menu Navigation */
-#info-navbar{
+#info-navbar {
 
 }
 #info-dropdown{
 	position:absolute;
     z-index:8999;
 	list-style-type:none;
-    width:100px;
-
+    width:200px;
+	display:none;
+	background-color:#161616;
+	
 }
 #login-navbar{
 
@@ -90,6 +98,8 @@ nav a:hover, nav a:focus {
     z-index:8999;
 	list-style-type:none;
     width:100px;
+	display:none;
+	background-color:#161616;
 }
 .hover {
     position:relative;
