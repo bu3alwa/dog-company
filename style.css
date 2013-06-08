@@ -44,14 +44,15 @@ header{
 nav{
 	width:100%;
 	margin-top:112px;
-	display: inline-block;
 	font-family: DevilBreeze !important;
 	font-size: 20px;
 	vertical-align: middle;
+	list-style-type:none;
 }
 nav a, nav a:visited  {
 	color: white;
 	text-decoration: none;
+	z-index:9001;
 }
 nav a:hover, nav a:focus {
 	text-decoration: none;
@@ -70,23 +71,28 @@ nav a:hover, nav a:focus {
 	padding-bottom: 10px;
 }
 /* Drop down menu Navigation */
-nav a:hover > #drop-down li{
-	visibility:visible;
-	opacity:1;
+#info-navbar{
+
 }
-#drop-down li{
-	list-style:none;
-	margin: 0;
-	padding: 0;
-	visibility:hidden;
-	opacity: 0;
+#info-dropdown{
 	position:absolute;
-	z-index: 9001;
-	width: 400px;
-	-webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
-    -moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
-    -o-transition:opacity 0.2s linear, visibility 0.2s linear; 
-    transition:opacity 0.2s linear, visibility 0.2s linear;     
+    z-index:8999;
+	list-style-type:none;
+    width:100px;
+
+}
+#login-navbar{
+
+
+}
+#login-dropdown {
+    position:absolute;
+    z-index:8999;
+	list-style-type:none;
+    width:100px;
+}
+.hover {
+    position:relative;
 }
 
 
@@ -96,7 +102,6 @@ nav a:hover > #drop-down li{
 	width:100%;
 	height:390px;
 	background-color:#222222;
-	overflow: hidden;
 }
 
 /* Main Body */
