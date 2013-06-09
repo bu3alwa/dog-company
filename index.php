@@ -102,37 +102,37 @@
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<div id="logo" class="container centered double padded double gap-bottom pull-left">
-					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
+				<div id="head" class="container centered double padded double gap-bottom">
+					<img class =" pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
+					<div id="counter" class="pull-right">
+					<h3>Next Operation</h3>
+						<div id="countdown_dashboard">
+							<div class="dash days_dash">
+								<span class="dash_title">days</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash hours_dash">
+								<span class="dash_title">hours</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash minutes_dash">
+								<span class="dash_title">minutes</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash seconds_dash">
+								<span class="dash_title">seconds</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+						</div>
 				</div>
-				<div id="counter" class="pull-right">
-				<h3>Next Operation</h3>
-					<div id="countdown_dashboard">
-						<div class="dash days_dash">
-							<span class="dash_title">days</span>
-							<div class="digit">0</div>
-							<div class="digit">0</div>
-						</div>
-
-						<div class="dash hours_dash">
-							<span class="dash_title">hours</span>
-							<div class="digit">0</div>
-							<div class="digit">0</div>
-						</div>
-
-						<div class="dash minutes_dash">
-							<span class="dash_title">minutes</span>
-							<div class="digit">0</div>
-							<div class="digit">0</div>
-						</div>
-
-						<div class="dash seconds_dash">
-							<span class="dash_title">seconds</span>
-							<div class="digit">0</div>
-							<div class="digit">0</div>
-						</div>
-
-					</div>
+				
 					<script language="javascript" type="text/javascript">
 							jQuery(document).ready(function(){
 							var today = new Date();
@@ -140,7 +140,6 @@
 							var saturdayTest = currDay - 6;
 							var wednesdayTest = currDay - 3;
 							var currHour = today.getUTCHours();
-							//saturdayTest < wednesdayTest && wednesdayTest <=0
 							if (wednesdayTest > saturdayTest && wednesdayTest <= 0 && currHour < 22){
 							//run wednesday script
 							var thisWed = -(wednesdayTest) + today.getUTCDate();
