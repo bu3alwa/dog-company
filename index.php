@@ -94,7 +94,13 @@
 				}
 				$('#info-navbar').hoverIntent(configInfo);
 				$('#login-navbar').hoverIntent(configLogin);
-					
+				$(window).resize(function(){
+				var browserWidth = $(window).width();
+				if (browserWidth < 743){
+					$('#counter').hide();
+				}else {
+					$('#counter').show();
+				};});
 			});//end document ready function
 	</script>
 	</head>
