@@ -55,9 +55,9 @@ What must work in new theme:
 
 ======= Update 6/8 ========
 
--add images to folder /images http://www.mediafire.com/?3epzq8m6bs61ebv
--add scripts from the countdown to each respective folder in our dog-company
--all files are updated. Be aware when updating.
+- add images to folder /images http://www.mediafire.com/?3epzq8m6bs61ebv
+- add scripts from the countdown to each respective folder in our dog-company
+- all files are updated. Be aware when updating.
 
 
 
