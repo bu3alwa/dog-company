@@ -105,7 +105,6 @@
 				<div id="head" class="container centered double padded double gap-bottom">
 					<img class =" pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 					<div id="counter" class="pull-right">
-					<h3>Next Operation</h3>
 						<div id="countdown_dashboard">
 							<div class="dash days_dash">
 								<span class="dash_title">days</span>
