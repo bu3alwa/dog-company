@@ -78,19 +78,25 @@
 				}
 				var configInfo = {
 					over: openInfo,
-					timeout: 500,
+					timeout: 100,
 					out:closeInfo
 					
 				}
 				var configLogin = {
 					over: openLogin,
-					timeout: 500,
+					timeout: 100,
 					out:closeLogin
 				}
 				$('#info-navbar').hoverIntent(configInfo);
 				$('#login-navbar').hoverIntent(configLogin);
 					
-					});//end document ready function
+			});//end document ready function
+			
+			$(window).on('unload', function(){
+			
+			
+			
+			});
 					
 					
 					
