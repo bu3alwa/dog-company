@@ -41,6 +41,9 @@ header{
 	height:145px;
 	background-color:#161616;
 }
+#head{
+	overflow:hidden;
+}
 nav{
 	width:100%;
 	margin-top:112px;
@@ -50,11 +53,12 @@ nav{
 	list-style-type:none;
 }
 nav ul{
-	list-style-type:none;
+	list-style-type:none !important;
 }
 nav ul li{
-	display:inline;
+	display:inline !important;
 }
+
 nav a, nav a:visited  {
 	color: white;
 	text-decoration: none;
@@ -78,31 +82,38 @@ nav a:hover, nav a:focus {
 }
 /* Drop down menu Navigation */
 #info-navbar {
-
+	position:relative;
 }
 #info-dropdown{
 	position:absolute;
     z-index:8999;
 	list-style-type:none;
-    width:200px;
 	display:none;
 	background-color:#161616;
 	
 }
+#info-dropdown li{
+	display:block !important;
+}
 #login-navbar{
-
+	position:relative;
 
 }
 #login-dropdown {
     position:absolute;
     z-index:8999;
 	list-style-type:none;
-    width:100px;
 	display:none;
 	background-color:#161616;
 }
 .hover {
     position:relative;
+}
+h3{
+	font-size:13px!important;
+	color: white;
+	margin:0 !important;
+	text-align:center;
 }
 
 
