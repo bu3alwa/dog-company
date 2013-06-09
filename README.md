@@ -44,13 +44,6 @@ Site Layout - Menu
   - Recent Ops
 
 
-Notes:
-- recode the html5 so that older broswers can view our page.
-- javascript slider does not resize so calender on the right of it will not show. figure out a fix or revert to calender being in the sidebar.
-- add fittext to 'wp-content/themes/dog-company/' https://github.com/davatron5000/FitText.js.
-- add http://cherne.net/brian/resources/jquery.hoverIntent.html to your '/dog-company/js' folder. 
-
-
 What must work in new theme:
 - look up via letter (members search)
 - text editor (List, h1 function is broken)
@@ -58,4 +51,9 @@ What must work in new theme:
 - Allow youtube videos to be embed into posts
 - MCP
   - Merging posts
+
+
+======= Update 6/8 ========
+add images to folder /images http://www.mediafire.com/?3epzq8m6bs61ebv
+add scripts from the countdown to each respective folder in our dog-company
 
