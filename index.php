@@ -36,6 +36,10 @@
 				var barWidth = $('.nav-fixed').width();
 				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
 				}
+			function centerNav(){
+				var barWidth = $('nav').width();
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+			}
 			function openLog(){
 				$('#info-dropdown').hide();
 				$('#login-dropdown').toggle();
@@ -46,8 +50,20 @@
 				$('#info-dropdown').toggle();
 				return false;
 			}
-
+			function counterHide(){
+				var browserWidth = $(window).width();
+				if (browserWidth < 743){
+					$('#counter').hide();
+				}else {
+					$('#counter').show();
+				};}
 			$('document').ready(function() {
+				//center nav
+				$(window).load('',centerNav());
+				$(window).resize(function(){
+				var barWidth = $('nav').width();
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+			});
 				//fix navbar to top when scroll
 				$(window).scroll(function() {
 						var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
@@ -57,6 +73,7 @@
 						}else{
 						$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
 						$('nav').removeClass('nav-fixed');
+						centerNav();
 						}
 						});
 				//run function to resize
@@ -79,6 +96,7 @@
 				function closeLogin() {
 						$('#login-dropdown').hide();
 				}
+				//hoverIntent config
 				var configInfo = {
 					interval:100,
 					over: openInfo,
@@ -92,8 +110,13 @@
 					timeout: 500,
 					out:closeLogin
 				}
+				//run hoverIntent
 				$('#info-navbar').hoverIntent(configInfo);
 				$('#login-navbar').hoverIntent(configLogin);
+				
+				
+				//show and hide counter on certain width
+				$('#countdown').load('',counterHide());
 				$(window).resize(function(){
 				var browserWidth = $(window).width();
 				if (browserWidth < 743){
@@ -108,7 +131,7 @@
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<div id="head" class="container centered double padded double gap-bottom">
+				<div id="head" class="container centered double padded ">
 					<img class =" pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
 					<div id="counter" class="pull-right">
 						<div id="countdown_dashboard">
@@ -136,8 +159,8 @@
 								<div class="digit">0</div>
 							</div>
 						</div>
+						<h3>Next Operation</h3>
 				</div>
-				
 					<script language="javascript" type="text/javascript">
 							jQuery(document).ready(function(){
 							var today = new Date();
