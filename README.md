@@ -34,12 +34,11 @@ Site Layout - Menu
 - Home
 - Foums
 - Info
-  - About Us
+  - About Us (History + contacts)
   - Roster (will list what trainning has been completed)
   - Arma XML
   - Blog
   - FAQ
-  - History
 - Media
   - Youtube
   - Recent Ops
