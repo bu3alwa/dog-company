@@ -40,6 +40,7 @@ header{
     width:100%px;
 	height:145px;
 	background-color:#161616;
+	position:relative;
 }
 #head{
 	overflow:hidden;
@@ -49,8 +50,10 @@ nav{
 	margin-top:112px;
 	font-family: DevilBreeze !important;
 	font-size: 20px;
-	vertical-align: middle;
 	list-style-type:none;
+	position: absolute;
+	bottom:0;
+	
 }
 nav ul{
 	list-style-type:none !important;
@@ -87,7 +90,7 @@ nav a:hover, nav a:focus {
 }
 #info-dropdown{
 	position:absolute;
-    z-index:8999;
+    z-index:8900;
 	list-style-type:none;
 	display:none;
 	background-color:#161616;
@@ -98,7 +101,6 @@ nav a:hover, nav a:focus {
 }
 #login-navbar{
 	position:relative;
-
 }
 #login-dropdown {
     position:absolute;
