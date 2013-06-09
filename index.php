@@ -17,6 +17,9 @@
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css">
 		<!-- GroundworkCSS -->
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork.css">
+		<script language="Javascript" type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.lwtCountdown-1.0.js"></script>
+		<script language="Javascript" type="text/javascript" src="./wp-content/themes/dog-company/js/misc.js"></script>
+		<link rel="Stylesheet" type="text/css" href="./wp-content/themes/dog-company/css/dark.css"></link>
 		<!--[if IE]>
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork-ie.css">
 		<![endif]-->
@@ -77,40 +80,108 @@
 						$('#login-dropdown').hide();
 				}
 				var configInfo = {
+					interval:100,
 					over: openInfo,
-					timeout: 100,
+					timeout: 500,
 					out:closeInfo
 					
 				}
 				var configLogin = {
+					interval:100,
 					over: openLogin,
-					timeout: 100,
+					timeout: 500,
 					out:closeLogin
 				}
 				$('#info-navbar').hoverIntent(configInfo);
 				$('#login-navbar').hoverIntent(configLogin);
 					
 			});//end document ready function
-			
-			$(window).on('unload', function(){
-			
-			
-			
-			});
-					
-					
-					
-					
-
 	</script>
 	</head>
 	<body>
 		<!-- header starts here -->
 		<div id="container">
 			<header>
-				<article id="logo" class="container centered double padded double gap-bottom">
+				<div id="logo" class="container centered double padded double gap-bottom pull-left">
 					<img src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
-				</article>
+				</div>
+				<div id="counter" class="pull-right">
+				<h3>Next Operation</h3>
+					<div id="countdown_dashboard">
+						<div class="dash days_dash">
+							<span class="dash_title">days</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+
+						<div class="dash hours_dash">
+							<span class="dash_title">hours</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+
+						<div class="dash minutes_dash">
+							<span class="dash_title">minutes</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+
+						<div class="dash seconds_dash">
+							<span class="dash_title">seconds</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+
+					</div>
+					<script language="javascript" type="text/javascript">
+							jQuery(document).ready(function(){
+							var today = new Date();
+							var currDay = today.getUTCDay();
+							var saturdayTest = currDay - 6;
+							var wednesdayTest = currDay - 3;
+							var currHour = today.getUTCHours();
+							//saturdayTest < wednesdayTest && wednesdayTest <=0
+							if (wednesdayTest > saturdayTest && wednesdayTest <= 0 && currHour < 22){
+							//run wednesday script
+							var thisWed = -(wednesdayTest) + today.getUTCDate();
+							var thisYear = today.getUTCFullYear();
+							var thisMonth = today.getUTCMonth() + 1;
+							$('#countdown_dashboard').countDown({
+									targetDate: {
+										'day': 		thisWed,
+										'month': 	thisMonth,
+										'year': 	thisYear,
+										'hour': 	10,
+										'min': 		0,
+										'sec': 		0,
+										'utc':      true
+									},
+									omitWeeks: true
+								});
+							} else {
+							//run saturday script
+							var thisWed = -(saturdayTest) + today.getUTCDate();
+							var thisYear = today.getUTCFullYear();
+							var thisMonth = today.getUTCMonth() + 1;
+							$('#countdown_dashboard').countDown({
+									targetDate: {
+										'day': 		thisSat,
+										'month': 	thisMonth,
+										'year': 	thisYear,
+										'hour': 	10,
+										'min': 		0,
+										'sec': 		0,
+										'utc':      true
+									},
+									omitWeeks: true
+								});
+							};
+
+							
+							});
+					</script>
+				
+				</div>
 				<nav class="row container double pad-right pad-left" >
 					<ul class="pull-left">
 						<li><a href="./">hoMe</a></li>
