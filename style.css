@@ -104,10 +104,16 @@ nav a:hover, nav a:focus {
 }
 #login-dropdown {
     position:absolute;
+	width:400px;
     z-index:8999;
 	list-style-type:none;
 	display:none;
 	background-color:#161616;
+	right:0;
+}
+#login-dropdown ul li{
+	display: block !important;
+
 }
 .hover {
     position:relative;
