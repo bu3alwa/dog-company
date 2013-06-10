@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 		<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name') ); ?></title>
@@ -227,11 +227,9 @@
 					<ul class="pull-right">
 						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
 							<ul id="login-dropdown" >
-							<li><a>Test 1</a></li>
-							<li><a>Test 2</a></li>
-							<li><a>Test 3</a></li>
-							<li><a>Test 4</a></li>
-							<li><a>Test 5</a></li>
+							<li>
+								<?php include(TEMPLATEPATH.'/login.php'); ?>
+							</li>
 							</ul>
 						</li>
 						<li><a href="#">Register</a></li>
