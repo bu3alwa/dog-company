@@ -60,4 +60,11 @@ What must work in new theme:
 - all files are updated. Be aware when updating.
 
 
+=============================== Update 6/9 ====================================
+
+- add plugin Wp Phpbb Bridge plugin in wordpress for integration
+- login is changed to a WP dynamic sidebar to use the login widget with the wp phpbb plugin. Widget named 'wp phpbb bridge user'
+- update all files to what they are on github
+- position realtive has been added to info-navbar login-navbar to make the dropdown pop next to them when position is absolute.
+
 
