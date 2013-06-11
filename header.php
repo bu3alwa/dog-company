@@ -178,7 +178,7 @@
 										'day': 		thisWed,
 										'month': 	thisMonth,
 										'year': 	thisYear,
-										'hour': 	10,
+										'hour': 	22,
 										'min': 		0,
 										'sec': 		0,
 										'utc':      true
@@ -195,7 +195,7 @@
 										'day': 		thisSat,
 										'month': 	thisMonth,
 										'year': 	thisYear,
-										'hour': 	10,
+										'hour': 	22,
 										'min': 		0,
 										'sec': 		0,
 										'utc':      true
