@@ -67,5 +67,6 @@ What must work in new theme:
 =============================== Update 6/13 ===================================
 
 - Counter is out by an hour. Change to 21hours is a temp fix.
+- Counter did not reset
 - Formatting on menus has started.
 - The slider is being a pain, I found I that sort of works. Not user friendly nor worked completely. Another one, user frindly just not working as much as the other one. MADMAN HELP!
