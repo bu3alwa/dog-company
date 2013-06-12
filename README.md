@@ -63,3 +63,9 @@ What must work in new theme:
 =============================== Update 6/11 ===================================
 
 - Using WP-United to intergrate phpBB and WordPress
+
+=============================== Update 6/13 ===================================
+
+- Counter is out by an hour. Change to 21hours is a temp fix.
+- Formatting on menus has started.
+- The slider is being a pain, I found I that sort of works. Not user friendly nor worked completely. Another one, user frindly just not working as much as the other one. MADMAN HELP!
