@@ -5,6 +5,7 @@ Resources:
 - Neou Font = http://www.dafont.com/neou.font
 - Font converting website = http://convertfonts.com/
   - Use this to convert the multiple files.
+- Expressway = http://www.dafont.com/expressway.font
 - Find a fall back font in cases a browser is not compatible with CSS3
 
 Objectives:
@@ -70,3 +71,13 @@ What must work in new theme:
 - Counter did not reset
 - Formatting on menus has started.
 - The slider is being a pain, I found I that sort of works. Not user friendly nor worked completely. Another one, user frindly just not working as much as the other one. MADMAN HELP!
+- Expressway is the new font for all the main content, link provided above in fonts.
+- Has looked into templates for the forums, I'm thinking we can use "subsilver2" for our template. Then modify from there. While researching I found some really cool looking rank images that would be cool to add. I've shown Gumby and he should be able to make then suit our needs really well.
+
+
+
+
+
+
+
+
