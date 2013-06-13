@@ -7,7 +7,7 @@
 			<?php endif; ?>
 			</article>
 			<?php include(TEMPLATEPATH.'/smallSidebar.php'); ?>
-			<div>
+			</div>
 			</section>
 
 			<!-- end horizontal sidebar -->
