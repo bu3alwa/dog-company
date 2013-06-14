@@ -75,9 +75,10 @@ What must work in new theme:
 - Has looked into templates for the forums, I'm thinking we can use "subsilver2" for our template. Then modify from there. While researching I found some really cool looking rank images that would be cool to add. I've shown Gumby and he should be able to make then suit our needs really well.
 - Fixed menu bump. *style has been updated
 
+=============================== Update 6/14 ===================================
 
-
-
+- Slider fixed (moc did it!)
+- 
 
 
 
