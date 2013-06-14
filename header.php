@@ -178,7 +178,7 @@
 										'day': 		thisWed,
 										'month': 	thisMonth,
 										'year': 	thisYear,
-										'hour': 	22,
+										'hour': 	21,
 										'min': 		0,
 										'sec': 		0,
 										'utc':      true
@@ -187,7 +187,7 @@
 								});
 							} else {
 							//run saturday script
-							var thisWed = -(saturdayTest) + today.getUTCDate();
+							var thisSat = -(saturdayTest) + today.getUTCDate();
 							var thisYear = today.getUTCFullYear();
 							var thisMonth = today.getUTCMonth() + 1;
 							$('#countdown_dashboard').countDown({
@@ -195,7 +195,7 @@
 										'day': 		thisSat,
 										'month': 	thisMonth,
 										'year': 	thisYear,
-										'hour': 	22,
+										'hour': 	21,
 										'min': 		0,
 										'sec': 		0,
 										'utc':      true
