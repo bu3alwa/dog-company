@@ -94,7 +94,9 @@ nav a:hover, nav a:focus {
 	z-index:9000;
 	padding-bottom: 10px;
 }
+
 /* Drop down menu Navigation */
+
 #info-navbar {
 	position:relative;
 }
@@ -138,9 +140,16 @@ h3{
 
 /* Slider */
 
-#slider{
-	width:100%;
-	height:390px;
+#slider-wrapper {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background-color:#222222;
+}
+#slider {
+	position: relative;
+	width: 100%;
+	height: 400px;
 	background-color:#222222;
 }
 
