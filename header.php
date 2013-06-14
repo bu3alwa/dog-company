@@ -203,8 +203,6 @@
 									omitWeeks: true
 								});
 							};
-
-							
 							});
 					</script>
 				
@@ -212,14 +210,14 @@
 				<nav class="row container double pad-right pad-left" >
 					<ul class="pull-left">
 						<li><a href="./">hoMe</a></li>
-						<li><a href="#">Forums</a></li>
+						<li><a href="./forum">Forums</a></li>
 						<li id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
 							<ul id="info-dropdown" >
-								<li><a>Test 1</a></li>
-								<li><a>Test 2</a></li>
-								<li><a>Test 3</a></li>
-								<li><a>Test 4</a></li>
-								<li><a>Test 5</a></li>
+								<li><a href="./about-us">About Us</a></li>
+								<li><a href="#">Roster</a></li>
+								<li><a href="#">Arma XML</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">FAQ</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Media</a></li>
@@ -232,7 +230,7 @@
 							</li>
 							</ul>
 						</li>
-						<li><a href="#">Register</a></li>
+						<li><a href="#">register</a></li>
 					</ul>
 				</nav>
 					<!-- resize menu text -->
