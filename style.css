@@ -162,6 +162,19 @@ h3{
 	-webkit-box-shadow: 0 0 5px 5px#888;
 	box-shadow: 0 0 5px 5px #888;
 }
+h2 { /* Page Heading formatting */
+	font-family: Expressway;
+}
+small { /* Date formatting */
+	font-family: Expressway;
+}
+h3 { /* Sub Heading formatting */
+	font-family: Expressway;
+}
+.entry { /* Content formatting */
+	font-family: Expressway;
+	font-size: 15px;
+}
 
 /* Footer */
 
