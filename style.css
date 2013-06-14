@@ -20,8 +20,8 @@
          url('./font/neou-bold.svg#DevilBreeze') format('svg');
     font-weight: normal;
     font-style: normal;
-} 
-@font-face 
+}
+@font-face
 {
     font-family: 'NeouThin';
     src: url('./font/neou-thin.eot');
@@ -39,8 +39,24 @@
          url('./font/expressway.woff') format('woff'),
          url('./font/expressway.ttf') format('truetype'),
          url('./font/expressway.svg#Expressway') format('svg');
-    font-weight: normal;
-    font-style: normal;
+}
+@font-face {
+    font-family: 'BigNoodle';
+    src: url('./font/big_noodle_titling.eot');
+    src: url('./font/big_noodle_titling.eot') format('embedded-opentype'),
+         url('./font/big_noodle_titling.woff') format('woff'),
+         url('./font/big_noodle_titling.ttf') format('truetype'),
+         url('./font/big_noodle_titling.svg#BigNoodle') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Geosans';
+    src: url('./font/geosanslight.eot');
+    src: url('./font/geosanslight.eot') format('embedded-opentype'),
+         url('./font/geosanslight.woff') format('woff'),
+         url('./font/geosanslight.ttf') format('truetype'),
+         url('./font/geosanslight.svg#Geosans') format('svg');
 }
 
 /* Styles */
@@ -55,6 +71,11 @@ header{
 #head{
 	overflow:hidden;
 }
+header h3 {
+	font-family: 'NeouBold';
+	text-align: center;
+	color: white;
+}
 nav{
 	width:100%;
 	margin-top:112px;
@@ -62,7 +83,7 @@ nav{
 	font-size: 20px;
 	list-style-type:none;
 	position: absolute;
-	bottom: -10px;
+	bottom: ;
 	
 }
 nav ul{
@@ -94,23 +115,32 @@ nav a:hover, nav a:focus {
 	z-index:9000;
 	padding-bottom: 10px;
 }
-
 /* Drop down menu Navigation */
-
-#info-navbar {
+#info-navbar{
 	position:relative;
 }
 #info-dropdown{
-	position:absolute;
+	position: absolute;
 	left: 0;
- 	z-index:8900;
-	list-style-type:none;
-	display:none;
-	background-color:#161616;
-	
+    z-index: 8900;
+	list-style-type: none;
+	display: none;
+	background-color: #161616;
+	font-family: NeouBold !important;
+	width: 250%;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: ;
+	top: ;
 }
 #info-dropdown li{
 	display:block !important;
+	border-top: 1px solid #303030;
+	padding-bottom: -4px;
+	text-align: center;
+}
+#info-dropdown li:first-child{
+	border-top: none;
 }
 #login-navbar{
 	position:relative;
@@ -123,6 +153,12 @@ nav a:hover, nav a:focus {
 	display:none;
 	background-color:#161616;
 	right:0;
+	font-family: NeouBold !important;
+	width: 270%;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: ;
+
 }
 #login-dropdown ul li{
 	display: block !important;
@@ -132,10 +168,11 @@ nav a:hover, nav a:focus {
     position:relative;
 }
 h3{
-	font-size:13px!important;
+	font-family: NeouThin;
+	font-size: 13px!important;
 	color: white;
-	margin:0 !important;
-	text-align:center;
+	margin: 0 !important;
+	text-align: center;
 }
 
 /* Slider */
@@ -146,7 +183,7 @@ h3{
 	height: 400px;
 	background-color:#222222;
 }
-#slider {
+#madmans-slider {
 	position: relative;
 	background-color:#222222;
 }
