@@ -77,10 +77,10 @@ What must work in new theme:
 
 =============================== Update 6/14 ===================================
 
-- Slider fixed (moc did it!)
-
-
-
+- Slider fixed (Moc did it!), now have to work on resizing
+- Counter bug fixed
+- Added new links in login-dropdown
+- Fixed dropdown alignment (
 
 
 
