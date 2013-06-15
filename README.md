@@ -78,7 +78,7 @@ What must work in new theme:
 =============================== Update 6/14 ===================================
 
 - Slider fixed (moc did it!)
-- 
+
 
 
 
