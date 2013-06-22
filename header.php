@@ -132,7 +132,7 @@
 		<div id="container">
 			<header>
 				<div id="head" class="container centered double padded ">
-					<img class =" pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" width="400"></img>
+					<img class ="pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" alt="dog company head img" width="400" /
 					<div id="counter" class="pull-right">
 						<div id="countdown_dashboard">
 							<div class="dash days_dash">
