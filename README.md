@@ -80,8 +80,10 @@ What must work in new theme:
 - Slider fixed (Moc did it!), now have to work on resizing
 - Counter bug fixed
 - Added new links in login-dropdown
-- Fixed dropdown alignment (
+- Fixed dropdown alignment
 
+=============================== Update 6/22 ===================================
 
-
-
+- Gumby has designed 3 amazing badges "logos" that have been added to the footer of the main page, (maybe add to the footer of the forums too?)
+- Forum coding had begun and is gaining traction and problems of course
+- Drop down bug found when scrolling down the gap between the drop down and menu itself reappears (you would already know this most likely)
