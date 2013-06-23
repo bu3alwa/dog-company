@@ -132,7 +132,7 @@
 		<div id="container">
 			<header>
 				<div id="head" class="container centered double padded ">
-					<img class="pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" alt="dog company head img" width="400" /
+					<<img class="pull-left" src="./wp-content/themes/dog-company/images/DC_white.png" alt="dog company head img" width="400" />
 					<div id="counter" class="pull-right">
 						<div id="countdown_dashboard">
 							<div class="dash days_dash">
@@ -208,10 +208,10 @@
 				
 				</div>
 				<nav class="row container double pad-right pad-left" >
-					<ul class="pull-left">
-						<li><a href="./">hoMe</a></li>
-						<li><a href="./forum">Forums</a></li>
-						<li id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
+					<ul class="pull-left" style="height: 33px">
+						<li class="nav-li"><a href="./">hoMe</a></li>
+						<li class="nav-li"><a href="./forum">Forums</a></li>
+						<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
 							<ul id="info-dropdown" >
 								<li><a href="./about-us">About Us</a></li>
 								<li><a href="#">Roster</a></li>
@@ -220,9 +220,9 @@
 								<li><a href="#">FAQ</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Media</a></li>
+						<li class="nav-li"><a href="#">Media</a></li>
 						</ul>
-					<ul class="pull-right">
+					<ul class="pull-right" style="height: 33px">
 						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
 							<ul id="login-dropdown" >
 							<li>
