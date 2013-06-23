@@ -40,7 +40,24 @@
          url('./font/expressway.ttf') format('truetype'),
          url('./font/expressway.svg#Expressway') format('svg');
 }
-
+@font-face {
+    font-family: 'BigNoodle';
+    src: url('./font/big_noodle_titling.eot');
+    src: url('./font/big_noodle_titling.eot') format('embedded-opentype'),
+         url('./font/big_noodle_titling.woff') format('woff'),
+         url('./font/big_noodle_titling.ttf') format('truetype'),
+         url('./font/big_noodle_titling.svg#BigNoodle') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Geosans';
+    src: url('./font/geosanslight.eot');
+    src: url('./font/geosanslight.eot') format('embedded-opentype'),
+         url('./font/geosanslight.woff') format('woff'),
+         url('./font/geosanslight.ttf') format('truetype'),
+         url('./font/geosanslight.svg#Geosans') format('svg');
+}
 
 /* Styles */
 
@@ -61,7 +78,6 @@ header h3 {
 }
 nav{
 	width:100%;
-	margin-top:112px;
 	font-family: DevilBreeze !important;
 	font-size: 20px;
 	list-style-type:none;
@@ -74,7 +90,11 @@ nav ul{
 	margin:0;
 }
 nav ul li{
-	display:inline !important;
+	display:inline-block !important;
+}
+nav a{
+	display:block;
+	height:33px;
 }
 
 nav a, nav a:visited  {
@@ -87,20 +107,25 @@ nav a:hover, nav a:focus {
 	color: #489ac1;
 }
 .nav-fixed{
-	display:inline-block;
-	vertical-align: middle;
+	display: block;
 	position:fixed !important;
 	top:0 !important;
-	float:none !important;
+	float: none !important;
 	width:100%;
 	background-color:#161616;
-	height:33px;
 	z-index:9000;
-	padding-bottom: 10px;
+	height:33px;
 }
+.nav-li{
+	height: 33px;
+}
+
 /* Drop down menu Navigation */
 #info-navbar{
 	position:relative;
+}
+#info-bar a{
+	display:block;
 }
 #info-dropdown{
 	position: absolute;
@@ -110,11 +135,10 @@ nav a:hover, nav a:focus {
 	display: none;
 	background-color: #161616;
 	font-family: NeouBold !important;
-	width: 250%;
+	width: 200px;
 	padding-left: 5px;
 	padding-right: 5px;
-	text-align: ;
-	top: ;
+	height:auto;
 }
 #info-dropdown li{
 	display:block !important;
@@ -130,17 +154,17 @@ nav a:hover, nav a:focus {
 }
 #login-dropdown {
     position:absolute;
-	width:400px;
+	width:300px;
     z-index:8999;
 	list-style-type:none;
 	display:none;
 	background-color:#161616;
 	right:0;
 	font-family: NeouBold !important;
-	width: 270%;
+	width: 380px;
 	padding-left: 5px;
 	padding-right: 5px;
-	text-align: ;
+	height: auto;
 
 }
 #login-dropdown ul li{
@@ -163,12 +187,16 @@ h3{
 #slider-wrapper {
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: auto;
 	background-color:#222222;
+	overflow: hidden;
+	max-height: 510px;
 }
 #madmans-slider {
+	padding-top: 10px;
 	position: relative;
 	background-color:#222222;
+	height:auto;
 }
 
 /* Main Body */
