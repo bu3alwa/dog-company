@@ -86,4 +86,4 @@ What must work in new theme:
 
 - Gumby has designed 3 amazing badges "logos" that have been added to the footer of the main page, (maybe add to the footer of the forums too?)
 - Forum coding had begun and is gaining traction and problems of course
-- Fixed [stroke]Drop down bug found when scrolling down the gap between the drop down and menu itself reappears (you would already know this most likely)[/stroke]
+- Fixed //Drop down bug found when scrolling down the gap between the drop down and menu itself reappears (you would already know this most likely)
