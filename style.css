@@ -40,24 +40,7 @@
          url('./font/expressway.ttf') format('truetype'),
          url('./font/expressway.svg#Expressway') format('svg');
 }
-@font-face {
-    font-family: 'BigNoodle';
-    src: url('./font/big_noodle_titling.eot');
-    src: url('./font/big_noodle_titling.eot') format('embedded-opentype'),
-         url('./font/big_noodle_titling.woff') format('woff'),
-         url('./font/big_noodle_titling.ttf') format('truetype'),
-         url('./font/big_noodle_titling.svg#BigNoodle') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-    font-family: 'Geosans';
-    src: url('./font/geosanslight.eot');
-    src: url('./font/geosanslight.eot') format('embedded-opentype'),
-         url('./font/geosanslight.woff') format('woff'),
-         url('./font/geosanslight.ttf') format('truetype'),
-         url('./font/geosanslight.svg#Geosans') format('svg');
-}
+
 
 /* Styles */
 
@@ -83,7 +66,7 @@ nav{
 	font-size: 20px;
 	list-style-type:none;
 	position: absolute;
-	bottom: ;
+	bottom: 0;
 	
 }
 nav ul{
@@ -131,7 +114,7 @@ nav a:hover, nav a:focus {
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: ;
-	top: 0;
+	top: ;
 }
 #info-dropdown li{
 	display:block !important;
@@ -180,7 +163,7 @@ h3{
 #slider-wrapper {
 	position: relative;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	background-color:#222222;
 }
 #madmans-slider {
@@ -193,9 +176,9 @@ h3{
 #content {
 	overflow:hidden;
 	margin: 15px 0px;
-	-moz-box-shadow: 0 0 5px 5px #888;
-	-webkit-box-shadow: 0 0 5px 5px#888;
-	box-shadow: 0 0 5px 5px #888;
+	-moz-box-shadow: 3px 3px 5px 5px #c8c8c8;
+	-webkit-box-shadow: 3px 3px 5px 5px #c8c8c8;
+	box-shadow: 3px 3px 5px 5px #c8c8c8;
 }
 h2 { /* Page Heading formatting */
 	font-family: Expressway;
@@ -217,4 +200,18 @@ footer{
 	width:100%;
 	height:300px;
 	background-color:#161616;
+}
+#logo {
+    text-align:center;
+}
+#logo img {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto; 
+	vertical-align: middle;
+}
+#copyright {
+	color: white;
+	text-align: center;
+	font-size: 10px;
 }
