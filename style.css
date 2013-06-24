@@ -60,7 +60,9 @@
 }
 
 /* Styles */
-
+html, body {
+	min-width:328;
+}
 /* Header */
 header{
     width:100%;
@@ -154,7 +156,7 @@ nav a:hover, nav a:focus {
 }
 #login-dropdown {
     position:absolute;
-	width:300px;
+	width: 33.33%;
     z-index:8999;
 	list-style-type:none;
 	display:none;
