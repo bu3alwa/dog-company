@@ -34,11 +34,11 @@
 			//center top nav
 			function fix_top_bar(){
 				var barWidth = $('.nav-fixed').width();
-				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 				}
 			function centerNav(){
 				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 			}
 			function openLog(){
 				$('#info-dropdown').hide();
@@ -207,8 +207,8 @@
 					</script>
 				
 				</div>
-				<nav class="row container double pad-right pad-left" >
-					<ul class="pull-left" style="height: 33px">
+				<nav class="row container " >
+					<ul class="pull-left double pad-left" style="height: 33px">
 						<li class="nav-li"><a href="./">hoMe</a></li>
 						<li class="nav-li"><a href="./forum">Forums</a></li>
 						<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
@@ -222,7 +222,7 @@
 						</li>
 						<li class="nav-li"><a href="#">Media</a></li>
 						</ul>
-					<ul class="pull-right" style="height: 33px">
+					<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
 						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
 							<ul id="login-dropdown" >
 							<li>
