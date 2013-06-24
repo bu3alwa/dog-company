@@ -150,7 +150,7 @@ nav a:hover, nav a:focus {
 	border-top: none;
 }
 #login-navbar{
-	position:relative;
+	
 }
 #login-dropdown {
     position:absolute;
@@ -218,7 +218,11 @@ h2:hover, h2 a:hover{
     color: #489ac1 !important;
     text-decoration: none;
 }
-#main h2:first{
+#main:link{
+	color: #489ac1;
+	text-decoration:none;
+}
+#main h2:first-child{
 	padding-top: 0px;
 }
 #main h2{
@@ -243,7 +247,10 @@ h3 { /* Sub Heading formatting */
 	font-size: 15px;
 	padding-bottom: 2.5px;
 	border-bottom: 1px solid #B3B3B3;
-	
+}
+#entry:last-child{
+#entry:last-child{
+	border-bottom: 0;
 }
 #entry:link{
 	color: #489ac1;
