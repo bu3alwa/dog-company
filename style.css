@@ -274,8 +274,18 @@ h3 { /* Sub Heading formatting */
 	text-decoration: none;
 	text-align:left;
     color: white !important;
-    background-color: #1878a8;
+    /*background-color: #0877af;*/
     padding: 6px;
+	
+    background-image: -moz-linear-gradient(
+		left center , 
+		rgb(17, 132, 190, 1.0) 0%, 
+		rgba(17, 132, 190, 0.1) 100%
+		);
+    background-image: -webkit-gradient(
+		linear, left top, right top, 
+		from(rgba(17, 132, 190, 1.0)),to(rgba(8, 119, 175, 0.1))
+		);
 }
 .sidebar ul{
 	list-style-type:none;
@@ -283,6 +293,7 @@ h3 { /* Sub Heading formatting */
 .side-title{
 	padding: 5px; 
 	background-color:#3f3f3f;
+
 }
 
 /* Footer */
