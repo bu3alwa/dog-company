@@ -62,7 +62,7 @@
 				$(window).load('',centerNav());
 				$(window).resize(function(){
 				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2 + 20) + 'px' });
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 			});
 				//fix navbar to top when scroll
 				$(window).scroll(function() {
@@ -224,7 +224,7 @@
 						</ul>
 					<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
 						<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
-							<ul id="login-dropdown" >
+							<ul id="login-dropdown" class="align-center" >
 							<li>
 								<?php include(TEMPLATEPATH.'/login.php'); ?>
 							</li>
