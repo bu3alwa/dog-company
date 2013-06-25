@@ -1,4 +1,4 @@
-<article id="main" class="two third padded">
+<article id="main" class="five seventh padded">
 					<!-- Start the Loop. -->
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<!-- Test if the current post is in category 3. -->
