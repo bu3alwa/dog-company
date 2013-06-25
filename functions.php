@@ -15,14 +15,14 @@ if ( function_exists('register_sidebar') )
         'description' => 'These widgets will appear in the Right sidebar.',
         'before_widget' => '<div class="sidebar">', // Displays before widget
         'after_widget' => '</div>', // Displayed after widget
-        'before_title' => '<h3>', //Displays before title, after widget start
-        'after_title' => '</h3>' //Displays after title
+        'before_title' => '<div class="side-title"><h3>', //Displays before title, after widget start
+        'after_title' => '</h3></div>' //Displays after title
     ));
 if ( function_exists('register_sidebar') )
     if ( function_exists('register_sidebar') )
         register_sidebar(array('name'=>'login', //Name your sidebar
         'description' => 'Do not add anything in here.',
-        'before_widget' => '<div class="widget">', // Displays before widget
+        'before_widget' => '<div class="login-widget">', // Displays before widget
         'after_widget' => '</div>', // Displayed after widget
         'before_title' => '<h3>', //Displays before title, after widget start
         'after_title' => '</h3>' //Displays after title
