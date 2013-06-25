@@ -60,7 +60,10 @@
 }
 
 /* Styles */
-
+img{
+	height:auto;
+	width:auto;
+}
 /* Header */
 header{
     width:100%;
@@ -154,7 +157,7 @@ nav a:hover, nav a:focus {
 }
 #login-dropdown {
     position:absolute;
-	width: 233.33%;
+	width: 133.33%;
     z-index:8999;
 	list-style-type:none;
 	display:none;
@@ -164,7 +167,10 @@ nav a:hover, nav a:focus {
 	padding-left: 5px;
 	padding-right: 5px;
 	height: auto;
-
+}
+#login-dropdown {
+	color: white;
+	font-size:1.1em
 }
 #login-dropdown ul li{
 	display: block !important;
@@ -207,6 +213,10 @@ h3{
 	-webkit-box-shadow: 3px 3px 5px 5px #c8c8c8;
 	box-shadow: 3px 3px 5px 5px #c8c8c8;
 }
+#content a:link, #content a:visited{
+	color: #489ac1;
+	text-decoration:none;
+}
 h2, h2:visited, h2 a, h2 a:visited{ /* Page Heading formatting */
 	font-family: Expressway;
 	font-size: 1.5em !important;
@@ -221,7 +231,7 @@ h2:hover, h2 a:hover{
 	color: #489ac1;
 	text-decoration:none;
 }
-#main h2:first-child{
+#main:firstchild h2{
 	padding-top: 0px;
 }
 #main h2{
@@ -247,21 +257,31 @@ h3 { /* Sub Heading formatting */
 	padding-bottom: 2.5px;
 	border-bottom: 1px solid #B3B3B3;
 }
-#entry:last-child{
-#entry:last-child{
-	border-bottom: 0;
-}
 #entry:link{
 	color: #489ac1;
 }
 /*sidebar*/
+.sidebar{
+	margin-top: 5px;
+}
+.sidebar:firstchild{
+	margin-top: 0;
+}
 .sidebar h3{
-	padding: 5px 0px 0 0;
     font-family: Expressway;
-	font-size: 1.5em !important;
-	color: black !important;
+	font-size: 1.4em !important;
 	text-decoration: none;
 	text-align:left;
+    color: white !important;
+    background-color: #1878a8;
+    padding: 6px;
+}
+.sidebar ul{
+	list-style-type:none;
+}
+.side-title{
+	padding: 5px; 
+	background-color:#3f3f3f;
 }
 
 /* Footer */
