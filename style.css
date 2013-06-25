@@ -60,10 +60,7 @@
 }
 
 /* Styles */
-img{
-	height:auto;
-	width:auto;
-}
+
 /* Header */
 header{
     width:100%;
@@ -259,6 +256,10 @@ h3 { /* Sub Heading formatting */
 }
 #entry:link{
 	color: #489ac1;
+}
+#entry img{
+	height:auto;
+	width:auto;
 }
 /*sidebar*/
 .sidebar{
