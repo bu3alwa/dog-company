@@ -57,6 +57,12 @@
 				}else {
 					$('#counter').show();
 				};}
+				function fixSlider(){
+				var sliderHeight = $('.nivo-main-image').height();
+				$('#madmans-slider').css('height', sliderHeight);
+				$('#slider').css('height', sliderHeight);
+			}
+			
 			$('document').ready(function() {
 				//center nav
 				$(window).load('',centerNav());
@@ -76,7 +82,7 @@
 						centerNav();
 						}
 						});
-				//run function to resize
+				//run function to resize top bar
 				fix_top_bar();
 					$(window).resize(function(){
 						  fix_top_bar();  
@@ -114,7 +120,6 @@
 				$('#info-navbar').hoverIntent(configInfo);
 				$('#login-navbar').hoverIntent(configLogin);
 				
-				
 				//show and hide counter on certain width
 				$('#countdown').load('',counterHide());
 				$(window).resize(function(){
@@ -124,6 +129,16 @@
 				}else {
 					$('#counter').show();
 				};});
+				
+				//slider background resize with image
+				
+				$(window).resize(function(){
+				var sliderHeight = $('.nivo-main-image').height();
+				$('#madmans-slider').css('height', sliderHeight);
+				$('#slider').css('height', sliderHeight);
+				});
+				
+				
 			});//end document ready function
 	</script>
 	</head>
