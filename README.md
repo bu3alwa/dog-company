@@ -92,3 +92,7 @@ What must work in new theme:
 
 - More files updated. Be careful when updating.
 - Content stylized a bit.
+
+=============================== Update 6/26 ===================================
+
+- Slider bug fixed
