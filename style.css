@@ -198,7 +198,11 @@ h3{
 	padding-top: 10px;
 	position: relative;
 	background-color:#222222;
+	height:450px;
+}
+#madmans-slider img{
 	height:auto;
+	width:auto;
 }
 
 /* Main Body */
@@ -280,11 +284,11 @@ h3 { /* Sub Heading formatting */
     background-image: -moz-linear-gradient(
 		left center , 
 		rgb(17, 132, 190, 1.0) 0%, 
-		rgba(17, 132, 190, 0.1) 100%
+		rgba(17, 132, 190, 0.0) 100%
 		);
     background-image: -webkit-gradient(
 		linear, left top, right top, 
-		from(rgba(17, 132, 190, 1.0)),to(rgba(8, 119, 175, 0.1))
+		from(rgba(17, 132, 190, 1.0)),to(rgba(8, 119, 175, 0.0))
 		);
 }
 .sidebar ul{
