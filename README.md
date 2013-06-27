@@ -3,10 +3,13 @@ dog-company
 Resources:
 - Devil Breeze Font = http://www.dafont.com/devil-breeze.font
 - Neou Font = http://www.dafont.com/neou.font
+- Expressway = http://www.dafont.com/expressway.font
 - Font converting website = http://convertfonts.com/
   - Use this to convert the multiple files.
-- Expressway = http://www.dafont.com/expressway.font
-- Find a fall back font in cases a browser is not compatible with CSS3
+
+- Color Codes:
+  - #1878a8 :Blue
+  - #505a2b :Green
 
 Objectives:
 - Create new home for Dog Company (DC).
