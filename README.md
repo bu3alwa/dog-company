@@ -36,7 +36,7 @@ Website Content and Design Requirements:
 
 Site Layout - Menu
 - Home
-- Foums
+- Forums
 - Info
   - About Us (History + contacts)
   - Roster (will list what trainning has been completed)
