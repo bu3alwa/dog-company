@@ -38,4 +38,7 @@ if ( function_exists('register_sidebar') )
     ));	
 	}
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+	
+	/*comment system */
+
 	?>
