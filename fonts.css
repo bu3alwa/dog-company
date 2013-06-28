@@ -1,0 +1,44 @@
+
+/* Fonts */
+@font-face /* Menu font */
+{
+    font-family: 'DevilBreeze';
+    src: url('./font/devilbreeze_demi.eot');
+    src: url('./font/devilbreeze_demi.eot') format('embedded-opentype'),
+         url('./font/devilbreeze_demi.woff') format('woff'),
+         url('./font/devilbreeze_demi.ttf') format('truetype'),
+         url('./font/devilbreeze_demi.svg#DevilBreeze') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'NeouBold';
+    src: url('./font/neou-bold.eot');
+    src: url('./font/neou-bold.eot') format('embedded-opentype'),
+         url('./font/neou-bold.woff') format('woff'),
+         url('./font/neou-bold.ttf') format('truetype'),
+         url('./font/neou-bold.svg#DevilBreeze') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'NeouThin';
+    src: url('./font/neou-thin.eot');
+    src: url('./font/neou-thin.eot') format('embedded-opentype'),
+         url('./font/neou-thin.woff') format('woff'),
+         url('./font/neou-thin.ttf') format('truetype'),
+         url('./font/neou-thin.svg#DevilBreeze') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face /* CONTENT */
+{
+    font-family: 'Expressway';
+    src: url('./font/expressway.eot');
+    src: url('./font/expressway.eot') format('embedded-opentype'),
+         url('./font/expressway.woff') format('woff'),
+         url('./font/expressway.ttf') format('truetype'),
+         url('./font/expressway.svg#Expressway') format('svg');
+}
