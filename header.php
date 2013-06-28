@@ -56,13 +56,7 @@
 					$('#counter').hide();
 				}else {
 					$('#counter').show();
-				};}
-				function fixSlider(){
-				var sliderHeight = $('.nivo-main-image').height();
-				$('#madmans-slider').css('height', sliderHeight);
-				$('#slider').css('height', sliderHeight);
-			}
-			
+				};}		
 			$('document').ready(function() {
 				//center nav
 				$(window).load('',centerNav());
@@ -107,11 +101,11 @@
 					interval:100,
 					over: openInfo,
 					timeout: 500,
-					out:closeInfo
-					
+					out:closeInfo	
 				}
 				var configLogin = {
 					interval:100,
+					over: openLogin,
 					over: openLogin,
 					timeout: 500,
 					out:closeLogin
@@ -129,16 +123,6 @@
 				}else {
 					$('#counter').show();
 				};});
-				
-				//slider background resize with image
-				
-				$(window).resize(function(){
-				var sliderHeight = $('.nivo-main-image').height();
-				$('#madmans-slider').css('height', sliderHeight);
-				$('#slider').css('height', sliderHeight);
-				});
-				
-				
 			});//end document ready function
 	</script>
 	</head>
