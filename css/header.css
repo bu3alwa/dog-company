@@ -20,15 +20,6 @@ nav{
 	list-style-type:none;
 	position: absolute;
 	bottom: 0;
-/* TEMP FIX - NEED MADMAN FOR COLAPSE */	
-	/* Element */
-	font-size: 18px;
-	left: 50%;
-	margin-left: -600px !important;
-	/* UNKOWN */
-	height: 43px;
-	text-align: center;
-	
 }
 nav ul{
 	list-style-type:none !important;
