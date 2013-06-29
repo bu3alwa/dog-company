@@ -110,4 +110,4 @@ What must work in new theme:
   - fonts
   - header
   - footer
-- Slider caption formatted 
+- Slider caption formatted, opacity set to 0.5
