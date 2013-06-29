@@ -1,0 +1,24 @@
+
+/* Footer */
+
+footer{
+  width:100%;
+	min-height:300px;
+	background-color:#161616;
+}
+#logo {
+    text-align:center;
+}
+#logo img {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto; 
+	vertical-align: middle;
+	width: auto;
+	height: auto;
+}
+#copyright {
+	color: white;
+	text-align: center;
+	font-size: 10px;
+}
