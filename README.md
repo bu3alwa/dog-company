@@ -106,3 +106,7 @@ What must work in new theme:
   - js added (links need perm fix)
   - Counter added
 - Footer img updated, re-sizing fixed
+- Wordpress CSS spliced
+  - fonts
+  - header
+  - footer
