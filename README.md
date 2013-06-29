@@ -99,3 +99,10 @@ What must work in new theme:
 =============================== Update 6/26 ===================================
 
 - Slider bug fixed
+
+=============================== Update 6/29 ===================================
+
+- Forums 
+  - js added (links need perm fix)
+  - Counter added
+- Footer img updated, re-sizing fixed
