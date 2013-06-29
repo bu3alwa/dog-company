@@ -110,3 +110,4 @@ What must work in new theme:
   - fonts
   - header
   - footer
+- Slider caption formatted 
