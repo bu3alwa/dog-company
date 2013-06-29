@@ -1,3 +1,4 @@
+
 #countdown_dashboard {
 	height: 52px;
 }
@@ -5,7 +6,7 @@
 .dash {
 	width: 75px;
 	height: 52px;
-	background: transparent url('../images/dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dash.png') 0 0 no-repeat;
 	float: left;
 	/*margin-left: 1px;*/
 	padding-left: 10px;
@@ -14,24 +15,24 @@
 }
 
 .weeks_dash {
-	background: transparent url('../images/dark_weeks_dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dark_weeks_dash.png') 0 0 no-repeat;
 }
 
 .days_dash {
-	background: transparent url('../images/dark_days_dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dark_days_dash.png') 0 0 no-repeat;
 }
 
 .hours_dash {
 	/* clear: left; */
-	background: transparent url('../images/dark_hours_dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dark_hours_dash.png') 0 0 no-repeat;
 }
 
 .minutes_dash {
-	background: transparent url('../images/dark_minutes_dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dark_minutes_dash.png') 0 0 no-repeat;
 }
 
 .seconds_dash {
-	background: transparent url('../images/dark_seconds_dash.png') 0 0 no-repeat;
+	background: transparent url('./images/dark_seconds_dash.png') 0 0 no-repeat;
 }
 
 .dash .digit {
