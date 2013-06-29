@@ -1,6 +1,7 @@
 /* Styles */
 @import url("./css/fonts.css");
 @import url("./css/header.css");
+@import url("./css/footer.css");
 
 
 /* Slider */
@@ -117,26 +118,4 @@ h3 { /* Sub Heading formatting */
 	padding: 5px; 
 	background-color:#3f3f3f;
 
-}
-
-/* Footer */
-
-footer{
-	width:100%;
-	height:300px;
-	background-color:#161616;
-}
-#logo {
-    text-align:center;
-}
-#logo img {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto; 
-	vertical-align: middle;
-}
-#copyright {
-	color: white;
-	text-align: center;
-	font-size: 10px;
 }
