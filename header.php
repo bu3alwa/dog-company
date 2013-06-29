@@ -13,10 +13,11 @@
 		<!-- jQuery -->
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.hoverIntent.js"></script>
-		<!-- DC Style -->
+		<!-- Dog Company CSS -->
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/style.css">
-		<!-- GroundworkCSS -->
+		<!-- Groundwork CSS -->
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork.css">
+		<!-- Counter  -->
 		<script language="Javascript" type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.lwtCountdown-1.0.js"></script>
 		<script language="Javascript" type="text/javascript" src="./wp-content/themes/dog-company/js/misc.js"></script>
 		<link rel="Stylesheet" type="text/css" href="./wp-content/themes/dog-company/css/dark.css"></link>
