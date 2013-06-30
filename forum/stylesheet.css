@@ -1,6 +1,6 @@
 /*  phpBB3 Style Sheet
     --------------------------------------------------------------
-  Style name:			Dog-Company
+	Style name:			Dog-Company
 	Based on style:		subsilver2 (the default phpBB 3.0.x style)
 	Original author:	phpBB Group ( http://www.phpbb.com/ )
 	Modified by:		Dog Company ( http://dog-company.com/ ) 
@@ -13,99 +13,8 @@
 ------------- 
 */
  
-/* @import url("   .css"); */
-
-
-nav {
-    width: 100%;
-    margin-top: ;
-    font-family: DevilBreeze !important;
-    font-size: 18px;
-    list-style-type: none;
-    position: absolute;
-    bottom: 0px;
-	display: block;
-	padding: 0px;
-}
-
-nav ul{
-	list-style-type:none !important;
-	margin:0;
-}
-nav ul li{
-	display:inline !important;
-}
-
-nav a, nav a:visited  {
-	color: white !important;
-	text-decoration: none;
-	z-index:9001;
-}
-nav a:hover, nav a:focus {
-	color: #489ac1 !important;
-	text-decoration: none;
-}
-.nav-fixed{
-	display:inline-block;
-	vertical-align: middle;
-	position:fixed !important;
-	top:0 !important;
-	float:none !important;
-	width:100%;
-	background-color:#161616;
-	height:33px;
-	z-index:9000;
-	padding-bottom: 10px;
-}
-/* Drop down menu Navigation */
-#info-navbar{
-	position:relative;
-}
-#info-dropdown{
-	position: absolute;
-	left: 0;
-    z-index: 8900;
-	list-style-type: none;
-	display: none;
-	background-color: #161616;
-	font-family: NeouBold !important;
-	width: 250%;
-	padding-left: 5px;
-	padding-right: 5px;
-	text-align: ;
-	top: ;
-}
-#info-dropdown li{
-	display:block !important;
-	border-top: 1px solid #303030;
-	padding-bottom: -4px;
-	text-align: center;
-}
-#info-dropdown li:first-child{
-	border-top: none;
-}
-#login-navbar{
-	position:relative;
-}
-#login-dropdown {
-    position:absolute;
-	width:400px;
-    z-index:8999;
-	list-style-type:none;
-	display:none;
-	background-color:#161616;
-	right:0;
-	font-family: NeouBold !important;
-	width: 270%;
-	padding-left: 5px;
-	padding-right: 5px;
-	text-align: ;
-
-}
-#login-dropdown ul li{
-	display: block !important;
-
-}
+@import url("../../../../wp-content/themes/dog-company/css/header.css");
+@import url("../../../../wp-content/themes/dog-company/css/fonts.css");
 
 #logo {
     text-align:center;
@@ -115,15 +24,7 @@ nav a:hover, nav a:focus {
 	margin-left: auto;
 	margin-right: auto; 
 	vertical-align: middle;
-	max-width: 150px;
 	width: auto;
-	max-height: 150px;
-	height: auto;
-}
-#logo img.big {
-	max-width: 200px;
-	width: auto;
-	max-height: 200px;
 	height: auto;
 }
 #copyright {
@@ -136,6 +37,12 @@ nav a:hover, nav a:focus {
 	Layout - GROUNDWORK
 --------------------------- 
 */
+.container {
+	max-width: 1200px;
+	min-width: 650px;
+	margin: 0px auto;
+}
+
 .centered {
 	float: none !important;
 	margin-left: auto !important;
@@ -229,6 +136,19 @@ nav a:hover, nav a:focus {
   clear: both;
 }
 
+p, .p, ul, ol, dl {
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 2.42857em;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+ul li, ol li, ul.list > li, ol.list > li {
+  display: list-item;
+}
 .whole,
 .wholes {
   width: 100%;
@@ -257,25 +177,11 @@ html {
 }
 
 body {
-	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
-	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	font-family: Expressway, "Lucida Grande", Verdana, Helvetica, Arial, sans-serif; /* Font for all of forums */
 	color: #323D4F;
 	background-color: #FFFFFF;
-	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	font-size: 12px; /* Font size */
 	margin: 0;
-}
-
-.container {
-	max-width: 1200px;
-	width: auto;
-	min-width: 650px;
-	margin: 0px auto;
-}
-
-#wrapheader {
-	height: auto !important;
-	padding: 0;
-	background-color: #161616;
 }
 
 #wrapcentre {
@@ -303,16 +209,8 @@ body {
 	border-color: #A9B8C2;
 }
 
-#header {
-    width: 100%;
-	height: 145px;
-	background-color: #161616;
-	display: block;
-	position: relative;
-}
-
 #menubar {
-	margin: 0 25px;
+	margin: 0 25px;'
 }
 
 #datebar {
@@ -341,7 +239,7 @@ body {
 	color: red;
 }
 
-#pageheader { } /* NOT USED */
+
 #pagecontent { }
 #pagefooter { }
 
@@ -354,37 +252,6 @@ body {
 	Text
 ------------
  */
- 
-@font-face /* Menu font */
-{
-    font-family: 'DevilBreeze';
-    src: url('./font/devilbreeze_demi.eot');
-    src: url('./font/devilbreeze_demi.eot') format('embedded-opentype'),
-         url('./font/devilbreeze_demi.woff') format('woff'),
-         url('./font/devilbreeze_demi.ttf') format('truetype'),
-         url('./font/devilbreeze_demi.svg#DevilBreeze') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face
-{
-    font-family: 'NeouBold';
-    src: url('./font/neou-bold.eot');
-    src: url('./font/neou-bold.eot') format('embedded-opentype'),
-         url('./font/neou-bold.woff') format('woff'),
-         url('./font/neou-bold.ttf') format('truetype'),
-         url('./font/neou-bold.svg#DevilBreeze') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face { /* Content Font */
-    font-family: 'Expressway';
-    src: url('./font/expressway.eot');
-    src: url('./font/expressway.eot') format('embedded-opentype'),
-         url('./font/expressway.woff') format('woff'),
-         url('./font/expressway.ttf') format('truetype'),
-         url('./font/expressway.svg#Expressway') format('svg');
-}
 h1 {
 	color: black;
 	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
@@ -408,10 +275,12 @@ h3 {
 	line-height: 120%;
 }
 
-h4 {
+h4 { /* Used for category headings */
 	margin: 0;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-weight: bold;
+	padding-left: 10px;
+	color: white;
 }
 
 p {
@@ -439,13 +308,14 @@ p.linkmcp { /* NOT USED */
 	float: left;
 }
 
-p.breadcrumbs {
+p.breadcrumbs { /* Forum nav font settings */
 	margin: 0;
 	float: left;
-	color: black;
-	font-weight: bold;
+	color: black !important;
 	white-space: normal;
+	font-family: NeouThin;
 	font-size: 1em;
+	font-weight: 500;
 }
 
 .rtl p.breadcrumbs {
@@ -587,55 +457,76 @@ p.topicdetails {
 	Tables
 --------------
  */
+ table {
+	border-collapse: collapse;
+}
+
 th {
 	color: #FFA34F;
 	font-size: 1.1em;
 	font-weight: bold;
-	background-color: #006699;
-	background-image: url('./images/cellpic3.gif');
+	background-color: #3F3F3F;
 	white-space: nowrap;
 	padding: 7px 5px;
 }
 
-td {
-	padding: 2px;
+tr {
+	padding-left: 20px !important;
+	border: solid;
+	border-color: red; /* CHANGE TO WHITE!! */
+	border-width: 10px 0;
 }
+tr#noborder {
+  border-bottom: none;
+}
+tr:first-child {
+  border-top: none;
+}
+tr:last-child {
+  border-bottom: none;
+}
+
+td {  
+}
+
 td.profile {
 	padding: 4px;
 }
 
 .tablebg {
-	background-color: #A9B8C2;
+	 /* Border of Tables */
 }
 
-.catdiv {
+.cat { /* Catagory Formatting 1/2 */
 	height: 28px;
 	margin: 0;
 	padding: 0;
 	border: 0;
-	background: white url('./images/cellpic2.jpg') repeat-y scroll top left;
+	background-color: #3F3F3F;
+	background-image: url('./images/cellpic1.gif');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-indent: 4px;
+}
+
+.catdiv { /* Catagory Formatting 2/2 */
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: #3F3F3F;
 }
 .rtl .catdiv {
 	background: white url('./images/cellpic2_rtl.jpg') repeat-y scroll top right;
 }
 
-.cat {
-	height: 28px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	background-color: #C7D0D7;
-	background-image: url('./images/cellpic1.gif');
-	text-indent: 4px;
-}
-
-.row1 {
-	background-color: #ECECEC;
+.row1 { 
+	background-color: #BABABA; /* BG Color of main content names cells */
 	padding: 4px;
 }
 
 .row2 {
-	background-color: #DCE1E5;
+	background-color: #BABABA; /* BG Color of details cells */
 	padding: 4px;
 }
 
@@ -675,22 +566,50 @@ hr {
 /* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
 /* See http://www.phpbb.com/bugs/phpbb3/59685 */
 a:link {
-	color: #006597;
+	color: black;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #005784;
+	color: black;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #D46400;
-	text-decoration: underline;
+	color: #489ac1;
+	text-decoration: none;
 }
 
 a:active {
-	color: #005784;
+	color: #489ac1;
+	text-decoration: none;
+}
+
+/* Category Links */
+h4 a, h4 a:visited  {
+	color: white !important;
+	text-decoration: none !important;
+}
+h4 a:hover, h4 a:focus {
+	color: white !important;
+	text-decoration: none !important;
+}
+/* Breadcrumb Links */
+breadcrumbs a, breadcrumbs a:visited  {
+	color: black;
+	text-decoration: none;
+}
+breadcrumbs a:hover, breadcrumbs a:focus {
+	color: black;
+	text-decoration: none;
+}
+/* Footer Links */
+#wrapfooter a, #wrapfooter a:visited  {
+	color: white;
+	text-decoration: none;
+}
+#wrapfooter a:hover, #wrapfooter a:focus {
+	color: #489ac1;
 	text-decoration: none;
 }
 
