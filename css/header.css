@@ -9,9 +9,10 @@ header{
 	overflow:hidden;
 }
 header h3 {
-	font-family: 'NeouBold';
+	font-family: NeouThin, NeouBold;
 	text-align: center;
 	color: white;
+	font-size: 15.6px !important;
 }
 nav{
 	width:100%;
