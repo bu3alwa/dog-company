@@ -30,13 +30,13 @@ nav ul li{
 }
 
 nav a, nav a:visited  {
-	color: white;
+	color: white !important;
 	text-decoration: none;
 	z-index:9001;
 }
 nav a:hover, nav a:focus {
 	text-decoration: none;
-	color: #489ac1;
+	color: #489ac1 !important;
 }
 .nav-fixed{
 	display:inline-block;
