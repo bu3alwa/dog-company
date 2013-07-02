@@ -154,9 +154,8 @@ a.nivo-prevNav {
 .nivo-caption { 
 	color: white !important;
 	height: 40px;
-	font-size: 20px;
-	padding-left: 20px;
-	padding-top: 15px;
+	line-height: 20px;
+	padding: 10px 15px;
     font-family: NeouBold, "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 .nivo-caption a { 
