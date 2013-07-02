@@ -114,4 +114,12 @@ What must work in new theme:
 
 =============================== Update 7/01 ===================================
 
-- Slider Caption reformatted. It was off on my browser
+- Slider Caption reformatted. It was off on my browser (madman)
+
+=============================== Update 7/02 ===================================
+
+- Forums main page style nearing completion
+  - Is looking for bugs created in other pages
+  - Waiting for Gumbys forum picture (all cog types)
+  - Footer image link fixed
+
