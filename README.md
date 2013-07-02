@@ -3,7 +3,7 @@ dog-company
 Resources:
 - Devil Breeze Font = http://www.dafont.com/devil-breeze.font
 - Neou Font = http://www.dafont.com/neou.font
-- Expressway = http://www.dafont.com/expressway.font
+
 - Font converting website = http://convertfonts.com/
   - Use this to convert the multiple files.
 
