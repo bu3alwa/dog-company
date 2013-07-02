@@ -111,3 +111,7 @@ What must work in new theme:
   - header
   - footer
 - Slider caption formatted, opacity set to 0.5
+
+=============================== Update 7/01 ===================================
+
+- Slider Caption reformatted. It was off on my browser
