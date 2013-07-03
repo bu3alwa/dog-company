@@ -123,3 +123,9 @@ What must work in new theme:
   - Waiting for Gumbys forum picture (all cog types)
   - Footer image link fixed
 
+=============================== Update 7/02 ===================================
+
+- Main page complete, will need verification.
+- Many bugs in all other pages, slow process.
+- Many images required design
+  - New topic, new post, online/offline etc.
