@@ -123,7 +123,7 @@ What must work in new theme:
   - Waiting for Gumbys forum picture (all cog types)
   - Footer image link fixed
 
-=============================== Update 7/02 ===================================
+=============================== Update 7/04 ===================================
 
 - Main page complete, will need verification.
 - Many bugs in all other pages, slow process.
