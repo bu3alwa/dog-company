@@ -132,7 +132,7 @@ What must work in new theme:
 - Reorginized Github files. Delete feature was added to github. (THANK GOD)
 - Header updated.
 
-=============================== Update 7/04 ===================================
+=============================== Update 7/05 ===================================
 
 - More bugs removed on:
   - viewfourm_body
