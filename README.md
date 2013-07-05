@@ -131,3 +131,11 @@ What must work in new theme:
   - New topic, new post, online/offline etc.
 - Reorginized Github files. Delete feature was added to github. (THANK GOD)
 - Header updated.
+
+=============================== Update 7/04 ===================================
+
+- More bugs removed on:
+  - viewfourm_body
+  - viewtopic_body
+  - etc...
+- Stupidly started to convert parts of pages to HTML5 as I noitce old code...
