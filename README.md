@@ -114,7 +114,7 @@ What must work in new theme:
 
 =============================== Update 7/01 ===================================
 
-- Slider Caption reformatted. It was off on my browser (madman)
+- Slider Caption reformatted. It was off on my browser 
 
 =============================== Update 7/02 ===================================
 
@@ -129,3 +129,4 @@ What must work in new theme:
 - Many bugs in all other pages, slow process.
 - Many images required design
   - New topic, new post, online/offline etc.
+- Reorginized Github files. Delete feature was added to github.
