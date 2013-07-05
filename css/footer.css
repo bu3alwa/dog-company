@@ -21,5 +21,6 @@ footer, #wrapfooter{
 #copyright {
 	color: white;
 	text-align: center;
-	font-size: 10px;
+	font-size: 10px !important;
+	font-family: Arial;
 }
