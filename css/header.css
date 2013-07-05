@@ -1,7 +1,7 @@
 /* Header */
 header{
     width:100%;
-  height:145px;
+	height:145px;
 	background-color:#161616;
 	position:relative;
 }
@@ -9,52 +9,60 @@ header{
 	overflow:hidden;
 }
 header h3 {
-	font-family: NeouThin, NeouBold;
+	font-family: 'NeouBold';
 	text-align: center;
 	color: white;
-	font-size: 15.6px !important;
-	padding-top: 3px;
 }
 nav{
 	width:100%;
-	margin-top:112px;
 	font-family: DevilBreeze !important;
+	font-size: 20px;
 	list-style-type:none;
 	position: absolute;
 	bottom: 0;
+
 }
 nav ul{
 	list-style-type:none !important;
 	margin:0;
 }
 nav ul li{
-	display:inline !important;
+	display:inline-block !important;
+}
+nav a{
+	display:block;
+	height:33px;
 }
 
 nav a, nav a:visited  {
-	color: white !important;
+	color: white;
 	text-decoration: none;
 	z-index:9001;
 }
 nav a:hover, nav a:focus {
 	text-decoration: none;
-	color: #489ac1 !important;
+	color: #489ac1;
 }
 .nav-fixed{
-	display:inline-block;
-	vertical-align: middle;
+	display: block;
 	position:fixed !important;
 	top:0 !important;
-	float:none !important;
+	float: none !important;
 	width:100%;
 	background-color:#161616;
-	height:33px;
 	z-index:9000;
-	padding-bottom: 10px;
+	height:33px;
 }
+.nav-li{
+	height: 33px;
+}
+
 /* Drop down menu Navigation */
 #info-navbar{
 	position:relative;
+}
+#info-bar a{
+	display:block;
 }
 #info-dropdown{
 	position: absolute;
@@ -64,11 +72,10 @@ nav a:hover, nav a:focus {
 	display: none;
 	background-color: #161616;
 	font-family: NeouBold !important;
-	width: 250%;
+	width: 200px;
 	padding-left: 5px;
 	padding-right: 5px;
-	text-align: ;
-	top: ;
+	height:auto;
 }
 #info-dropdown li{
 	display:block !important;
@@ -80,22 +87,24 @@ nav a:hover, nav a:focus {
 	border-top: none;
 }
 #login-navbar{
-	position:relative;
+
 }
 #login-dropdown {
     position:absolute;
-	width:400px;
+	width: 133.33%;
     z-index:8999;
 	list-style-type:none;
 	display:none;
 	background-color:#161616;
 	right:0;
 	font-family: NeouBold !important;
-	width: 270%;
 	padding-left: 5px;
 	padding-right: 5px;
-	text-align: ;
-
+	height: auto;
+}
+#login-dropdown {
+	color: white;
+	font-size:1.1em
 }
 #login-dropdown ul li{
 	display: block !important;
