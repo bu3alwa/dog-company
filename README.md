@@ -130,3 +130,4 @@ What must work in new theme:
 - Many images required design
   - New topic, new post, online/offline etc.
 - Reorginized Github files. Delete feature was added to github.
+- Please update your header!!! you wiped out the correct header on github!
