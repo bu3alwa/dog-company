@@ -125,9 +125,9 @@ What must work in new theme:
 
 =============================== Update 7/04 ===================================
 
-- Main page complete, will need verification.
+- Forum main page complete, will need verification.
 - Many bugs in all other pages, slow process.
 - Many images required design
   - New topic, new post, online/offline etc.
-- Reorginized Github files. Delete feature was added to github.
-- Please update your header!!! you wiped out the correct header on github!
+- Reorginized Github files. Delete feature was added to github. (THANK GOD)
+- Header updated.
