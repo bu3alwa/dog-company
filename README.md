@@ -139,3 +139,8 @@ What must work in new theme:
   - viewtopic_body
   - etc...
 - Stupidly started to convert parts of pages to HTML5 as I noitce old code...
+
+=============================== Update 7/14 ===================================
+
+- Comment system now working. Just need to style it to our liking.
+- Style.css import now differs from old method. Will update once everything is set.
