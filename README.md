@@ -145,3 +145,4 @@ What must work in new theme:
 - Comment system now working. Just need to style it to our liking.
 - Style.css import now differs from old method. Will update once everything is set.
 - Login Dropdown halfway done on the wordpress side.
+- info dropdown part stylized.
