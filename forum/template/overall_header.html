@@ -11,10 +11,10 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 {META}
-<title>{SITENAME} &bull; <!-- IF S_IN_MCP -->{L_MCP} &bull; <!-- ELSEIF S_IN_UCP -->{L_UCP} &bull; <!-- ENDIF -->{PAGE_TITLE}</title>
+<title>{SITENAME} | <!-- IF S_IN_MCP -->{L_MCP} | <!-- ELSEIF S_IN_UCP -->{L_UCP} | <!-- ENDIF -->{PAGE_TITLE}</title>
 
 <!-- IF S_ENABLE_FEEDS -->
-  <!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
 	<!-- IF S_ENABLE_FEEDS_NEWS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_NEWS}" href="{U_FEED}?mode=news" /><!-- ENDIF -->
 	<!-- IF S_ENABLE_FEEDS_FORUMS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_ALL_FORUMS}" href="{U_FEED}?mode=forums" /><!-- ENDIF -->
 	<!-- IF S_ENABLE_FEEDS_TOPICS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_NEW}" href="{U_FEED}?mode=topics" /><!-- ENDIF -->
@@ -25,12 +25,12 @@
 
 <link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" />
 <!-- jQuery -->
-<script type="text/javascript" src="/united/forum/styles/dog-company/theme/js/libs/jquery-1.9.1.min.js"></script><!-- ###LINKS NEEDS FIXING### -->
-<script type="text/javascript" src="/united/forum/styles/dog-company/theme/js/jquery.hoverIntent.js"></script><!-- ###LINKS NEEDS FIXING### -->
+<script type="text/javascript" src="/forum/styles/dog-company/theme/js/libs/jquery-1.9.1.min.js"></script><!-- ###LINKS NEEDS FIXING### -->
+<script type="text/javascript" src="/forum/styles/dog-company/theme/js/jquery.hoverIntent.js"></script><!-- ###LINKS NEEDS FIXING### -->
 <!-- Counter -->
-<script language="Javascript" type="text/javascript" src="/united/forum/styles/dog-company/theme/js/misc.js"></script><!-- ###LINKS NEEDS FIXING### -->
-<script language="Javascript" type="text/javascript" src="/united/forum/styles/dog-company/theme/js/jquery.lwtCountdown-1.0.js"></script><!-- ###LINKS NEEDS FIXING### -->
-<link rel="Stylesheet" type="text/css" href="/united/forum/styles/dog-company/theme/counter/dark.css" /><!-- ###LINKS NEEDS FIXING### -->
+<script language="Javascript" type="text/javascript" src="/forum/styles/dog-company/theme/js/misc.js"></script><!-- ###LINKS NEEDS FIXING### -->
+<script language="Javascript" type="text/javascript" src="/forum/styles/dog-company/theme/js/jquery.lwtCountdown-1.0.js"></script><!-- ###LINKS NEEDS FIXING### -->
+<link rel="Stylesheet" type="text/css" href="/forum/styles/dog-company/theme/counter/dark.css" /><!-- ###LINKS NEEDS FIXING### -->
 <!-- NAV -->
 <script type="text/javascript">
 	//center top nav
@@ -320,11 +320,11 @@ function marklist(id, name, state)
 		</div>
 		<nav class="row container " >
 			<ul class="pull-left double pad-left" style="height: 33px">
-				<li class="nav-li"><a href="./">hoMe</a></li>
-				<li class="nav-li"><a href="./forum">Forums</a></li>
+				<li class="nav-li"><a href="/">hoMe</a></li>
+				<li class="nav-li"><a href="./">Forums</a></li>
 				<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
 					<ul id="info-dropdown" >
-						<li><a href="./about-us">About Us</a></li>
+						<li><a href="/about-us">About Us</a></li>
 						<li><a href="#">Roster</a></li>
 						<li><a href="#">Arma XML</a></li>
 						<li><a href="#">Blog</a></li>
@@ -345,50 +345,38 @@ function marklist(id, name, state)
 			</ul>
 		</nav>
 		<!-- resize menu text -->
-		<script src="/united/forum/styles/dog-company/theme/js/fit-text/jquery.fittext.js"></script><!-- ###LINKS NEEDS FIXING### -->
+		<script src="/forum/styles/dog-company/theme/js/fit-text/jquery.fittext.js"></script><!-- ###LINKS NEEDS FIXING### -->
 		<script type="text/javascript">
 			$('nav').fitText(3.0,{ minFontSize: '12px', maxFontSize: '18px' });
 		</script>
 	</header>
-			
 
-	<div id="menubar" class="container centered whole padded">
+	<div id="menubar" class="container centered whole double padded">
 		<table width="100%" cellspacing="0">
 		<tr>
 			<td class="genmed">
-				<!-- IF not S_IS_BOT --><a href="{U_LOGIN_LOGOUT}"><img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" alt="*" /> {L_LOGIN_LOGOUT}</a>&nbsp;<!-- ENDIF -->
-				<!-- IF U_RESTORE_PERMISSIONS --> &nbsp;<a href="{U_RESTORE_PERMISSIONS}"><img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" alt="*" /> {L_RESTORE_PERMISSIONS}</a><!-- ENDIF -->
-				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN --> &nbsp;<span style="color: red;">{L_BOARD_DISABLED}</span><!-- ENDIF -->
+				<!-- IF not S_IS_BOT --><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>&nbsp;<!-- ENDIF -->
+				<!-- IF U_RESTORE_PERMISSIONS --> &nbsp;<a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a><!-- ENDIF -->
+				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN --> &nbsp;<span style="color: red;">{L_BOARD_DISABLED}</span><!-- ENDIF --> |
 				<!-- IF not S_IS_BOT -->
 					<!-- IF S_USER_LOGGED_IN -->
-						<!-- IF S_DISPLAY_PM --> &nbsp;<a href="{U_PRIVATEMSGS}"><img src="{T_THEME_PATH}/images/icon_mini_message.gif" width="12" height="13" alt="*" /> {PRIVATE_MESSAGE_INFO}<!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->, {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a><!-- ENDIF -->
-					<!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --> &nbsp;<a href="{U_REGISTER}"><img src="{T_THEME_PATH}/images/icon_mini_register.gif" width="12" height="13" alt="*" /> {L_REGISTER}</a>
-					<!-- ENDIF -->
+						<!-- IF S_DISPLAY_PM --> &nbsp;<a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}<!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->{PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a><!-- ENDIF -->
+					<!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --> &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->
 				<!-- ENDIF -->
 			</td>
 			<td class="genmed" align="{S_CONTENT_FLOW_END}">
-				<a href="{U_FAQ}"><img src="{T_THEME_PATH}/images/icon_mini_faq.gif" width="12" height="13" alt="*" /> {L_FAQ}</a>
-				<!-- IF S_DISPLAY_SEARCH -->&nbsp; &nbsp;<a href="{U_SEARCH}"><img src="{T_THEME_PATH}/images/icon_mini_search.gif" width="12" height="13" alt="*" /> {L_SEARCH}</a><!-- ENDIF -->
+				<a href="{U_FAQ}">{L_FAQ}</a> |
+				<!-- IF S_DISPLAY_SEARCH --><a href="{U_SEARCH}">{L_SEARCH}</a><!-- ENDIF -->
 				<!-- IF not S_IS_BOT -->
-					<!-- IF S_DISPLAY_MEMBERLIST -->&nbsp; &nbsp;<a href="{U_MEMBERLIST}"><img src="{T_THEME_PATH}/images/icon_mini_members.gif" width="12" height="13" alt="*" /> {L_MEMBERLIST}</a><!-- ENDIF -->
-					<!-- IF S_USER_LOGGED_IN -->&nbsp; &nbsp;<a href="{U_PROFILE}"><img src="{T_THEME_PATH}/images/icon_mini_profile.gif" width="12" height="13" alt="*" /> {L_PROFILE}</a><!-- ENDIF -->
+					<!-- IF S_DISPLAY_MEMBERLIST --> | <a href="{U_MEMBERLIST}">{L_MEMBERLIST}</a><!-- ENDIF -->
+					<!-- IF S_USER_LOGGED_IN --> | <a href="{U_PROFILE}">{L_PROFILE}</a><!-- ENDIF -->
 				<!-- ENDIF -->
 			</td>
 		</tr>
 		</table>
 	</div>
 
-	<!--###DATE
-		<div id="datebar" class="centered">
-			<table width="100%" cellspacing="0">
-			<tr>
-				<td class="gensmall"><!-- IF S_USER_LOGGED_IN --> <!--### {LAST_VISIT_DATE}<!-- ENDIF --> <!--###</td>
-				<td class="gensmall" align="{S_CONTENT_FLOW_END}">{CURRENT_TIME}<br /></td>
-			</tr>
-			</table>
-		</div> ###-->
-
-	<div id="wrapcentre" class="container centered whole padded">
+	<div id="wrapcentre" class="container centered whole pad-right pad-left double">
 
 		<!-- IF S_DISPLAY_SEARCH -->
 		<p class="searchbar">
@@ -399,8 +387,5 @@ function marklist(id, name, state)
 		</p>
 		<!-- ENDIF -->
 
-		<br style="clear: both;" />
-
+		<br style="clear: both;" /><br />
 		<!-- INCLUDE breadcrumbs.html -->
-
-		<br />
