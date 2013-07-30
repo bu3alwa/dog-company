@@ -1,8 +1,8 @@
-  	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+		<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 	</div>
 
 	<div id="wrapfooter" class="padded">
-		<div class="container">
+		<div class="container FLOW_MIDDLE">
 			<!-- IF U_MCP --><span class="gensmall">[ <a href="{U_MCP}">{L_MCP}</a> ]</span><!-- ENDIF -->
 			<!-- IF U_ACP --><span class="gensmall">[ <a href="{U_ACP}">{L_ACP}</a> ]</span><br /><br /><!-- ENDIF -->
 			<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
@@ -10,15 +10,15 @@
 		</div>
 		<div class="container">
 			<article id="logo">
-				<img src="./styles/dog-company/imageset/footer.png" alt="dog company logo" />
+				{SITE_FOOTER_IMG}
 			</article>
 			<article id="copyright">
 				<br>
-				Designed by Brad "Gumby" Doyle, Created by the Dog Company Team
+				Designed by Brad "Gumby" Doyle, Created by the Dog Company Team.
 				<br>
-				<i>Copyright 2013 by Dog Company. All Rights Reserved.</i>
+				<i>Copyright 2013 by Dog Company. All Rights Reserved.
 				<br>
-				<span class="copyright">{CREDIT_LINE}</span>
+				<span class="copyright">{CREDIT_LINE}</span></i>
 			</article>
 		</div>
 	</div>
