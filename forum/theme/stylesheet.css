@@ -15,23 +15,9 @@
  
 @import url("../../../../wp-content/themes/dog-company/css/header.css");
 @import url("../../../../wp-content/themes/dog-company/css/fonts.css");
+@import url("../../../../wp-content/themes/dog-company/css/footer.css");
 
-#logo {
-    text-align:center;
-}
-#logo img {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto; 
-	vertical-align: middle;
-	width: auto;
-	height: auto;
-}
-#copyright {
-	color: white;
-	text-align: center;
-	font-size: 10px;
-}
+
 /* 
 ---------------------------
 	Layout - GROUNDWORK
@@ -99,6 +85,56 @@
   padding-left: 30px;
 }
 
+.gapped {
+  margin: 10px;
+}
+.gapped.double {
+  margin: 20px;
+}
+.gapped.triple {
+  margin: 30px;
+}
+
+.gap-top {
+  margin-top: 10px;
+}
+.gap-top.double {
+  margin-top: 20px;
+}
+.gap-top.triple {
+  margin-top: 30px;
+}
+
+.gap-right {
+  margin-right: 10px;
+}
+.gap-right.double {
+  margin-right: 20px;
+}
+.gap-right.triple {
+  margin-right: 30px;
+}
+
+.gap-bottom {
+  margin-bottom: 10px;
+}
+.gap-bottom.double {
+  margin-bottom: 20px;
+}
+.gap-bottom.triple {
+  margin-bottom: 30px;
+}
+
+.gap-left {
+  margin-left: 10px !important;
+}
+.gap-left.double {
+  margin-left: 20px;
+}
+.gap-left.triple {
+  margin-left: 30px;
+}
+
 .align-top {
   display: table-cell;
   vertical-align: top;
@@ -123,7 +159,6 @@
 .pull-left {
   float: left;
 }
-
 .row {
   width: 100%;
 }
@@ -136,13 +171,12 @@
   clear: both;
 }
 
-p, .p, ul, ol, dl {
+ul, ol, dl { /* P, .p removed*/
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 1em;
-  line-height: 2.42857em;
+  line-height: 2em;
 }
-
 ul, ol {
   margin-left: 20px;
 }
@@ -154,10 +188,63 @@ ul li, ol li, ul.list > li, ol.list > li {
   width: 100%;
 }
 /* 
-------------------------------
-	START OF ORIGINAL CSS
-------------------------------
+----------------------------
+	START OF FORUM CSS
+----------------------------
 */
+/* 
+-------------
+	HTML5
+------------- 
+*/
+.FLOW_BEGIN { /* S_CONTENT_FLOW_BEGIN */
+	text-align: left;
+}
+.FLOW_END { /* S_CONTENT_FLOW_END */
+	text-align: right;
+}
+.FLOW_MIDDLE  {
+	text-align: center;
+}
+.v_top { /* valign="top" */
+	vertical-align: top;
+}
+.v_middle { /* valign="center" */
+	vertical-align: middle;
+}
+.v_botton { /* valign="bottom" */
+	vertical-align: bottom;
+}
+/* width="x" */
+td.w_140 {
+	width: 140px;
+}
+td.w_130 {
+	width: 130px;
+}
+td.w_80 {
+	width: 80px;
+}
+td.w_50 {
+	width: 50px;
+}
+td.w_40 {
+	width: 40px;
+}
+td.w_25 {
+	width: 25px;
+}
+td.w_20 {
+	width: 20px;
+}
+/* height="x" */
+td.h_1 {
+	height: 1px;
+}
+td.h_30 {
+	height: 30px;
+}
+
 /* 
 -------------
 	Layout
@@ -177,8 +264,8 @@ html {
 }
 
 body {
-	font-family: Expressway, "Lucida Grande", Verdana, Helvetica, Arial, sans-serif; /* Font for all of forums */
-	color: #323D4F;
+	font-family: Helvetica, Arial, sans-serif; /* Font for all of forums */
+	color: Black;
 	background-color: #FFFFFF;
 	font-size: 12px; /* Font size */
 	margin: 0;
@@ -190,14 +277,8 @@ body {
 	-moz-box-shadow: 3px 3px 5px 5px #c8c8c8;
 	-webkit-box-shadow: 3px 3px 5px 5px #c8c8c8;
 	box-shadow: 3px 3px 5px 5px #c8c8c8;
-}
-
-#wrapfooter {
-	text-align: center;
-	clear: both;
-	color: white;
-	background-color: #161616;
-	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #wrapnav {
@@ -232,7 +313,7 @@ body {
 	padding: 4px;
 	font-weight: normal;
 	font-size: 1.1em;
-	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .forumrules h3 {
@@ -254,7 +335,7 @@ body {
  */
 h1 {
 	color: black;
-	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 1.8em;
 	text-decoration: none;
@@ -277,10 +358,12 @@ h3 {
 
 h4 { /* Used for category headings */
 	margin: 0;
-	font-size: 1.2em;
+	font-size: 2em;
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	padding-left: 10px;
 	color: white;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.6);
 }
 
 p {
@@ -311,30 +394,30 @@ p.linkmcp { /* NOT USED */
 p.breadcrumbs { /* Forum nav font settings */
 	margin: 0;
 	float: left;
-	color: black !important;
+	color: #BABABA !important;
 	white-space: normal;
-	font-family: NeouThin;
-	font-size: 1em;
-	font-weight: 500;
+	font-family: NeouBold, NeouThin;
+	font-size: 1.5em;
+	font-weight: lighter;
 }
 
 .rtl p.breadcrumbs {
 	float: right;
 }
 
-p.datetime {
+p.datetime { /* NOT USED */
 	margin: 0;
 	float: right;
 	white-space: nowrap;
 	font-size: 1em;
 }
 
-.rtl p.datetime {
+.rtl p.datetime { /* NOT USED */
 	float: left;
 }
 
 p.searchbar {
-	padding: 2px 0;
+	padding: 4px 0;
 	white-space: nowrap;
 } 
 
@@ -349,7 +432,7 @@ p.searchbarreg {
 }
 
 p.forumdesc {
-	padding-bottom: 4px;
+	font-size: 1.2em;
 }
 
 p.topicauthor {
@@ -358,6 +441,7 @@ p.topicauthor {
 
 p.topicdetails {
 	margin: 1px 0;
+	font-size: 1.2em;
 }
 
 .postreported, .postreported a:link, .postreported a:visited, .postreported a:hover, .postreported a:active {
@@ -405,7 +489,6 @@ p.topicdetails {
 .nav {
 	margin: 0;
 	color: black;
-	font-weight: bold;
 }
 
 .pagination {
@@ -434,17 +517,14 @@ p.topicdetails {
 	font-size: 1em;
 }
 
-.copyright {
-	color: #444;
-	font-weight: normal;
-	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+b.postauthor {
+	padding-left: 4px;
 }
 
 .titles {
-	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-weight: bold;
-	font-size: 1.3em;
+	font-family: Arial, sans-serif;
 	text-decoration: none;
+	padding-left: 5px;
 }
 
 .error {
@@ -462,35 +542,62 @@ p.topicdetails {
 }
 
 th {
-	color: #FFA34F;
-	font-size: 1.1em;
+	color: white; /* Secondary category font color */
+	font-size: 1.8em; /* Secondary category font size */
 	font-weight: bold;
 	background-color: #3F3F3F;
 	white-space: nowrap;
-	padding: 7px 5px;
+	padding: 7px 2.5px;
 }
 
 tr {
+	font-family: Helvetica, Arial, sans-serif;
 	padding-left: 20px !important;
 	border: solid;
-	border-color: red; /* CHANGE TO WHITE!! */
-	border-width: 10px 0;
+	border-color: white !important;
+	border-width: 3px 0;
+	padding: 4px;
 }
-tr#noborder {
-  border-bottom: none;
+/* border-width: TOP RIGHT BOTTOM LEFT;  */
+.noborder {
+	border: 0;
+}
+.t-border {
+	border-style: solid;
+	border-color: white !important;
+	border-width: 3px 0px 0px 0px !important;
+}
+.r-border {
+	border-style: solid;
+	border-color: white !important;
+	border-width: 0px 3px 0px 0px !important;
+}
+.b-border {
+	border-style: solid;
+	border-color: white !important;
+	border-width: 0px 0px 3px 0px !important;
+}
+.l-border {
+	border-style:solid;
+	border-color: white !important;
+	border-width: 0px 0px 0px 3px !important;
 }
 tr:first-child {
-  border-top: none;
+	border-top: none;
 }
 tr:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
 
-td {  
+td {
 }
 
 td.profile {
 	padding: 4px;
+}
+
+td.v-align {
+	vertical-align: middle;
 }
 
 .tablebg {
@@ -498,12 +605,12 @@ td.profile {
 }
 
 .cat { /* Catagory Formatting 1/2 */
-	height: 28px;
+	height: 40px;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	background-color: #3F3F3F;
-	background-image: url('./images/cellpic1.gif');
+	background-image: url('./images/cellpic1.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	text-indent: 4px;
@@ -519,7 +626,12 @@ td.profile {
 .rtl .catdiv {
 	background: white url('./images/cellpic2_rtl.jpg') repeat-y scroll top right;
 }
-
+.bg {
+	background-color: #3F3F3F;
+}
+.no-bg {
+	background-color: transparent !important;
+}
 .row1 { 
 	background-color: #BABABA; /* BG Color of main content names cells */
 	padding: 4px;
@@ -536,7 +648,7 @@ td.profile {
 }
 
 .spacer {
-	background-color: #D1D7DC;
+	background-color: white;
 }
 
 hr {
@@ -565,23 +677,13 @@ hr {
 
 /* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
 /* See http://www.phpbb.com/bugs/phpbb3/59685 */
-a:link {
+a:link, a:visited {
 	color: black;
 	text-decoration: none;
 }
 
-a:visited {
-	color: black;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #489ac1;
-	text-decoration: none;
-}
-
-a:active {
-	color: #489ac1;
+a:hover, a:active {
+	color: #489ac1; /* Light blue */
 	text-decoration: none;
 }
 
@@ -603,6 +705,15 @@ breadcrumbs a:hover, breadcrumbs a:focus {
 	color: black;
 	text-decoration: none;
 }
+/* Post heading Links */
+a.titles, a:visited.titles {
+	color: white;
+	text-decoration: none;
+}
+a:hover.titles, a:focus.titles {
+	color: white;
+	text-decoration: none;
+}
 /* Footer Links */
 #wrapfooter a, #wrapfooter a:visited  {
 	color: white;
@@ -612,23 +723,27 @@ breadcrumbs a:hover, breadcrumbs a:focus {
 	color: #489ac1;
 	text-decoration: none;
 }
-
+/* Topic Links */
 a.forumlink {
-	color: #069;
+	color: black;
 	font-weight: bold;
-	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-size: 1.2em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.5em; /* Fourm topic headings */
+}
+a:hover.forumlink, a:focus.forumlink {
+	color: white !important;
+	text-decoration: none !important;
 }
 
 a.topictitle {
 	margin: 1px 0;
-	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 1.2em;
 }
 
-a.topictitle:visited {
-	color: #5493B4;
+a.topictitle:hover {
+	color: #484848 !important; /* Dark grey */
 	text-decoration: none;
 }
 
@@ -746,6 +861,8 @@ input.radio {
 .helpline {
 	background-color: #DEE3E7;
 	border-style: none;
+	width: 100%;
+	max-width: 940px;
 }
 
 
@@ -870,6 +987,11 @@ img {
 	border: none;
 }
 
+.colorPalette { /* Color imgage sizes */
+	width: 9px;
+	height: 10px;
+}
+
 .sep {
 	color: black;
 	background-color: #FFA34F;
@@ -890,4 +1012,10 @@ pre {
 
 .username-coloured {
 	font-weight: bold;
+}
+
+textarea { /* Used in posting.php (Message textarea) */
+	width: 700px;
+	max-width: 940px;
+	height: 270px;
 }
