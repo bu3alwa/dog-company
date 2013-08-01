@@ -15,7 +15,7 @@
 */
 if (!defined('IN_PHPBB'))
 {
-  exit;
+	exit;
 }
 
 if (empty($lang) || !is_array($lang))
@@ -155,7 +155,7 @@ $lang = array_merge($lang, array(
 
 	'IMG_SITE_LOGO'			=> 'Main logo',
 	'IMG_SITE_FOOTER'		=> 'Footer logo',
-	'IMG_SITE_ICON'		=> 'Site icon',
+	'IMG_SITE_ICON'			=> 'Site icon',
 	'IMG_UPLOAD_BAR'		=> 'Upload progress bar',
 	'IMG_POLL_LEFT'			=> 'Poll left end',
 	'IMG_POLL_CENTER'		=> 'Poll centre',
