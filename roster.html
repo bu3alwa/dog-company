@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title> ROSTER Temp</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function altRows(id){
+		if(document.getElementsByTagName){  
+			
+			var table = document.getElementById(id);  
+			var rows = table.getElementsByTagName("tr"); 
+			 
+			for(i = 0; i < rows.length; i++){          
+				if(i % 2 == 0){
+					rows[i].className = "evenrowcolor";
+				}else{
+					rows[i].className = "oddrowcolor";
+				}      
+			}
+		}
+	}
+	window.onload=function(){
+		altRows('alternatecolor');
+	}
+	</script>
+	
+	<style>
+		table.roster {
+			width: auto;
+			max-width: 630px;
+			border-collapse: collapse;
+			text-align: center;
+		}
+
+		tr {
+			font-family: Helvetica,Arial,sans-serif;
+			padding-left: 20px !important;
+			border-style: solid;
+			-moz-border-top-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			border-image: none;
+			border-color: white !important;
+			padding-top: 4px;
+			padding-right: 4px;
+			padding-bottom: 4px;
+		}
+		
+		tr:first-child {
+			height: 50px;
+		}
+		
+		td {
+			height: 60px;
+			width: 200px;
+		}
+		
+		.oddrowcolor {
+			background-color:#4c4c4c;
+		}
+		.evenrowcolor {
+			background-color:#727272;
+		}
+	</style>
+	<table class="roster" id="alternatecolor" border="0" bordercolor="#FFCC00" cellpadding="2" cellspacing="2">
+		<tr>
+			<th>Name</th>
+			<th>Rank</th>
+			<th>Status</th>
+			<th>BCT</th>
+			<th>ATI</th>
+			<th>NCO</th>
+			<th>Position</th>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#4c4c4c';">
+			<td>Moc</td>
+			<td>Private 1st Class</td>
+			<td>Member</td>
+			<td>BCT2</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>S6|Head</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#727272';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#4c4c4c';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#727272';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#4c4c4c';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#727272';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		<tr onmouseover="this.style.backgroundColor='#ffffff';" onmouseout="this.style.backgroundColor='#4c4c4c';">
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+			<td>Table Cell</td>
+		</tr>
+		</table>
+		
+		BCT - Basic Combat Training<br>
+		ATI - <br>
+		NCO - Non Commissioned Officer
+</body>
+</html>
