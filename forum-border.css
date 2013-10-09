@@ -1,4 +1,3 @@
-
 tr.madmanSucks:nth-child(even) {
 	border: solid;
 	border-style: none none dashed none; /* Top, Right, Bottom, Left */
@@ -21,4 +20,10 @@ tr.madmanSucks:nth-child(odd) {
 
 tr.madmanSucks:last-child {
 	border: none;
+}
+/* to fix the last child problem we need a div wrapper to go around the table so that we could point the last child in
+each div like so
+
+#divName > mandmanSucks:last-child{
+	border:none;
 }
