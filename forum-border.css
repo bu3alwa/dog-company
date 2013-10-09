@@ -1,0 +1,24 @@
+
+tr.madmanSucks:nth-child(even) {
+	border: solid;
+	border-style: none none dashed none; /* Top, Right, Bottom, Left */
+	border-width: 1px;
+	border-color: #B9B9B9; /* Top, Right, Bottom, Left */
+
+    background-color: transparent;
+	padding: 4px !important;
+}
+
+tr.madmanSucks:nth-child(odd) {
+	border: solid;
+	border-style: none none dashed none; /* Top, Right, Bottom, Left */
+	border-width: 1px;
+	border-color: #B9B9B9; /* Top, Right, Bottom, Left */
+	
+    background-color: #E3E3E3;
+	padding: 4px !important;
+}
+
+tr.madmanSucks:last-child {
+	border: none;
+}
