@@ -146,3 +146,9 @@ What must work in new theme:
 - Style.css import now differs from old method. Will update once everything is set.
 - Login Dropdown halfway done on the wordpress side.
 - info dropdown part stylized.
+ 
+=============================== Update 10/13 ===================================
+
+- Damn time flys.
+- Updated some forum styling issue that could help you out in forum-border.css
+ 
