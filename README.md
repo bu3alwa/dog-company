@@ -50,25 +50,25 @@ Site Layout - Menu
 
 What must work in new theme:
 - look up via letter (members search)
-- text editor (List, h1 function is broken)
-- image sizes (don't resize when posted
+- text editor (List, h1 function is broken) << ABBC3 fixes this
+- image sizes (don't resize when posted) << ABBC3 fixes this
 - Allow youtube videos to be embed into posts
 - MCP
   - Merging posts
 
 
-=============================== Update 6/8 ====================================
+=============================== Update 06/8 ====================================
 
 - add images to folder /images http://www.mediafire.com/?3epzq8m6bs61ebv
 - add scripts from the countdown to each respective folder in our dog-company
 - all files are updated. Be aware when updating.
 
 
-=============================== Update 6/11 ===================================
+=============================== Update 06/11 ===================================
 
 - Using WP-United to intergrate phpBB and WordPress
 
-=============================== Update 6/13 ===================================
+=============================== Update 06/13 ===================================
 
 - Counter is out by an hour. Change to 21hours is a temp fix.
 - Counter did not reset
@@ -78,29 +78,29 @@ What must work in new theme:
 - Has looked into templates for the forums, I'm thinking we can use "subsilver2" for our template. Then modify from there. While researching I found some really cool looking rank images that would be cool to add. I've shown Gumby and he should be able to make then suit our needs really well.
 - Fixed menu bump. *style has been updated
 
-=============================== Update 6/14 ===================================
+=============================== Update 06/14 ===================================
 
 - Slider fixed (Moc did it!), now have to work on resizing
 - Counter bug fixed
 - Added new links in login-dropdown
 - Fixed dropdown alignment
 
-=============================== Update 6/22 ===================================
+=============================== Update 06/22 ===================================
 
 - Gumby has designed 3 amazing badges "logos" that have been added to the footer of the main page, (maybe add to the footer of the forums too?)
 - Forum coding had begun and is gaining traction and problems of course
 - Fixed //Drop down bug found when scrolling down the gap between the drop down and menu itself reappears (you would already know this most likely)
 
-=============================== Update 6/24 ===================================
+=============================== Update 06/24 ===================================
 
 - More files updated. Be careful when updating.
 - Content stylized a bit.
 
-=============================== Update 6/26 ===================================
+=============================== Update 06/26 ===================================
 
 - Slider bug fixed
 
-=============================== Update 6/29 ===================================
+=============================== Update 06/29 ===================================
 
 - Forums 
   - js added (links need perm fix)
@@ -112,18 +112,18 @@ What must work in new theme:
   - footer
 - Slider caption formatted, opacity set to 0.5
 
-=============================== Update 7/01 ===================================
+=============================== Update 07/01 ===================================
 
 - Slider Caption reformatted. It was off on my browser 
 
-=============================== Update 7/02 ===================================
+=============================== Update 07/02 ===================================
 
 - Forums main page style nearing completion
   - Is looking for bugs created in other pages
   - Waiting for Gumbys forum picture (all cog types)
   - Footer image link fixed
 
-=============================== Update 7/04 ===================================
+=============================== Update 07/04 ===================================
 
 - Forum main page complete, will need verification.
 - Many bugs in all other pages, slow process.
@@ -132,7 +132,7 @@ What must work in new theme:
 - Reorginized Github files. Delete feature was added to github. (THANK GOD)
 - Header updated.
 
-=============================== Update 7/05 ===================================
+=============================== Update 07/05 ===================================
 
 - More bugs removed on:
   - viewfourm_body
@@ -140,7 +140,7 @@ What must work in new theme:
   - etc...
 - Stupidly started to convert parts of pages to HTML5 as I noitce old code...
 
-=============================== Update 7/14 ===================================
+=============================== Update 07/14 ===================================
 
 - Comment system now working. Just need to style it to our liking.
 - Style.css import now differs from old method. Will update once everything is set.
@@ -151,4 +151,9 @@ What must work in new theme:
 
 - Damn time flys.
 - Updated some forum styling issue that could help you out in forum-border.css
- 
+
+=============================== Update 11/01 ===================================
+
+- Added Advanced BBCode Box 3
+  - Need to update the style to fix the images OR create our own OR style it
+- Updated icon pack with Dragonboy's new icons
