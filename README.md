@@ -33,7 +33,7 @@ Website Content and Design Requirements:
 - Look at rasing the min Avatar size from 6.0Kb to something higher
 	- COMPLETE
 
-Site Layout - Menu //Check the Wiki for a new proposed design (27/11/13)
+Site Layout - Menu //Check the Issues section of GitHub for a new proposed design (27/11/13)
 - Home
 - Forums
 - Info
