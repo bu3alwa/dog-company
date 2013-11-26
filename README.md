@@ -11,30 +11,29 @@ Resources:
   - #1878a8 :Blue
   - #505a2b :Green
 
-Objectives:
-- Create new home for Dog Company (DC).
-- Show that DC is not an Arma exclusive community but a group of gamers playing many things.
-- Have a minimum of 2 forums designs (Arma & Eve) plus and homepage to connect them.
-  - We may not have an EVE forum but a "Other Games" forum.
-  - Other Games (EVE, World of Tanks, Wargame, CoH2
-- Create a local blog for nova and friends
-- Link both phpBB
-- stylize dropdown menu.
-
 Website Content and Design Requirements:
-- Homepage login via phpBB
+- Homepage login connected to phpBB
+	- UNDERWAY //United will be able to sort this.
 - Color palette
+	- COMPLETE //White, Dark Grey and Blue
 - Layout designs
+	- COMPLETE //Only small details are left to complete
 - Working calendar that allows for members to sign up to events via a button
+	- INCOMPLETE //Has been difficault to find what is required for this.
 - A countdown till the next operation
+	- COMPLETE //Still some bugs to iron out.
 - Link the blog to the front page
+	- REMOVED //Will move the bog to the website.
 - Add a sliding DC advert image slider
-- A squad roster of sorts (use XML)
-- Work on Javascript slider
+	- COMPLETE
+- A squad roster
+	- INCOMPLETE //Will begin when this is a bigger priority
 - Line that seperates each post (Homepage)
-- Look at rasing the min Avatar size from 6.0Kb to something higher (Need to talk to Nova about this)
+	- COMPLETE
+- Look at rasing the min Avatar size from 6.0Kb to something higher
+	- COMPLETE
 
-Site Layout - Menu
+Site Layout - Menu //Check the Wiki for a new proposed design (27/11/13)
 - Home
 - Forums
 - Info
@@ -47,22 +46,23 @@ Site Layout - Menu
   - Youtube
   - Recent Ops
 
-
 What must work in new theme:
-- look up via letter (members search)
-- text editor (List, h1 function is broken) << ABBC3 fixes this
-- image sizes (don't resize when posted) << ABBC3 fixes this
+- Look up via letter (members search)
+	- INCOMPLETE
+- Text editor (List, h1 function is broken)
+	- COMPLETE //ABBC3 fixes this
+- Image sizes (don't resize when posted) 
+	- COMPLETE //ABBC3 fixes this
 - Allow youtube videos to be embed into posts
-- MCP
-  - Merging posts
-
+	- COMPLETE //ABBC3 fixes this
+- MCP - Merging posts
+	- INCOMPLETE
 
 =============================== Update 06/8 ====================================
 
 - add images to folder /images http://www.mediafire.com/?3epzq8m6bs61ebv
 - add scripts from the countdown to each respective folder in our dog-company
 - all files are updated. Be aware when updating.
-
 
 =============================== Update 06/11 ===================================
 
