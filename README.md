@@ -157,3 +157,9 @@ What must work in new theme:
 - Added Advanced BBCode Box 3
   - Need to update the style to fix the images OR create our own OR style it
 - Updated icon pack with Dragonboy's new icons
+
+=============================== Update 11/29 ===================================
+
+- Google Analytics added
+- Work on Forums has begun again
+	- More HTML5 has been added 
