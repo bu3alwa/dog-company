@@ -167,6 +167,13 @@ What must work in new theme:
 	- Ranks text bigger
 	- Font fixes
 - Wordpress formatting
+- Wordpress bugs fixed
+- Forum bugs fixed
+
+=============================== Update 11/29 ===================================
+
+- Wordpress bugs fixed
+- Forum bugs fixed
 - Added sidbar features
 	- Soical links
 	- Server links
