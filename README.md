@@ -170,7 +170,7 @@ What must work in new theme:
 - Wordpress bugs fixed
 - Forum bugs fixed
 
-=============================== Update 11/29 ===================================
+=============================== Update 11/30 ===================================
 
 - Wordpress bugs fixed
 - Forum bugs fixed
