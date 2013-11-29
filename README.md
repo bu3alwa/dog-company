@@ -162,4 +162,11 @@ What must work in new theme:
 
 - Google Analytics added
 - Work on Forums has begun again
-	- More HTML5 has been added 
+	- More HTML5 has been added
+	- Dashed lines fixed
+	- Ranks text bigger
+	- Font fixes
+- Wordpress formatting
+- Added sidbar features
+	- Soical links
+	- Server links
