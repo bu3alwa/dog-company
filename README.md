@@ -174,7 +174,12 @@ What must work in new theme:
 
 - Wordpress bugs fixed
 - Forum bugs fixed
-- Added sidbar features
-	- Soical links
+- Added sidebar features
+	- Social links
 	- Server links
 - Trailing Achievement plugin for WP
+
+=============================== Update 12/01 ===================================
+
+- Minor formatting fixes
+
