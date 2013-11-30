@@ -177,3 +177,4 @@ What must work in new theme:
 - Added sidbar features
 	- Soical links
 	- Server links
+- Trailing Achievement plugin for WP
