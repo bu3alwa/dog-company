@@ -182,4 +182,5 @@ What must work in new theme:
 =============================== Update 12/01 ===================================
 
 - Minor formatting fixes
+- Updated Menu functions on phpBB
 
