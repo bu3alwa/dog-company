@@ -177,7 +177,7 @@ What must work in new theme:
 - Added sidebar features
 	- Social links
 	- Server links
-- Trailing Achievement plugin for WP
+- Trialling Achievement plugin for WP
 
 =============================== Update 12/01 ===================================
 
@@ -188,5 +188,8 @@ What must work in new theme:
 
 - Edited counter images to blend with theme
 - Better fonts have been discussed to replace Arial
-	- Replace body text with a serif font
-	- Use http://www.adobe.com/type/fontfinder/
+	- Body text should be a serif font
+		- Bodoni Std (suggested)
+	- Header text
+		- Helvetica (suggested)
+	- Use http://www.adobe.com/type/fontfinder/ to help find correct fonts.
