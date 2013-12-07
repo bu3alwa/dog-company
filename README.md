@@ -184,3 +184,9 @@ What must work in new theme:
 - Minor formatting fixes
 - Updated Menu functions on phpBB
 
+=============================== Update 12/07 ===================================
+
+- Edited counter images to blend with theme
+- Better fonts have been discussed to replace Arial
+	- Replace body text with a serif font
+	- Use http://www.adobe.com/type/fontfinder/
