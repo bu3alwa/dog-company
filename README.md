@@ -209,3 +209,6 @@ What must work in new theme:
 - Off-white background-color behind main content upadted on forums.
 - Added titles to all menu buttons.
 - Enhanced the counter images to correct color and uped the quality of the text.
+- Small formatting done to PM folder
+- Fixed incorrect img path in PM folder
+- Formated the CAPTCHA
