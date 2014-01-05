@@ -202,7 +202,7 @@ What must work in new theme:
 - Off-white background-color behind main content.
 - Header and footer background-color changed.
 
-=============================== Update 12/13 ===================================
+=============================== Update 01/05 ===================================
 
 - Header image edited, link fixed on Forums side.
 - Blue bar at the bottom of the footer added to forums.
