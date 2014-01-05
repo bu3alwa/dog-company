@@ -198,6 +198,14 @@ What must work in new theme:
 =============================== Update 12/13 ===================================
 
 - Header size shrinked 20 px less.
-- Blue bar at the bottom of the footer added.
+- Blue bar at the bottom of the footer added to WP.
 - Off-white background-color behind main content.
 - Header and footer background-color changed.
+
+=============================== Update 12/13 ===================================
+
+- Header image edited, link fixed on Forums side.
+- Blue bar at the bottom of the footer added to forums.
+- Off-white background-color behind main content upadted on forums.
+- Added titles to all menu buttons.
+- Enhanced the counter images to correct color and uped the quality of the text.
