@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">
 <head>
-
 <meta http-equiv="content-type" content="text/html"; charset="{S_CONTENT_ENCODING}" />
 <meta http-equiv="content-language" content="{S_USER_LANG}" />
 <meta http-equiv="content-style-type" content="text/css" />
@@ -10,6 +9,9 @@
 <meta name="distribution" content="global" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/images/icon.png" sizes="128x128" type="image/x-icon"/>
+
 {META}
 <title>{SITENAME} | <!-- IF S_IN_MCP -->{L_MCP} | <!-- ELSEIF S_IN_UCP -->{L_UCP} | <!-- ENDIF -->{PAGE_TITLE}</title>
 
@@ -22,7 +24,6 @@
 	<!-- IF S_ENABLE_FEEDS_FORUM and S_FORUM_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FORUM} - {FORUM_NAME}" href="{U_FEED}?f={S_FORUM_ID}" /><!-- ENDIF -->
 	<!-- IF S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_TOPIC} - {TOPIC_TITLE}" href="{U_FEED}?f={S_FORUM_ID}&amp;t={S_TOPIC_ID}" /><!-- ENDIF -->
 <!-- ENDIF -->
-
 <link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" />
 <!-- jQuery -->
 <script type="text/javascript" src="/forum/styles/dog-company/theme/js/libs/jquery-1.9.1.min.js"></script><!-- ###LINKS NEEDS FIXING### -->
@@ -138,6 +139,7 @@
 		};});
 	});//end document ready function
 </script>
+<!-- PHPbb -->
 <script type="text/javascript">
 // <![CDATA[
 <!-- IF S_USER_PM_POPUP and S_NEW_PM -->
@@ -251,11 +253,12 @@ function marklist(id, name, state)
 
 // ]]>
 </script>
+
 </head>
 <body class="{S_CONTENT_DIRECTION}">
 	<header>
 		<div id="head" class="container centered double padded ">
-			<a href="#">{SITE_LOGO_IMG}</a>
+			<a href="http://dog-company.com"><img src="/images/header.png" title="" alt="dog company head img"></img></a>
 			<div id="counter" class="pull-right">
 				<div id="countdown_dashboard">
 					<div class="dash days_dash">
@@ -331,28 +334,45 @@ function marklist(id, name, state)
 		</div>
 		<nav class="row container " >
 			<ul class="pull-left double pad-left" style="height: 33px">
-				<li class="nav-li"><a href="/">hoMe</a></li>
-				<li class="nav-li"><a href="./">Forums</a></li>
+				<li class="nav-li" title="click to go 'Home'"><a href="/">hoMe</a></li>
+				<li class="nav-li" title="click to go 'Forums'"><a href="./">Forums</a></li>
 				<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
 					<ul id="info-dropdown" >
-						<li><a href="/about-us">About Us</a></li>
-						<li><a href="#">Roster</a></li>
-						<li><a href="#">Arma XML</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li title="click to go 'About Us'"><a href="/?page_id=5">About Us</a></li>
+						<li title="click to go 'Roster'"><a href="/?page_id=7">Roster</a></li>
+						<li title="click to go 'Arma XML'"><a href="/squad/squadXML.php">Arma XML</a></li>
+						<li title="click to go 'FAQ'"><a href="/?page_id=2">FAQ</a></li>
 					</ul>
 				</li>
-				<li class="nav-li"><a href="#">Media</a></li>
-				</ul>
+				<li class="nav-li" title="click to go 'Media'"><a href="#">Media</a></li>
+			</ul>
 			<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
-				<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Sign in</a>
-					<ul id="login-dropdown" class="align-center" >
-					<li>
-						<?php include(TEMPLATEPATH.'/login.php'); ?>
-					</li>
+				<!-- IF S_USER_LOGGED_IN -->
+				<li id="login-navbar" title="click to go 'Profile'"><a href="{U_PROFILE}">Profile</a></li>
+
+				<li title="click to Logout"><a href="{U_LOGIN_LOGOUT}">Logout</a></li>
+				<!-- ELSE -->
+				<li id="login-navbar" title="click to Login"><a href="javascript:void(0)" onclick="openLog()">Login</a>
+					<ul id="login-dropdown">
+						<li>
+							<div id="login-form-header">
+								<h2>User Login</h2>
+							</div>
+							<div id="form-wrapper">
+								<form class="wpuloginform" method="post" action="{S_LOGIN_ACTION}">
+									<li><label for="phpbb_username">Username</label><input tabindex="1" class="inputbox autowidth" type="text" name="username" id="phpbb_username"/></li>
+									<li><label for="phpbb_password">Password</label> <input tabindex="2" class="inputbox autowidth" type="password" name="password" id="phpbb_password" maxlength="32" /></li>
+									<li><a href="{U_REGISTER}">Register</a></li>
+									<li><a href="{U_SEND_PASSWORD}">Forgot Password?</a></li>
+									<li><input type="submit" name="login" class="wpuloginsubmit" value="{L_LOGIN}" /></li>
+									{S_LOGIN_REDIRECT}
+								</form>
+							</div>
+						</li>
 					</ul>
 				</li>
-				<li><a href="#">register</a></li>
+				<li><a href="{U_REGISTER}">Register</a></a></li>
+				<!-- ENDIF -->
 			</ul>
 		</nav>
 		<!-- resize menu text -->
@@ -366,13 +386,12 @@ function marklist(id, name, state)
 		<table width="100%" cellspacing="0">
 		<tr>
 			<td class="genmed">
-				<!-- IF not S_IS_BOT --><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>&nbsp;<!-- ENDIF -->
-				<!-- IF U_RESTORE_PERMISSIONS --> &nbsp;<a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a><!-- ENDIF -->
-				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN --> &nbsp;<span style="color: red;">{L_BOARD_DISABLED}</span><!-- ENDIF --> |
+				<!-- IF U_RESTORE_PERMISSIONS --><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a> |<!-- ENDIF -->
+				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN -->&nbsp;<span style="color: red;">{L_BOARD_DISABLED}</span> | <!-- ENDIF -->
 				<!-- IF not S_IS_BOT -->
 					<!-- IF S_USER_LOGGED_IN -->
-						<!-- IF S_DISPLAY_PM --> &nbsp;<a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}<!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->{PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a><!-- ENDIF -->
-					<!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --> &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->
+						<!-- IF S_DISPLAY_PM --><a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}<!-- IF PRIVATE_MESSAGE_INFO_UNREAD --> | {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a><!-- ENDIF -->
+					<!-- ENDIF -->
 				<!-- ENDIF -->
 			</td>
 			<td class="genmed" align="{S_CONTENT_FLOW_END}">
