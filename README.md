@@ -212,3 +212,8 @@ What must work in new theme:
 - Small formatting done to PM folder
 - Fixed incorrect img path in PM folder
 - Formated the CAPTCHA
+
+=============================== Update 01/06 ===================================
+
+- Small edits to counter images.
+- Fully implemented BBC3
