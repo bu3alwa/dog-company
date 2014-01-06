@@ -87,6 +87,13 @@ class bbcode extends abbcode
 		$bitfield = new bitfield($this->bbcode_bitfield);
 		$bbcodes_set = $bitfield->get_all_set();
 
+// MOD : MSSTI ABBC3 - Start
+		// Try to avoid duplicates anchor ID's inside quotes
+		if (preg_match('#\[quote(?:=&quot;(.*?)&quot;)?:' . $this->bbcode_uid . '\](.*?)\[anchor=(.*?)?\sgoto=(.*?)?:' . $this->bbcode_uid . '\](.*?)\[/anchor:' . $this->bbcode_uid . '\](.*?)\[/quote:' . $this->bbcode_uid . '\]#is', $message))
+		{
+			$message = preg_replace('#(\[anchor=(.*?)(\s)goto=(.*?):' . $this->bbcode_uid . '\](.*?)\[/anchor:' . $this->bbcode_uid . '\]?)#is', "[anchor=quoted$2 goto=quoted$4:" . $this->bbcode_uid . "]$5[/anchor:" . $this->bbcode_uid . "]", $message);
+		}
+// MOD : MSSTI ABBC3 - End
 		$undid_bbcode_specialchars = false;
 		foreach ($bbcodes_set as $bbcode_id)
 		{
@@ -157,10 +164,31 @@ class bbcode extends abbcode
 					trigger_error('The file ' . $this->template_filename . ' is missing.', E_USER_ERROR);
 				}
 			}
+// MOD : MSSTI ABBC3 - Start
+			$this->template_filename2 = $phpbb_root_path . 'styles/' . $user->theme['template_path'] . '/template/abbcode.html';
+
+			if (!@file_exists($this->template_filename2))
+			{
+				if (isset($user->theme['template_inherits_id']) && $user->theme['template_inherits_id'])
+				{
+					$this->template_filename2 = $phpbb_root_path . 'styles/' . $user->theme['template_inherit_path'] . '/template/abbcode.html';
+					if (!@file_exists($this->template_filename2))
+					{
+						trigger_error('The file ' . $this->template_filename2 . ' is missing.', E_USER_ERROR);
+					}
+				}
+				else
+				{
+					trigger_error('The file ' . $this->template_filename2 . ' is missing.', E_USER_ERROR);
+				}
+			}
+// MOD : MSSTI ABBC3 - End
 		}
 
 		$bbcode_ids = $rowset = $sql = array();
-
+// MOD : MSSTI ABBC3 - Start
+		$abbcode = new abbcode();
+// MOD : MSSTI ABBC3 - end
 		$bitfield = new bitfield($this->bbcode_bitfield);
 		$bbcodes_set = $bitfield->get_all_set();
 
@@ -186,6 +214,9 @@ class bbcode extends abbcode
 			$sql = 'SELECT *
 				FROM ' . BBCODES_TABLE . '
 				WHERE ' . $db->sql_in_set('bbcode_id', $sql);
+// MOD : MSSTI ABBC3 - Start
+			$sql .= " AND bbcode_match <> '.'";
+// MOD : MSSTI ABBC3 - End
 			$result = $db->sql_query($sql, 3600);
 
 			while ($row = $db->sql_fetchrow($result))
@@ -236,6 +267,10 @@ class bbcode extends abbcode
 				case 3:
 					$this->bbcode_cache[$bbcode_id] = array(
 						'preg' => array(
+// MOD : MSSTI ABBC3 - Start
+							'#\[url:$uid\](ed2k://\|(file|server|serverlist|friend)(|\|[^\\/\|:<>\*\?\"]+?)\|(.*?)\|/?)\[/url:$uid\]#sie'		=> "\$this->ed2k_pass( \$bbcode_id, '\$1', '' )",
+							'#\[url=(ed2k://\|(file|server|serverlist|friend)(|\|[^\\/\|:<>\*\?\"]+?)\|(.*?)\|/?):$uid\](.*?)\[/url:$uid\]#sie'	=> "\$this->ed2k_pass( \$bbcode_id, '\$1', '\$5' )",
+// MOD : MSSTI ABBC3 - End
 							'#\[url:$uid\]((.*?))\[/url:$uid\]#s'			=> $this->bbcode_tpl('url', $bbcode_id),
 							'#\[url=([^\[]+?):$uid\](.*?)\[/url:$uid\]#s'	=> $this->bbcode_tpl('url', $bbcode_id),
 						)
@@ -383,6 +418,9 @@ class bbcode extends abbcode
 						}
 
 						// Replace {L_*} lang strings
+// MOD : MSSTI ABBC3 - Start
+						$user->add_lang('mods/abbcode');
+// MOD : MSSTI ABBC3 - End
 						$bbcode_tpl = preg_replace('/{L_([A-Z_]+)}/e', "(!empty(\$user->lang['\$1'])) ? \$user->lang['\$1'] : ucwords(strtolower(str_replace('_', ' ', '\$1')))", $bbcode_tpl);
 
 						if (!empty($rowset[$bbcode_id]['second_pass_replace']))
@@ -425,7 +463,7 @@ class bbcode extends abbcode
 				'i_close'	=> '</span>',
 				'u_open'	=> '<span style="text-decoration: underline">',
 				'u_close'	=> '</span>',
-				'img'		=> '<img src="$1" alt="' . $user->lang['IMAGE'] . '" />',
+				'img'		=> '<img src="$1" alt="' . $user->lang['IMAGE'] . '" class="resize_me" />',
 				'size'		=> '<span style="font-size: $1%; line-height: normal">$2</span>',
 				'color'		=> '<span style="color: $1">$2</span>',
 				'email'		=> '<a href="mailto:$1">$2</a>'
@@ -443,6 +481,16 @@ class bbcode extends abbcode
 			{
 				trigger_error('Could not load bbcode template', E_USER_ERROR);
 			}
+// MOD : MSSTI ABBC3 - Start
+			if (($tpl2 = file_get_contents($this->template_filename2)) === false)
+			{
+				trigger_error('Could not load abbcode template', E_USER_ERROR);
+			}
+			else
+			{
+				$tpl .= $tpl2;
+			}
+// MOD : MSSTI ABBC3 - End
 
 			// replace \ with \\ and then ' with \'.
 			$tpl = str_replace('\\', '\\\\', $tpl);
