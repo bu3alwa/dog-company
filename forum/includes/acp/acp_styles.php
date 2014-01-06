@@ -13,7 +13,7 @@
 */
 if (!defined('IN_PHPBB'))
 {
-  exit;
+	exit;
 }
 
 /**
@@ -107,7 +107,7 @@ inherit_from = {INHERIT_FROM}
 
 		$this->imageset_keys = array(
 			'logos' => array(
-				'site_logo', 'site_footer', 'site_icon',
+				'site_icon',
 			),
 			'buttons'	=> array(
 				'icon_back_top', 'icon_contact_aim', 'icon_contact_email', 'icon_contact_icq', 'icon_contact_jabber', 'icon_contact_msnm', 'icon_contact_pm', 'icon_contact_yahoo', 'icon_contact_www', 'icon_post_delete', 'icon_post_edit', 'icon_post_info', 'icon_post_quote', 'icon_post_report', 'icon_user_online', 'icon_user_offline', 'icon_user_profile', 'icon_user_search', 'icon_user_warn', 'button_pm_forward', 'button_pm_new', 'button_pm_reply', 'button_topic_locked', 'button_topic_new', 'button_topic_reply',
@@ -1469,7 +1469,7 @@ inherit_from = {INHERIT_FROM}
 		{
 			while (($file = readdir($dp)) !== false)
 			{
-				if ($file[0] != '.' && strtoupper($file) != 'CVS' && !is_file($dir . '/' . $file) && !is_link($dir . '/' . $file))
+				if ($file[0] != '.' && strtoupper($file) != 'CVS' && !is_file($dir . '/' . $file) && !is_link($dir . '/' . $file) && $file != 'abbcode')
 				{
 					$langs[] = $file;
 				}
