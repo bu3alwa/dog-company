@@ -216,4 +216,5 @@ What must work in new theme:
 =============================== Update 01/06 ===================================
 
 - Small edits to counter images.
-- Fully implemented BBC3
+- Fully implemented BBC3.
+- Added automated embedding of videos on posts.
