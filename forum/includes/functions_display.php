@@ -1380,6 +1380,13 @@ function get_user_avatar($avatar, $avatar_type, $avatar_width, $avatar_height, $
 				return '';
 			}
 		break;
+		
+		case AVATAR_GRAVATAR:
+			if (!$config['allow_avatar_gravatar'] && !$ignore_config)
+			{
+				return '';
+			}
+		break;
 	}
 
 	$avatar_img .= $avatar;
