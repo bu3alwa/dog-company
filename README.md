@@ -218,3 +218,9 @@ What must work in new theme:
 - Small edits to counter images.
 - Fully implemented BBC3.
 - Added automated embedding of videos on posts.
+
+=============================== Update 01/07 ===================================
+
+- Added error pages.
+- Modified spoiler hover.
+- Added Gravatar options to fourms.
