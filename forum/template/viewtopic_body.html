@@ -34,29 +34,18 @@
 	</table>
 
 	<table class="tablebg" width="100%">
-	<tr>
-		<td class="cat">
-			<table width="100%">
-			<tr>
-				<td><h2><a class="titles v_middle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h2></td>
-				<td class="nav FLOW_END nowrap white"><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a><!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --> | <a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a><!-- ENDIF --> | <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;</td>
-			</tr>
-			</table>
-		</td>
-	</tr>
 <!-- IF S_HAS_POLL -->
 	<tr>
-		<td class="FLOW_MIDDLE" class="row2" colspan="2"><br clear="all" />
-
+		<td class="poll_bg FLOW_MIDDLE" class="row2" colspan="2">
+		<br clear="all" />
 			<form method="post" action="{S_POLL_ACTION}">
-
-			<table class="FLOW_MIDDLE" cellpadding="4" border="0">
+			<table class="poll FLOW_MIDDLE" cellpadding="4" border="0">
 			<tr class="noborder">
 				<td class="FLOW_MIDDLE"><span class="gen"><b>{POLL_QUESTION}</b></span><br /><span class="gensmall">{L_POLL_LENGTH}</span></td>
 			</tr>
 			<tr class="noborder">
 				<td class="FLOW_BEGIN">
-					<table cellpadding="2" border="0">
+					<table class="poll" cellpadding="2" border="0">
 				<!-- BEGIN poll_option -->
 					<tr class="noborder">
 					<!-- IF S_CAN_VOTE -->
@@ -104,6 +93,16 @@
 		</td>
 	</tr>
 <!-- ENDIF -->
+	<tr>
+		<td class="cat">
+			<table width="100%">
+			<tr>
+				<td><h2><a class="titles v_middle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h2></td>
+				<td class="nav FLOW_END nowrap white"><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a><!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --> | <a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a><!-- ENDIF --> | <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
 	</table>
 	
 <!-- BEGIN postrow -->
