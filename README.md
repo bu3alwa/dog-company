@@ -224,3 +224,12 @@ What must work in new theme:
 - Added error pages.
 - Modified spoiler hover.
 - Added Gravatar options to fourms.
+
+=============================== Update 01/10 ===================================
+
+- Error pages compteted and working.
+
+=============================== Update 01/11 ===================================
+
+- Poll formatted
+- Fomatted seach.php
