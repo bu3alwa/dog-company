@@ -42,6 +42,18 @@
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
 		<![endif]-->
 		<script type="text/javascript">
+	
+			function openLog(){
+				jQuery('#info-dropdown').hide();
+				jQuery('#login-dropdown').toggle();
+				return false;
+			}
+			function openMenu(){
+				jQuery('#login-dropdown').hide();
+				jQuery('#info-dropdown').toggle();
+				return false;
+			}
+			jQuery('document').ready(function($) {
 			//center top nav
 			function fix_top_bar(){
 				var barWidth = $('.nav-fixed').width();
@@ -51,24 +63,16 @@
 				var barWidth = $('nav').width();
 				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 			}
-			function openLog(){
-				$('#info-dropdown').hide();
-				$('#login-dropdown').toggle();
-				return false;
-			}
-			function openMenu(){
-				$('#login-dropdown').hide();
-				$('#info-dropdown').toggle();
-				return false;
-			}
 			function counterHide(){
 				var browserWidth = $(window).width();
 				if (browserWidth < 743){
 					$('#counter').hide();
 				}else {
 					$('#counter').show();
-				};}		
-			$('document').ready(function() {
+				};
+			}	
+			
+				
 				//center nav
 				$(window).load('',centerNav());
 				$(window).resize(function(){
@@ -107,24 +111,6 @@
 				function closeLogin() {
 						$('#login-dropdown').hide();
 				}
-				//hoverIntent config
-				var configInfo = {
-					interval:100,
-					over: openInfo,
-					timeout: 500,
-					out:closeInfo	
-				}
-				var configLogin = {
-					interval:100,
-					over: openLogin,
-					over: openLogin,
-					timeout: 500,
-					out:closeLogin
-				}
-				/*run hoverIntent
-				$('#info-navbar').hoverIntent(configInfo);
-				$('#login-navbar').hoverIntent(configLogin);
-				*/
 				//show and hide counter on certain width
 				$('#countdown').load('',counterHide());
 				//$('#countdown').on('load',counterHide());
@@ -173,7 +159,7 @@
 						<h3>Next Operation</h3>
 				</div>
 						<script language="javascript" type="text/javascript">
-							jQuery(document).ready(function(){
+							jQuery(document).ready(function($){
 							var today = new Date();
 							var currDay = today.getUTCDay();
 							var saturdayTest = currDay - 6;
