@@ -232,8 +232,8 @@ What must work in new theme:
 =============================== Update 01/11 ===================================
 
 - Poll formatted
-- Fomatted seach.php
-- 
+- Fomatted seach.php 
+
 =============================== Update 02/25 ===================================
 
 - Fixed JS on Wordpress
