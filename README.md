@@ -233,3 +233,8 @@ What must work in new theme:
 
 - Poll formatted
 - Fomatted seach.php
+- 
+=============================== Update 02/25 ===================================
+
+- Fixed JS on Wordpress
+- Noted multiple errors to be fixed after release
