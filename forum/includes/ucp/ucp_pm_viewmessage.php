@@ -236,6 +236,24 @@ function view_message($id, $mode, $folder_id, $msg_id, $folder, $message_row)
 		'U_PRINT_PM'		=> ($config['print_pm'] && $auth->acl_get('u_pm_printpm')) ? "$url&amp;f=$folder_id&amp;p=" . $message_row['msg_id'] . "&amp;view=print" : '',
 		'U_FORWARD_PM'		=> ($config['forward_pm'] && $auth->acl_get('u_sendpm') && $auth->acl_get('u_pm_forward')) ? "$url&amp;mode=compose&amp;action=forward&amp;f=$folder_id&amp;p=" . $message_row['msg_id'] : '')
 	);
+	
+	//Social Networking Site Buttons START
+	$user->add_lang('mods/social_networking_buttons');
+	
+	$template->assign_var('U_STEAM_SN', ($user_info['user_steam']) ? $user_info['user_steam'] : '');
+	$template->assign_var('U_YOUTUBE_SN', ($user_info['user_youtube']) ? $user_info['user_youtube'] : '');
+	$template->assign_var('U_TWITCH_SN', ($user_info['user_twitch']) ? $user_info['user_twitch'] : '');
+	$template->assign_var('U_XBOX_SN', ($user_info['user_xbox']) ? $user_info['user_xbox'] : '');
+	
+	$template->assign_var('U_BEBO_SN', ($user_info['user_bebo']) ? $user_info['user_bebo'] : '');
+	$template->assign_var('U_BLOGGER_SN', ($user_info['user_blogger']) ? $user_info['user_blogger'] : '');
+	$template->assign_var('U_FACEBOOK_SN', ($user_info['user_facebook']) ? $user_info['user_facebook'] : '');
+	$template->assign_var('U_GOODREADS_SN', ($user_info['user_goodreads']) ? $user_info['user_goodreads'] : '');
+	$template->assign_var('U_LINKEDIN_SN', ($user_info['user_linkedin']) ? $user_info['user_linkedin'] : '');
+	$template->assign_var('U_NETLOG_SN', ($user_info['user_netlog']) ? $user_info['user_netlog'] : '');
+	$template->assign_var('U_MYSPACE_SN', ($user_info['user_myspace']) ? $user_info['user_myspace'] : '');
+	$template->assign_var('U_TWITTER_SN', ($user_info['user_twitter']) ? $user_info['user_twitter'] : '');
+	//Social Networking Site Buttons END
 
 	// Begin: Profile Fields Control MOD
 	$template->assign_vars(pm_view_profile_fields($user_info, $author_id));
