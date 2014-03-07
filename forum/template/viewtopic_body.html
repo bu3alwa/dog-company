@@ -37,8 +37,8 @@
 <!-- IF S_HAS_POLL -->
 	<tr>
 		<td class="poll_bg FLOW_MIDDLE" class="row2" colspan="2">
-		<br clear="all" />
-			<form method="post" action="{S_POLL_ACTION}">
+			<article class="poll_head whole pad-left"><h2>Poll</h2></article>
+			<form class="poll_form pad-top pad-bottom" method="post" action="{S_POLL_ACTION}">
 			<table class="poll FLOW_MIDDLE" cellpadding="4" border="0">
 			<tr class="noborder">
 				<td class="FLOW_MIDDLE"><span class="gen"><b>{POLL_QUESTION}</b></span><br /><span class="gensmall">{L_POLL_LENGTH}</span></td>
@@ -184,10 +184,10 @@
 				</span>
 
 			</td>
-			<td class="v_top">
+			<td class="v_top relative">
 				<table width="100%">
 				<tr class="noborder">
-					<td class="relative">
+					<td>
 					<!-- IF postrow.S_POST_UNAPPROVED or postrow.S_POST_REPORTED -->
 						<table width="100%">
 						<tr class="noborder">
@@ -254,8 +254,8 @@
 
 			<td class="profile"><strong><a href="#wrapheader">{L_BACK_TO_TOP}</a></strong></td>
 			<td>
-				<div class="gensmall" style="float: {S_CONTENT_FLOW_BEGIN};">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{PROFILE_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a> <!-- ENDIF -->&nbsp;</div>
-				<div class="gensmall" style="float: {S_CONTENT_FLOW_END};">
+				<div class="gensmall float_l">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{PROFILE_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a><!-- ENDIF --><!-- IF postrow.U_STEAM --><a href="{postrow.U_STEAM}">{STEAM_IMG}</a><!-- ENDIF --><!-- IF postrow.U_YOUTUBE --><a href="{postrow.U_YOUTUBE}">{YOUTUBE_IMG}</a><!-- ENDIF --><!-- IF postrow.U_TWITCH --><a href="{postrow.U_TWITCH}">{TWITCH_IMG}</a><!-- ENDIF --><!-- IF postrow.U_XBOX --><a href="{postrow.U_XBOX}">{XBOX_IMG}</a><!-- ENDIF -->&nbsp;</div>
+				<div class="gensmall float_r">
 					<!-- IF not S_IS_BOT -->
 						<!-- IF postrow.U_EDIT -->
 							<a href="{postrow.U_EDIT}">{EDIT_IMG}</a>
