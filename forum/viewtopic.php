@@ -698,8 +698,24 @@ $template->assign_vars(array(
 	'U_POST_NEW_TOPIC' 		=> ($auth->acl_get('f_post', $forum_id) || $user->data['user_id'] == ANONYMOUS) ? append_sid("{$phpbb_root_path}posting.$phpEx", "mode=post&amp;f=$forum_id") : '',
 	'U_POST_REPLY_TOPIC' 	=> ($auth->acl_get('f_reply', $forum_id) || $user->data['user_id'] == ANONYMOUS) ? append_sid("{$phpbb_root_path}posting.$phpEx", "mode=reply&amp;f=$forum_id&amp;t=$topic_id") : '',
 	'U_BUMP_TOPIC'			=> (bump_topic_allowed($forum_id, $topic_data['topic_bumped'], $topic_data['topic_last_post_time'], $topic_data['topic_poster'], $topic_data['topic_last_poster_id'])) ? append_sid("{$phpbb_root_path}posting.$phpEx", "mode=bump&amp;f=$forum_id&amp;t=$topic_id&amp;hash=" . generate_link_hash("topic_$topic_id")) : '')
-);
+	);
 
+	$user->add_lang('mods/social_networking_buttons');
+	
+	$template->assign_var('STEAM_IMG', $user->img('icon_contact_steam', 'STEAM'));
+	$template->assign_var('YOUTUBE_IMG', $user->img('icon_contact_youtube', 'YOUTUBE'));
+	$template->assign_var('TWITCH_IMG', $user->img('icon_contact_twitch', 'TWITCH'));
+	$template->assign_var('XBOX_IMG', $user->img('icon_contact_xbox', 'XBOX'));
+	
+	$template->assign_var('BEBO_IMG', $user->img('icon_contact_bebo', 'BEBO'));
+	$template->assign_var('BLOGGER_IMG', $user->img('icon_contact_blogger', 'BLOGGER'));
+	$template->assign_var('FACEBOOK_IMG', $user->img('icon_contact_fb', 'FACEBOOK'));
+	$template->assign_var('GOODREADS_IMG', $user->img('icon_contact_gr', 'GOODREADS'));
+	$template->assign_var('LINKEDIN_IMG', $user->img('icon_contact_li', 'LINKEDIN'));
+	$template->assign_var('MYSPACE_IMG', $user->img('icon_contact_ms', 'MYSPACE'));
+	$template->assign_var('NETLOG_IMG', $user->img('icon_contact_netlog', 'NETLOG'));
+	$template->assign_var('TWITTER_IMG', $user->img('icon_contact_twit', 'TWITTER'));
+	
 // Does this topic contain a poll?
 if (!empty($topic_data['poll_start']))
 {
@@ -1128,6 +1144,20 @@ while ($row = $db->sql_fetchrow($result))
 				'warnings'			=> 0,
 				'allow_pm'			=> 0,
 			);
+			
+			$user_cache[$poster_id]['steam'] = '';
+			$user_cache[$poster_id]['youtube'] = '';
+			$user_cache[$poster_id]['twitch'] = '';
+			$user_cache[$poster_id]['xbox'] = '';
+			
+			$user_cache[$poster_id]['bebo'] = '';
+			$user_cache[$poster_id]['blogger'] = '';
+			$user_cache[$poster_id]['facebook'] = '';
+			$user_cache[$poster_id]['goodreads'] = '';
+			$user_cache[$poster_id]['linkedin'] = '';
+			$user_cache[$poster_id]['myspace'] = '';
+			$user_cache[$poster_id]['netlog'] = '';
+			$user_cache[$poster_id]['twitter'] = '';
 
 			get_user_rank($row['user_rank'], false, $user_cache[$poster_id]['rank_title'], $user_cache[$poster_id]['rank_image'], $user_cache[$poster_id]['rank_image_src']);
 		}
@@ -1180,6 +1210,20 @@ while ($row = $db->sql_fetchrow($result))
 				'author_username'	=> get_username_string('username', $poster_id, $row['username'], $row['user_colour']),
 				'author_profile'	=> get_username_string('profile', $poster_id, $row['username'], $row['user_colour']),
 			);
+			
+			$user_cache[$poster_id]['steam'] = urlencode($row['user_steam']);
+			$user_cache[$poster_id]['youtube'] = urlencode($row['user_youtube']);
+			$user_cache[$poster_id]['twitch'] = urlencode($row['user_twitch']);
+			$user_cache[$poster_id]['xbox'] = urlencode($row['user_xbox']);
+			
+			$user_cache[$poster_id]['bebo'] = urlencode($row['user_bebo']);
+			$user_cache[$poster_id]['blogger'] = $row['user_blogger'];
+			$user_cache[$poster_id]['facebook'] = $row['user_facebook'];
+			$user_cache[$poster_id]['goodreads'] = $row['user_goodreads'];
+			$user_cache[$poster_id]['linkedin'] = $row['user_linkedin'];
+			$user_cache[$poster_id]['myspace'] = urlencode($row['user_myspace']);
+			$user_cache[$poster_id]['netlog'] = $row['user_netlog'];
+			$user_cache[$poster_id]['twitter'] = urlencode($row['user_twitter']);
 
 			get_user_rank($row['user_rank'], $row['user_posts'], $user_cache[$poster_id]['rank_title'], $user_cache[$poster_id]['rank_image'], $user_cache[$poster_id]['rank_image_src']);
 
@@ -1603,6 +1647,20 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 		'S_IGNORE_POST'		=> ($row['hide_post']) ? true : false,
 		'L_IGNORE_POST'		=> ($row['hide_post']) ? sprintf($user->lang['POST_BY_FOE'], get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']), '<a href="' . $viewtopic_url . "&amp;p={$row['post_id']}&amp;view=show#p{$row['post_id']}" . '">', '</a>') : '',
 	);
+	
+	$postrow['U_STEAM_SN'] = $user_cache[$poster_id]['steam'];
+	$postrow['U_YOUTUBE_SN'] = $user_cache[$poster_id]['youtube'];
+	$postrow['U_TWITCH_SN'] = $user_cache[$poster_id]['twitch'];
+	$postrow['U_XBOX_SN'] = $user_cache[$poster_id]['xbox'];
+	
+	$postrow['U_BEBO_SN'] = $user_cache[$poster_id]['bebo'];
+	$postrow['U_BLOGGER_SN'] = $user_cache[$poster_id]['blogger'];
+	$postrow['U_FACEBOOK_SN'] = $user_cache[$poster_id]['facebook'];
+	$postrow['U_GOODREADS_SN'] = $user_cache[$poster_id]['goodreads'];
+	$postrow['U_LINKEDIN_SN'] = $user_cache[$poster_id]['linkedin'];
+	$postrow['U_MYSPACE_SN'] = $user_cache[$poster_id]['myspace'];
+	$postrow['U_NETLOG_SN'] = $user_cache[$poster_id]['netlog'];
+	$postrow['U_TWITTER_SN'] = $user_cache[$poster_id]['twitter'];
 
 	if (isset($cp_row['row']) && sizeof($cp_row['row']))
 	{
