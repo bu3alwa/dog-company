@@ -131,7 +131,25 @@ inherit_from = {INHERIT_FROM}
 				'user_icon1', 'user_icon2', 'user_icon3', 'user_icon4', 'user_icon5', 'user_icon6', 'user_icon7', 'user_icon8', 'user_icon9', 'user_icon10',
 			),
 		);
-
+		
+		//Social Networking Site Buttons START
+		$user->add_lang('mods/social_networking_buttons');
+		
+		$this->imageset_keys['icons'][] = 'icon_contact_steam';
+		$this->imageset_keys['icons'][] = 'icon_contact_youtube';
+		$this->imageset_keys['icons'][] = 'icon_contact_twitch';
+		$this->imageset_keys['icons'][] = 'icon_contact_xbox';
+		
+		$this->imageset_keys['icons'][] = 'icon_contact_bebo';
+		$this->imageset_keys['icons'][] = 'icon_contact_blogger';
+		$this->imageset_keys['icons'][] = 'icon_contact_fb';
+		$this->imageset_keys['icons'][] = 'icon_contact_gr';
+		$this->imageset_keys['icons'][] = 'icon_contact_li';
+		$this->imageset_keys['icons'][] = 'icon_contact_ms';
+		$this->imageset_keys['icons'][] = 'icon_contact_netlog';
+		$this->imageset_keys['icons'][] = 'icon_contact_twit';
+		//Social Networking Site Buttons END
+		
 		// Execute overall actions
 		switch ($action)
 		{
