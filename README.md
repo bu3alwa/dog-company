@@ -142,14 +142,14 @@ What must work in new theme:
 
 =============================== Update 07/14 ===================================
 
-- Comment system now working. Just need to style it to our liking.
-- Style.css import now differs from old method. Will update once everything is set.
-- Login Dropdown halfway done on the wordpress side.
-- info dropdown part stylized.
+- Comment system now working. Just need to style it to our liking
+- Style.css import now differs from old method. Will update once everything is set
+- Login Dropdown halfway done on the wordpress side
+- info dropdown part stylized
  
 =============================== Update 10/13 ===================================
 
-- Damn time flys.
+- Damn time flys
 - Updated some forum styling issue that could help you out in forum-border.css
 
 =============================== Update 11/01 ===================================
@@ -197,37 +197,37 @@ What must work in new theme:
 	
 =============================== Update 12/13 ===================================
 
-- Header size shrinked 20 px less.
-- Blue bar at the bottom of the footer added to WP.
-- Off-white background-color behind main content.
-- Header and footer background-color changed.
+- Header size shrinked 20 px less
+- Blue bar at the bottom of the footer added to WP
+- Off-white background-color behind main content
+- Header and footer background-color changed
 
 =============================== Update 01/05 ===================================
 
-- Header image edited, link fixed on Forums side.
-- Blue bar at the bottom of the footer added to forums.
-- Off-white background-color behind main content upadted on forums.
-- Added titles to all menu buttons.
-- Enhanced the counter images to correct color and uped the quality of the text.
+- Header image edited, link fixed on Forums side
+- Blue bar at the bottom of the footer added to forums
+- Off-white background-color behind main content upadted on forums
+- Added titles to all menu buttons
+- Enhanced the counter images to correct color and uped the quality of the text
 - Small formatting done to PM folder
 - Fixed incorrect img path in PM folder
 - Formated the CAPTCHA
 
 =============================== Update 01/06 ===================================
 
-- Small edits to counter images.
-- Fully implemented BBC3.
-- Added automated embedding of videos on posts.
+- Small edits to counter images
+- Fully implemented BBC3
+- Added automated embedding of videos on posts
 
 =============================== Update 01/07 ===================================
 
-- Added error pages.
-- Modified spoiler hover.
-- Added Gravatar options to fourms.
+- Added error pages
+- Modified spoiler hover
+- Added Gravatar options to fourms
 
 =============================== Update 01/10 ===================================
 
-- Error pages compteted and working.
+- Error pages compteted and working
 
 =============================== Update 01/11 ===================================
 
@@ -247,3 +247,6 @@ What must work in new theme:
 - Added Twitch intergration (alpha stages)
 - Mulltiple minor tweaks to code
 
+=============================== Update 03/07 ===================================
+
+- Updated footer image
