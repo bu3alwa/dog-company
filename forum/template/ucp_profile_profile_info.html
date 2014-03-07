@@ -1,0 +1,91 @@
+<!-- INCLUDE ucp_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+<tr>
+	<th colspan="2" valign="middle">{L_TITLE}</th>
+</tr>
+<!-- IF ERROR -->
+	<tr>
+		<td class="row3" colspan="2" align="center"><span class="gensmall error">{ERROR}</span></td>
+	</tr>
+<!-- ENDIF -->
+<tr> 
+	<td class="row1" colspan="2"><span class="gensmall">{L_PROFILE_INFO_NOTICE}</span></td>
+</tr>
+<!-- IF S_USER_UCP_ICQ -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_UCP_ICQ}:<!-- IF UCP_ICQ_REQUIRE --> *<!-- ENDIF --> </b></td>
+
+	<td class="row2"><input class="post" type="text" name="icq" size="30" maxlength="15" value="{ICQ}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_AIM -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_UCP_AIM}:<!-- IF UCP_AIM_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="aim" size="30" maxlength="255" value="{AIM}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_MSNM -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_UCP_MSNM}:<!-- IF UCP_MSNM_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="msn" size="30" maxlength="255" value="{MSN}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_YIM -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_UCP_YIM}:<!-- IF UCP_YIM_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="yim" size="30" maxlength="255" value="{YIM}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_JABBER -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_UCP_JABBER}:<!-- IF UCP_JABBER_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="jabber" size="30" maxlength="255" value="{JABBER}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_WEBSITE -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_WEBSITE}:<!-- IF UCP_WEBSITE_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="website" size="30" maxlength="255" value="{WEBSITE}" /></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_LOCATION -->	
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_LOCATION}:<!-- IF UCP_LOCATION_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><input class="post" type="text" name="location" size="30" maxlength="100" value="{LOCATION}" /></td>
+</tr>
+<!-- ENDIF -->	
+<!-- IF S_USER_UCP_OCCUPATION -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_OCCUPATION}:<!-- IF UCP_OCCUPATION_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><textarea class="post" name="occupation" rows="3" cols="30">{OCCUPATION}</textarea></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_USER_UCP_INTERESTS -->
+<tr> 
+	<td class="row1" width="35%"><b class="genmed">{L_INTERESTS}:<!-- IF UCP_INTERESTS_REQUIRE --> *<!-- ENDIF --> </b></td>
+	<td class="row2"><textarea class="post" name="interests" rows="3" cols="30">{INTERESTS}</textarea></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_BIRTHDAYS_ENABLED -->
+	<tr> 
+		<td class="row1" width="35%"><b class="genmed">{L_BIRTHDAY}:<!-- IF UCP_BIRTHDAY_REQUIRE --> *<!-- ENDIF --> </b><br /><span class="gensmall">{L_BIRTHDAY_EXPLAIN}</span></td>
+		<td class="row2"><span class="genmed">{L_DAY}:</span> <select name="bday_day">{S_BIRTHDAY_DAY_OPTIONS}</select> <span class="genmed">{L_MONTH}:</span> <select name="bday_month">{S_BIRTHDAY_MONTH_OPTIONS}</select> <span class="genmed">{L_YEAR}:</span> <select name="bday_year">{S_BIRTHDAY_YEAR_OPTIONS}</select></td>
+	</tr>
+<!-- ENDIF -->
+<!-- BEGIN profile_fields -->
+	<tr> 
+		<td class="row1" width="35%">
+			<b class="genmed">{profile_fields.LANG_NAME}: </b>
+			<!-- IF profile_fields.S_REQUIRED --><b>*</b><!-- ENDIF -->
+			<!-- IF profile_fields.LANG_EXPLAIN --><br /><span class="gensmall">{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF -->
+		</td>
+		<td class="row2">{profile_fields.FIELD}<!-- IF profile_fields.ERROR --><br /><span class="gensmall error">{profile_fields.ERROR}</span><!-- ENDIF --></td>
+	</tr>
+<!-- END profile_fields -->
+<tr>
+	<td class="cat" colspan="2" align="center">{S_HIDDEN_FIELDS}<input class="btnmain" type="submit" name="submit" value="{L_SUBMIT}" />&nbsp;&nbsp;<input class="btnlite" type="reset" value="{L_RESET}" name="reset" /></td>
+</tr>
+</table>
+
+<!-- INCLUDE ucp_footer.html -->
