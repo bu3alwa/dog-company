@@ -189,14 +189,25 @@ ul li, ol li, ul.list > li, ol.list > li {
 /*-----------
 	HTML5
 -----------*/
-.FLOW_BEGIN { /* S_CONTENT_FLOW_BEGIN */
+.FLOW_BEGIN {
 	text-align: left;
 }
-.FLOW_END { /* S_CONTENT_FLOW_END */
+.FLOW_END {
 	text-align: right;
 }
 .FLOW_MIDDLE  {
 	text-align: center;
+}
+.float_l { /* S_CONTENT_FLOW_BEGIN */
+	float: left;
+}
+.float_r { /* S_CONTENT_FLOW_END */
+	float: right;
+}
+.v-align  img{
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
 }
 .v_top { /* valign="top" */
 	vertical-align: top;
@@ -351,6 +362,7 @@ body {
 	background: #FFF;
 }
 
+
 #postrow { }
 #postdata { }
 
@@ -417,7 +429,7 @@ p.linkmcp { /* NOT USED */
 .breadcrumbs { /* Forum nav font settings */
 	margin: 0;
 	float: left;
-	color: #E3E3E3 !important;
+	color: black !important;
 	white-space: normal;
 	font-family: NeouBold, NeouThin;
 	font-size: 1.8em;
@@ -554,7 +566,8 @@ b.postauthor {
 }
 
 .sig {
-
+	/*position: absolute;
+	bottom: 0;*/0707
 }
 
 .error {
@@ -700,7 +713,7 @@ td.relative {
 }
 
 .row2 {
-	background-color: #dcdcdc; /* BG Color of main content names cells */
+	background-color: #bdbdbd;
 	padding: 4px;
 }
 
@@ -718,6 +731,9 @@ td.relative {
 
     background-color: transparent;
 	padding: 4px !important;
+}
+.madmanSucks-even:first-child {
+	border-style: none hidden dashed hidden; /* Top, Right, Bottom, Left */
 }
 .madmanSucks-odd {
 	border: solid;
