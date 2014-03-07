@@ -24,6 +24,7 @@ include($phpbb_root_path . 'includes/functions_profile_control.' . $phpEx);
 $user->session_begin();
 $auth->acl($user->data);
 $user->setup(array('memberlist', 'groups'));
+$user->add_lang('mods/social_networking_buttons');
 
 // Grab data
 $mode		= request_var('mode', '');
@@ -1759,6 +1760,32 @@ function show_profile($data, $user_notes_enabled = false, $warn_user_enabled = f
 		'USER_JABBER_IMG'	=> ($data['user_jabber']) ? $user->img('icon_contact_jabber', $data['user_jabber']) : '',
 
 		'L_VIEWING_PROFILE'	=> sprintf($user->lang['VIEWING_PROFILE'], $username),
+		
+		'USER_STEAM_SN'		=> $data['user_steam'],
+		'U_STEAM_SN'		=> ($data['user_steam']) ? 'http://steamcommunity.com/id/' . urlencode($data['user_steam']) : '',
+		'USER_YOUTUBE_SN'	=> $data['user_youtube'],
+		'U_YOUTUBE_SN'		=> ($data['user_youtube']) ? 'https://www.youtube.com/user/' . urlencode($data['user_youtube']) : '',
+		'USER_TWITCH_SN'	=> $data['user_twitch'],
+		'U_TWITCH_SN'		=> ($data['user_twitch']) ? 'https://www.twitch.tv/' . urlencode($data['user_twitch']) : '',
+		'USER_XBOX_SN'		=> $data['user_xbox'],
+		'U_XBOX_SN'			=> ($data['user_xbox']) ? 'https://live.xbox.com/en-US/Profile?GamerTag=' . urlencode($data['user_xbox']) : '',
+		
+		'USER_BEBO_SN'		=> $data['user_bebo'],
+		'U_BEBO_SN'			=> ($data['user_bebo']) ? 'http://bebo.com/' . urlencode($data['user_bebo']) : '',
+		'USER_BLOGGER_SN'	=> $data['user_blogger'],
+		'U_BLOGGER_SN'		=> ($data['user_blogger']) ? urlencode($data['user_blogger']) : '',
+		'USER_FACEBOOK_SN'	=> $data['user_facebook'],
+		'U_FACEBOOK_SN'		=> ($data['user_facebook']) ? urlencode($data['user_facebook']) : '',
+		'USER_GOODREADS_SN'	=> $data['user_goodreads'],
+		'U_GOODREADS_SN'	=> ($data['user_goodreads']) ? urlencode($data['user_goodreads']) : '',
+		'USER_LINKEDIN_SN'	=> $data['user_linkedin'],
+		'U_LINKEDIN_SN'		=> ($data['user_linkedin']) ? urlencode($data['user_linkedin']) : '',
+		'USER_MYSPACE_SN'	=> $data['user_myspace'],
+		'U_MYSPACE_SN'		=> ($data['user_myspace']) ? 'http://www.myspace.com/' . urlencode($data['user_myspace']) : '',
+		'USER_NETLOG_SN'	=> $data['user_netlog'],
+		'U_NETLOG_SN'		=> ($data['user_netlog']) ? urlencode($data['user_netlog']) : '',
+		'USER_TWITTER_SN'	=> $data['user_twitter'],
+		'U_TWITTER_SN'		=> ($data['user_twitter']) ? 'http://www.twitter.com/' . urlencode($data['user_twitter']) : '',
 	);
 }
 
