@@ -250,3 +250,5 @@ What must work in new theme:
 =============================== Update 03/08 ===================================
 
 - Updated footer image
+- Added Profile Fields Control MOD
+- Added Social Networking Site Buttons MOD
