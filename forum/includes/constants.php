@@ -283,4 +283,10 @@ define('ZEBRA_TABLE',				$table_prefix . 'zebra');
 define('CLICKS_TABLE',				$table_prefix . 'clicks');
 // MOD : MSSTI ABBC3 Clicks Counter - End
 
+//Begin: Profile Fields Control MOD
+define('PROFILE_FIELD_DISABLED', 0);
+define('PROFILE_FIELD_ENABLED', 1);
+define('PROFILE_DISPLAY_REGISTRATION', 2);
+define('PROFILE_REQUIRE_REGISTRATION', 3);
+//End: Profile Fields Control MOD
 ?>
