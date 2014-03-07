@@ -113,26 +113,111 @@
 				<td><a href="{U_PM}">{PM_IMG}</a></td>
 			</tr>
 		<!-- ENDIF -->
+		<!-- IF U_MSN -->
 			<tr  class="noborder">
 				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_MSNM}: </td>
-				<td><!-- IF U_MSN --><a href="{U_MSN}" onclick="popup(this.href, 550, 320); return false">{MSN_IMG}</a><!-- ELSEIF USER_MSN -->{USER_MSN}<!-- ENDIF --></td>
+				<td><a href="{U_MSN}" onclick="popup(this.href, 550, 320); return false">{MSN_IMG}</a><!-- ELSEIF USER_MSN -->{USER_MSN}</td>
 			</tr>
+		<!-- ENDIF -->
+		<!-- IF U_YIM -->
 			<tr  class="noborder">
 				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_YIM}: </td>
-				<td><!-- IF U_YIM --><a href="{U_YIM}" onclick="popup(this.href, 780, 550); return false">{YIM_IMG}</a><!-- ELSEIF USER_YIM -->{USER_YIM}<!-- ENDIF --></td>
+				<td><a href="{U_YIM}" onclick="popup(this.href, 780, 550); return false">{YIM_IMG}</a><!-- ELSEIF USER_YIM -->{USER_YIM}</td>
 			</tr>
+		<!-- ENDIF -->
+		<!-- IF U_AIM -->
 			<tr  class="noborder">
 				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_AIM}: </td>
-				<td><!-- IF U_AIM --><a href="{U_AIM}" onclick="popup(this.href, 550, 320); return false">{AIM_IMG}</a><!-- ELSEIF USER_AIM -->{USER_AIM}<!-- ENDIF --></td>
+				<td><a href="{U_AIM}" onclick="popup(this.href, 550, 320); return false">{AIM_IMG}</a><!-- ELSEIF USER_AIM -->{USER_AIM}</td>
 			</tr>
+		<!-- ENDIF -->
+		<!-- IF U_ICQ -->
 			<tr  class="noborder">
 				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_ICQ}: </td>
-				<td><!-- IF U_ICQ --><a href="{U_ICQ}" onclick="popup(this.href, 550, 320); return false">{ICQ_IMG}</a><!-- ELSEIF USER_ICQ -->{USER_ICQ}<!-- ENDIF --></td>
+				<td><a href="{U_ICQ}" onclick="popup(this.href, 550, 320); return false">{ICQ_IMG}</a><!-- ELSEIF USER_ICQ -->{USER_ICQ}</td>
 			</tr>
+		<!-- ENDIF -->
+		<!-- IF U_JABBER -->
 			<tr  class="noborder">
 				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_JABBER}: </td>
-				<td><!-- IF U_JABBER --><a href="{U_JABBER}" onclick="popup(this.href, 550, 320); return false">{JABBER_IMG}</a><!-- ELSEIF USER_JABBER -->{USER_JABBER_IMG}<!-- ENDIF --></td>
+				<td><a href="{U_JABBER}" onclick="popup(this.href, 550, 320); return false">{JABBER_IMG}</a><!-- ELSEIF USER_JABBER -->{USER_JABBER_IMG}</td>
 			</tr>
+		<!-- ENDIF -->
+		
+		<!-- Social Networking Site Buttons START -->
+		<!-- IF USER_STEAM_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_STEAM}:</td>
+				<td><a href="{USER_STEAM_SN}" title="{L_VIEW_STEAM}: {USER_STEAM_SN}">{L_VIEW_STEAM}</a><!-- ELSEIF USER_STEAM -->{USER_STEAM_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_YOUTUBE_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_YOUTUBE}:</td>
+				<td><a href="{USER_YOUTUBE_SN}" title="{L_VIEW_YOUTUBE}: {USER_YOUTUBE_SN}">{L_VIEW_YOUTUBE}</a><!-- ELSEIF USER_YOUTUBE -->{USER_YOUTUBE_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_TWITCH_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_TWITCH}:</td>
+				<td><a href="{USER_TWITCH_SN}" title="{L_VIEW_TWITCH}: {USER_TWITCH_SN}">{L_VIEW_TWITCH}</a><!-- ELSEIF USER_TWITCH -->{USER_TWITCH_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_XBOX_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_XBOX}:</td>
+				<td><a href="{USER_XBOX_SN}" title="{L_VIEW_XBOX}: {USER_XBOX_SN}">{L_VIEW_XBOX}</a><!-- ELSEIF USER_XBOX -->{USER_XBOX_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_BEBO_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_BEBO}:</td>
+				<td><a href="http://www.bebo.com/{USER_BEBO_SN}" title="{L_VIEW_BEBO}: {USER_BEBO_SN}">{L_VIEW_BEBO}</a><!-- ELSEIF USER_BEBO -->{USER_BEBO_IMG}</td>
+			</tr>
+		<!-- ENDIF -->	
+		<!-- IF USER_BLOGGER_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_BLOGGER}:</td>
+				<td><a href="{USER_BLOGGER_SN}" title="{L_VIEW_BLOGGER}: {USER_BLOGGER_SN}">{L_VIEW_BLOGGER}</a><!-- ELSEIF USER_BLOGGER -->{USER_BLOGGER_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_FACEBOOK_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_FACEBOOK}:</td>
+				<td><a href="{USER_FACEBOOK_SN}" title="{L_VIEW_FACEBOOK}: {USER_FACEBOOK_SN}">{L_VIEW_FACEBOOK}</a><!-- ELSEIF USER_FACEBOOK -->{USER_FACEBOOK_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_GOODREADS_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_GOODREADS}:</td>
+				<td><a href="{USER_GOODREADS_SN}" title="{L_VIEW_GOODREADS}: {USER_GOODREADS_SN}">{L_VIEW_GOODREADS}</a><!-- ELSEIF USER_GOODREADS -->{USER_GOODREADS_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_LINKEDIN_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_LINKEDIN}:</td>
+				<td><a href="{USER_LINKEDIN_SN}" title="{L_VIEW_LINKEDIN}: {USER_LINKEDIN_SN}">{L_VIEW_LINKEDIN}</a><!-- ELSEIF USER_LINKEDIN -->{USER_LINKEDIN_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_MYSPACE_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_MYSPACE}:</td> 
+				<td><a href="http://www.myspace.com/{USER_MYSPACE_SN}" title="{L_VIEW_MYSPACE}: {USER_MYSPACE_SN}">{L_VIEW_MYSPACE}</a><!-- ELSEIF USER_MYSPACE -->{USER_MYSPACE_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_NETLOG_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_NETLOG}:</td> 
+				<td><a href="{USER_NETLOG_SN}" title="{L_VIEW_NETLOG}: {USER_NETLOG_SN}">{L_VIEW_NETLOG}</a><!-- ELSEIF USER_NETLOG -->{USER_NETLOG_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- IF USER_TWITTER_SN -->
+			<tr  class="noborder">
+				<td class="gen" nowrap="nowrap" align="{S_CONTENT_FLOW_END}">{L_TWITTER}:</td> 
+				<td><a href="http://www.twitter.com/{USER_TWITTER_SN}" title="{L_VIEW_TWITTER}: {USER_TWITTER_SN}">{L_VIEW_TWITTER}</a><!-- ELSEIF USER_TWITTER -->{USER_TWITTER_IMG}</td>
+			</tr>
+		<!-- ENDIF -->
+		<!-- Social Networking Site Buttons END -->
 			</table>
 		</td>
 		<td></td>
