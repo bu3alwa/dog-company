@@ -1374,6 +1374,31 @@ class acp_users
 							array('string', true, 5, 255),
 							array('jabber')),
 						'yim'			=> array('string', true, 5, 255),
+						//Social Networking Site Buttons START
+						'steam'			=> array('string', true, 4, 255),
+						'youtube'		=> array('string', true, 4, 255),
+						'twitch'		=> array('string', true, 4, 255),
+						'xbox'			=> array('string', true, 4, 255),
+						
+						'bebo'			=> array('string', true, 4, 255),
+						'blogger'		=> array(
+							array('string', true, 12, 255),
+							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
+						'facebook'		=> array(
+							array('string', true, 12, 255),
+							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
+						'goodreads'		=> array(
+							array('string', true, 12, 255),
+							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
+						'linkedin'		=> array(
+							array('string', true, 12, 255),
+							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
+						'myspace'		=> array('string', true, 4, 255),
+						'netlog'		=> array(
+							array('string', true, 12, 255),
+							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
+						'twitter'		=> array('string', true, 4, 255),
+						//Social Networking Site Buttons END
 						'website'		=> array(
 							array('string', true, 12, 255),
 							array('match', true, '#^http[s]?://(.*?\.)*?[a-z0-9\-]+\.[a-z]{2,4}#i')),
@@ -1412,7 +1437,22 @@ class acp_users
 							'user_interests'=> $data['interests'],
 							'user_birthday'	=> $data['user_birthday'],
 						);
-
+						//Social Networking Site Buttons START
+						$sql_ary['user_steam'] = $data['steam'];
+						$sql_ary['user_youtube'] = $data['youtube'];
+						$sql_ary['user_twitch'] = $data['twitch'];
+						$sql_ary['user_xbox'] = $data['xbox'];
+						
+						$sql_ary['user_bebo'] = $data['bebo'];
+						$sql_ary['user_blogger'] = $data['blogger'];
+						$sql_ary['user_facebook'] = $data['facebook'];
+						$sql_ary['user_goodreads'] = $data['goodreads'];
+						$sql_ary['user_linkedin'] = $data['linkedin'];
+						$sql_ary['user_myspace'] = $data['myspace'];
+						$sql_ary['user_netlog'] = $data['netlog'];
+						$sql_ary['user_twitter'] = $data['twitter'];
+						//Social Networking Site Buttons END
+						
 						$sql = 'UPDATE ' . USERS_TABLE . '
 							SET ' . $db->sql_build_array('UPDATE', $sql_ary) . "
 							WHERE user_id = $user_id";
@@ -1469,6 +1509,22 @@ class acp_users
 
 					'S_PROFILE'		=> true)
 				);
+				
+				//Social Networking Site Buttons START
+				$template->assign_var('STEAM', $data['steam']);
+				$template->assign_var('YOUTUBE', $data['youtube']);
+				$template->assign_var('TWITCH', $data['twitch']);
+				$template->assign_var('XBOX', $data['xbox']);
+				
+				$template->assign_var('BEBO', $data['bebo']);
+				$template->assign_var('BLOGGER', $data['blogger']);
+				$template->assign_var('FACEBOOK', $data['facebook']);
+				$template->assign_var('GOODREADS', $data['goodreads']);
+				$template->assign_var('LINKEDIN', $data['linkedin']);
+				$template->assign_var('MYSPACE', $data['myspace']);
+				$template->assign_var('NETLOG', $data['netlog']);
+				$template->assign_var('TWITTER', $data['twitter']);
+				//Social Networking Site Buttons END
 
 				// Get additional profile fields and assign them to the template block var 'profile_fields'
 				$user->get_profile_fields($user_id);
