@@ -48,15 +48,13 @@ Site Layout - Menu //Check the Issues section of GitHub for a new proposed desig
 
 What must work in new theme:
 - Look up via letter (members search)
-	- INCOMPLETE
+	- COMPLETE
 - Text editor (List, h1 function is broken)
 	- COMPLETE //ABBC3 fixes this
 - Image sizes (don't resize when posted) 
 	- COMPLETE //ABBC3 fixes this
 - Allow youtube videos to be embed into posts
 	- COMPLETE //ABBC3 fixes this
-- MCP - Merging posts
-	- INCOMPLETE
 
 =============================== Update 06/8 ====================================
 
