@@ -247,6 +247,6 @@ What must work in new theme:
 - Added Twitch intergration (alpha stages)
 - Mulltiple minor tweaks to code
 
-=============================== Update 03/07 ===================================
+=============================== Update 03/08 ===================================
 
 - Updated footer image
