@@ -238,3 +238,12 @@ What must work in new theme:
 
 - Fixed JS on Wordpress
 - Noted multiple errors to be fixed after release
+
+=============================== Update 03/07 ===================================
+
+- Formatted ucp panel
+- Formatted view profile page
+- Added Profile Mod
+- Added Twitch intergration (alpha stages)
+- Mulltiple minor tweaks to code
+
