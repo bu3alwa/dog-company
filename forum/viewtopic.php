@@ -1611,6 +1611,9 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 
 
 	$GLOBALS['wpu_actions']->show_viewtopic_link($user_cache[$poster_id], $postrow);
+	// Begin: Profile Fields Control MOD
+	profile_fields_variables($postrow, $user_cache[$poster_id]);
+	// End: Profile Fields Control MOD
 	// Dump vars into template
 	$template->assign_block_vars('postrow', $postrow);
 
