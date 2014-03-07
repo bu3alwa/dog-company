@@ -1,0 +1,114 @@
+	<form id="user_profile" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_USER_PROFILE}</legend>
+	<dl>
+		<dt><label for="icq">{L_UCP_ICQ}:</label></dt>
+		<dd><input type="text" id="icq" name="icq" value="{ICQ}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="aim">{L_UCP_AIM}:</label></dt>
+		<dd><input type="text" id="aim" name="aim" value="{AIM}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="msn">{L_UCP_MSNM}:</label></dt>
+		<dd><input type="text" id="msn" name="msn" value="{MSN}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="yim">{L_UCP_YIM}:</label></dt>
+		<dd><input type="text" id="yim" name="yim" value="{YIM}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="jabber">{L_UCP_JABBER}:</label></dt>
+		<dd><input type="text" id="jabber" name="jabber" value="{JABBER}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="steam">{L_UCP_STEAM}:</label></dt>
+		<dd><input type="text" name="steam" id="steam" value="{STEAM}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="youtube">{L_UCP_YOUTUBE}:</label></dt>
+		<dd><input type="text" name="youtube" id="youtube" value="{YOUTUBE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="twitch">{L_UCP_TWITCH}:</label></dt>
+		<dd><input type="text" name="twitch" id="twitch" value="{TWITCH}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="xbox">{L_UCP_XBOX}:</label></dt>
+		<dd><input type="text" name="xbox" id="xbox" value="{XBOX}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="bebo">{L_UCP_BEBO}:</label></dt>
+		<dd><input type="text" name="bebo" id="bebo" value="{BEBO}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="blogger">{L_UCP_BLOGGER}:</label></dt>
+		<dd><input type="text" name="blogger" id="blogger" value="{BLOGGER}" /></dd>
+	</dl>		
+	<dl>
+		<dt><label for="facebook">{L_UCP_FACEBOOK}:</label></dt>
+		<dd><input type="text" name="facebook" id="facebook" value="{FACEBOOK}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="goodreads">{L_UCP_GOODREADS}:</label></dt>
+		<dd><input type="text" name="goodreads" id="goodreads" value="{GOODREADS}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="linkedin">{L_UCP_LINKEDIN}:</label></dt>
+		<dd><input type="text" name="linkedin" id="linkedin" value="{LINKEDIN}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="myspace">{L_UCP_MYSPACE}:</label></dt>
+		<dd><input type="text" name="myspace" id="myspace" value="{MYSPACE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="netlog">{L_UCP_NETLOG}:</label></dt>
+		<dd><input type="text" name="netlog" id="netlog" value="{NETLOG}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="twitter">{L_UCP_TWITTER}:</label></dt>
+		<dd><input type="text" name="twitter" id="twitter" value="{TWITTER}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="website">{L_WEBSITE}:</label></dt>
+		<dd><input type="text" id="website" name="website" value="{WEBSITE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="location">{L_LOCATION}:</label></dt>
+		<dd><input type="text" id="location" name="location" value="{LOCATION}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="occupation">{L_OCCUPATION}:</label></dt>
+		<dd><textarea id="occupation" name="occupation" rows="3" cols="30">{OCCUPATION}</textarea></dd>
+	</dl>
+	<dl>
+		<dt><label for="interests">{L_INTERESTS}:</label></dt>
+		<dd><textarea id="interests" name="interests" rows="3" cols="30">{INTERESTS}</textarea></dd>
+	</dl>
+	<dl> 
+		<dt><label for="birthday">{L_BIRTHDAY}:</label><br /><span>{L_BIRTHDAY_EXPLAIN}</span></dt>
+		<dd>{L_DAY}: <select id="birthday" name="bday_day">{S_BIRTHDAY_DAY_OPTIONS}</select> {L_MONTH}: <select name="bday_month">{S_BIRTHDAY_MONTH_OPTIONS}</select> {L_YEAR}: <select name="bday_year">{S_BIRTHDAY_YEAR_OPTIONS}</select></dd>
+	</dl>
+	</fieldset>
+
+	<!-- IF .profile_fields -->
+		<fieldset>
+			<legend>{L_USER_CUSTOM_PROFILE_FIELDS}</legend>
+		<!-- BEGIN profile_fields -->
+		<dl> 
+			<dt><label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>{profile_fields.LANG_NAME}:</label><!-- IF profile_fields.LANG_EXPLAIN --><br /><span>{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF --></dt>
+			<dd>{profile_fields.FIELD}</dd>
+			<!-- IF profile_fields.ERROR -->
+				<dd><span class="small" style="color: red;">{profile_fields.ERROR}</span></dd>
+			<!-- ENDIF -->
+		</dl>
+		<!-- END profile_fields -->
+		</fieldset>
+	<!-- ENDIF -->
+
+	<fieldset class="quick">
+		<input class="button1" type="submit" name="update" value="{L_SUBMIT}" />
+		{S_FORM_TOKEN}
+	</fieldset>
+	</form>
