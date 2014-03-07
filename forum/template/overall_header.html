@@ -329,7 +329,7 @@ function marklist(id, name, state)
 							'utc':      true
 						},
 						omitWeeks: true
-					});
+						});
 				};
 				});
 		</script>
@@ -350,8 +350,7 @@ function marklist(id, name, state)
 			</ul>
 			<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
 				<!-- IF S_USER_LOGGED_IN -->
-				<li id="login-navbar" title="click to go 'Profile'"><a href="{U_PROFILE}">Profile</a></li>
-
+				<li id="login-navbar" title="click to go 'Profile'"><a href="{ROOT_PATH}memberlist.php?mode=viewprofile&un={S_USERNAME}">Profile</a></li>
 				<li title="click to Logout"><a href="{U_LOGIN_LOGOUT}">Logout</a></li>
 				<!-- ELSE -->
 				<li id="login-navbar" title="click to Login"><a href="javascript:void(0)" onclick="openLog()">Login</a>
