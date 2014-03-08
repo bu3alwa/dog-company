@@ -1,5 +1,5 @@
-RELEASE NEW SITE
-
+Release Protocol
+--------------------------------------------------------------------------------------------------
 WORDPRESS
 
 
@@ -8,8 +8,7 @@ WORDPRESS
 
 
 PHPBB
-
-Mods:
-
-- Social Networking Site Buttons Mod 
-  - Must update database via social_networking_buttons.php
+  Mods:
+  
+  - Social Networking Site Buttons Mod 
+    - Must update database via social_networking_buttons.php
