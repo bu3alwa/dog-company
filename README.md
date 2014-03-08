@@ -244,9 +244,15 @@ What must work in new theme:
 - Added Profile Mod
 - Added Twitch intergration (alpha stages)
 - Mulltiple minor tweaks to code
+- Created temp .html for website down time
 
 =============================== Update 03/08 ===================================
 
 - Updated footer image
 - Added Profile Fields Control MOD
 - Added Social Networking Site Buttons MOD
+
+=============================== Update 03/09 ===================================
+
+- Finished Roster page
+- Fix few minor issues
