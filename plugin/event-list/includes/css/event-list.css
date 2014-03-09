@@ -1,0 +1,137 @@
+@import url("../../../../wp-content/themes/dog-company/css/fonts.css");
+
+.event-list {
+	clear: both;
+}
+
+ul.event-list-view, ul.single-event-view {
+	list-style: none !important;
+	margin: 1.5em 0 2em 0;
+	padding: 0;
+}
+
+li.event {
+	clear: both;
+	margin: 0 0.5em 1em 0.5em;
+	overflow: hidden;
+	zoom: 1; /* Fix for IE 6+7 */
+	border: solid;
+	border-width: 1px;
+	border-color: #1878A8;
+}
+
+.event-date {
+	float: left;
+	margin: 0;
+	font-family: NeouBold;
+}
+
+.event-list .multi-date {
+	background: url(../images/date-separator.png) center no-repeat;
+}
+
+.event-list .start-date, .event-list .end-date {
+	text-align: center;
+	width: 3.2em;
+	/*border-radius: 5px;*/
+	color: #fff !important;
+	background-color: #1878A8;
+}
+
+.event-list .start-date {
+	float: left;
+}
+
+.event-list .end-date {
+	margin-left: 3.8em;
+}
+
+.event-weekday {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.event-day {
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1em;
+	margin-bottom: -0.2em;
+}
+
+.event-month {
+	text-transform: uppercase;
+	font-size: 1.0em;
+	line-height: 1em;
+	padding: 0.4em 0;
+}
+
+.event-year {
+	font-size: 0.8em;
+	line-height: 0.8em;
+	letter-spacing: 0.1em;
+	padding-bottom: 0.3em;
+}
+
+.multi-day {
+	margin: 0.7em 0 0 7.5em; /* Top, Right, Bottom, Left */
+}
+
+.single-day {
+	margin: 0.7em 0 0 3.8em; /* Top, Right, Bottom, Left */
+}
+
+.event-title h3 {
+	/*font-size: 13px !important;*/
+	clear: none;
+	margin: 0 !important;
+	padding: 0;
+	font-family: NeouBold;
+}
+
+.event-time {
+	font-weight: bold;
+	padding-right: 0.8em;
+	font-family: NeouBold;
+}
+
+.event-cat {
+	font-size: 0.95em;
+}
+
+.event-details {
+	font-size: 0.8em;
+}
+
+div.feed {
+	display: block;
+}
+
+div.feed a * {
+	vertical-align: middle;
+}
+
+div.feed img {
+	margin: 0 5px 0 2px;
+}
+
+div.filterbar, div.filterbar div {
+	clear: both;
+	margin: 1em 0;
+	vertical-align: middle;
+}
+
+div.filterbar select.dropdown, div.filterbar ul.hlist, div.filterbar a.link {
+	margin: 0 3px;
+	vertical-align: middle;
+}
+
+div.filterbar ul.hlist li {
+	float: left;
+	list-style: none;
+	margin: 0;
+}
+
+div.filterbar ul.hlist li + li:before {
+	content: "|";
+	padding: 0 1px;
+}
