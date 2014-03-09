@@ -1,0 +1,64 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Helpers
+    link(rel="stylesheet", href="css/test-helpers.css")
+  
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Helpers
+        p This page generates elements that use Groundwork helpers using all 3 possible ways: classes, includes, and extends.
+        p Things are good when:
+        ul.list
+          li Includes and extends function like their class counterparts.
+    
+      .row.headings
+        .one.third Classes
+        .one.third Mixins
+        .one.third Placeholders
+      
+      //- This should sync with cases in test-helpers.scss
+      - var cases = ["padded", "pad-top", "pad-right", "pad-bottom", "pad-left", "gapped", "gap-top", "gap-right", "gap-bottom", "gap-left", "inline", "block", "zero", "pull-left", "pull-right", "bordered", "border-right", "border-left", "border-top", "border-bottom", "align-top", "align-right", "align-bottom", "align-left", "align-center", "justify", "truncate", "center", "disabled", "space", "round", "rotate-90", "rotate-180", "rotate-270", "rotate-90-ctr", "rotate-180-ctr", "rotate-270-ctr"]
+      //- End cases
+      
+      each item in cases
+        .row.demo
+          .one.third: div(class="#{item}")
+            | #{item}
+          .one.third: div(class="include-#{item}")
+            | #{item}
+          .one.third: div(class="extend-#{item}")
+            | #{item}
+      
+      hr
+      h2 Spacer Modifiers
+      .row.demo
+        .one.third: div(class="padded double")
+          | padded double
+        .one.third: div(class="include-padded-double")
+          | @include _padded(2);
+        .one.third: div(class="extend-padded extend-double")
+          | extend-padded extend-double
+      .row.demo
+        .one.third: div(class="padded triple")
+          | padded triple
+        .one.third: div(class="include-padded-triple")
+          | @include _padded(3);
+        .one.third: div(class="extend-padded extend-triple")
+          | extend-padded extend-triple
+      .row.demo
+        .one.third: div(class="gapped double")
+          | gapped double
+        .one.third: div(class="include-gapped-double")
+          | @include _gapped(2);
+        .one.third: div(class="extend-gapped extend-double")
+          | extend-gapped extend-double
+      .row.demo
+        .one.third: div(class="gapped triple")
+          | gapped triple
+        .one.third: div(class="include-gapped-triple")
+          | @include _gapped(3);
+        .one.third: div(class="extend-gapped extend-triple")
+          | extend-gapped extend-triple

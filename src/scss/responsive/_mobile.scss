@@ -1,0 +1,44 @@
+// ===================================
+//               Mobile
+// ===================================
+
+
+
+
+@mixin mobile {
+  @media only screen and (max-width:480px) {
+    // responsive grid
+    @include grid-responsive(false);
+    // conditional helpers
+    .mobile-only { display:inline-block !important; }
+    .hide-on-mobile { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-mobile { @include helper_reset(); }
+    .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+
+///////////////////////
+//      mobile       //
+///////////////////////
+@include mobile {
+  .tabs:not(.mobile) {
+    > ul {
+      li {
+        float:none;
+        width:100%;
+        a {
+          @include rounded(0);
+          border-bottom:none;
+        }
+        &:first-child a {
+          @include rounded($radius $radius 0 0);
+        }
+      }
+    }
+  }
+}

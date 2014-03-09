@@ -25,6 +25,7 @@
 		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>-->
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/libs/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.hoverIntent.js"></script>
+		<script type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.dropdown.js"></script>
 		<!-- GroundworkCSS -->
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/groundwork.css">
 		<script language="Javascript" type="text/javascript" src="./wp-content/themes/dog-company/js/jquery.lwtCountdown-1.0.js"></script>
@@ -216,15 +217,15 @@
 								<li><a href="/?page_id=2" rel="load">FAQ</a></li>
 							</ul>
 						</li>
-						<li class="nav-li"><a href="#">Media</a></li>
+						<li class="nav-li"><a href="/?page_id=135">Media</a></li>
 						</ul>
 					<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
 						<?php global $phpbbForum; if ($phpbbForum->user_logged_in()): ?> 
 							<?php admin_button(); ?>
-								<li id="login-navbar"><a href=<?php echo call_profile(); ?> >Profile</a></li>
+								<li id="login-navbar"><a href=<?php echo wpu_phpbb_profile_link(); ?> >Profile</a></li>
 								<li><?php integ_logout_uri();?></li>
 						<?php else: ?>
-								<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Login</a>
+								<li id="login-navbar" class="dropdown"><a href="javascript:void(0)" data-dropdown="#dropdown-1">Login</a>
 								<ul id="login-dropdown" class="align-center" >
 								<li>
 									<?php include(TEMPLATEPATH.'/login.php'); ?>

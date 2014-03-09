@@ -1,0 +1,100 @@
+// ===================================
+//         GroundworkCSS Squares
+// ===================================
+
+
+
+
+%tiles {
+  position:relative;
+}
+
+%tile {
+  display:inline-block;
+  background-color:darken($background-color,20%);
+  border:6px solid $border-color;
+  color:$font-color;
+  display:inline-block;
+  word-wrap:break-word;
+  padding:0.25em;
+  margin-bottom:0.25em;
+  text-align:center;
+  font-size:1em;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  @include transition(background-color 0.25s ease-out);
+  @include rounded($radius);
+  cursor:pointer;
+  &:hover, &:focus {
+    text-decoration:none;
+    background-color:darken($background-color,25%);
+    color:darken($font-color,10%);
+    border-color:darken($border-color,5%);
+  }
+}
+
+%tile-icon {
+  font-size:2em;
+  display:block;
+  margin:0.15em 1em;
+}
+
+%tile-on {
+  text-decoration:none;
+  background-color:darken($background-color,25%);
+  color:darken($font-color,10%);
+  border-color:darken($border-color,5%);
+}
+
+%tile-active, %tile-active:hover, %tile-active:focus {
+  background-color:darken($background-color,30%);
+  color:darken($font-color,20%);
+  border-color:darken($border-color,20%);
+}
+
+%tile-small { @include _small; }
+%tile-large { @include _large; }
+%tile-square { @include _square; }
+%tile-round { @include _round; }
+%tile-disabled  { @include state(disabled,normal,lighten(gray,20%)); }
+
+@for $i from 1 through length($modifier-name) {
+  %tile-#{nth($modifier-name, $i)} {
+    color:#{nth($modifier-code, $i)};
+    &%on, &:hover, &:focus {
+      background-color:lighten(nth($modifier-code, $i),10%);
+      border-color:#{nth($modifier-code, $i)};
+      color:#{nth($modifier-text, $i)};
+    }
+    &.active, &.active:hover, &.active:focus {
+      background-color:#{nth($modifier-code, $i)};
+      color:#{nth($modifier-text, $i)};
+      border-color:darken(nth($modifier-code, $i),10%);
+    }
+  }  
+}
+
+@if $classes {
+  .tiles {
+    @extend %tiles;
+    .tile {
+      @extend %tile;
+      i {
+        @extend %tile-icon;
+      }
+      $modifiers: on active small large square round disabled;
+      @for $i from 1 through length($modifiers) {
+        &.#{nth($modifiers, $i)} {
+          @extend %tile-#{nth($modifiers, $i)};
+        }
+      }
+      // modifier colors
+      @for $i from 1 through length($modifier-name) {
+        &.#{nth($modifier-name, $i)} {
+          @extend %tile-#{nth($modifier-name, $i)};
+        }
+      }
+    }
+  }
+}

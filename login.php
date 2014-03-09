@@ -1,3 +1,2 @@
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('login') ) : ?>
-  					<!-- static content goes here if sidebar is inactive -->
-<?php endif; ?>
+<div id="login-form-header"><h2>user Login</h2></div>
+<div id="form-wrapper"><?php login_form(); ?></div>

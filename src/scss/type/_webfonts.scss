@@ -1,0 +1,28 @@
+// =============================================
+//                 Web Fonts
+//          Last Updated:2013-4-25
+// =============================================
+
+
+
+
+@for $i from 1 through length($web-font-files) {
+  // @include font-face('#{nth($web-font-names, $i)}', inline-font-files("#{nth($web-font-files, $i)}.eot", "#{nth($web-font-files, $i)}.woff", "#{nth($web-font-files, $i)}.ttf"));
+  @font-face {
+    font-family: '#{nth($web-font-names, $i)}';
+    font-style: normal;
+    font-weight: normal;
+    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.eot');
+    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.eot#iefix') format('embedded-opentype'), 
+         url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.woff') format('woff'), 
+         url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.ttf') format('truetype');
+  }
+  %#{nth($web-font-names, $i)} {
+    @include font-stack(#{nth($web-font-names, $i)});
+  }
+  @if $classes {
+    .#{nth($web-font-names, $i)} {
+      @extend %#{nth($web-font-names, $i)};
+    }
+  }
+}

@@ -1,0 +1,149 @@
+// =============================================
+//              Custom Settings
+//          Last Updated:2013-4-25
+// =============================================
+
+
+
+
+///////////////////////
+//  custom settings  //
+///////////////////////
+
+// framework options
+$classes:             true !default;       // enable CSS class selectors     (WIP)
+$tags:                true !default;       // enable semantic tag selectors  (WIP)
+$tag-elements: html body
+							div span header footer aside nav menu section article details
+							h1 h2 h3 h4 h5 h6 p
+							ol ul li dl dt dd
+							em small big strong b u i sub sup del strike
+							blockquote cite pre code time address
+							a img center hr
+							form fieldset legend label input textarea select button
+							table caption tbody thead tfoot tr th td
+							iframe object canvas audio video !default;
+$aria:                true !default;       // enable Aria role selectors     (WIP)
+
+// file paths
+$root_path:           '../' !default;      // path to HTML document root (relative from $css_path)
+$css_path:            'css/' !default;     // path to CSS output (relative from HTML document root)
+$images_path:         'images/' !default;  // path to images (relative from $root_path)
+$fonts_path:          'font/' !default;    // path to fonts (relative from $root_path)
+$boxsizing_path:      '/js/libs/boxsizing.htc' !default;  // path to box sizing polyfill (change to absolute path from HTML document root)
+
+// layout/grid settings
+$max-width:           1200px !default;     // max container width (i.e. - 960px)
+$gutter:              10px !default;       // gutter spacing
+
+
+///////////////////////
+//       colors      //
+///////////////////////
+
+// base styles
+$background-color:    #ffffff !default;
+$font-color:          #2b2b2d !default;
+$base-font-size:      16px !default;       // these are already set by Compass, changing these here will do nothing
+$base-line-height:    24px !default;       // these are already set by Compass, changing these here will do nothing
+$font-family:         Helvetica, Arial, Geneva, sans-serif !default;
+
+// links
+$link-color:          #489AC1 !default;
+$link-active:         #198D98 !default;
+
+// selection
+$selection-color:     $link-color !default;
+$selection-text:      #ffffff !default;
+
+// borders
+$border-color:        #dddddd !default;
+
+// buttons
+$button-color:        #1DABB8 !default;
+$button-border-color: darken($button-color,10%) !default;
+$button-active:       #198D98 !default;
+$button-text:         #ffffff !default;
+$button-active-text:  #ffffff !default;
+
+// disabled
+$disabled-color:      gray !default;
+
+// info
+$info-color:          #3a87ad !default;
+$info-background:     #d9edf7 !default;
+$info-border:         #bce8f1 !default;
+
+// alert
+$alert-color:         #c09853 !default;
+$alert-background:    #fcf8e3 !default;
+$alert-border:        #fbeee0 !default;
+
+// error
+$error-color:         #b94a48 !default;
+$error-background:    #f2dede !default;
+$error-border:        #eed3d7 !default;
+
+// warning
+$warning-color:       #FF971E !default;
+$warning-background:  #FFE5C7 !default;
+$warning-border:      #FFDBB3 !default;
+
+// success
+$success-color:       #468847 !default;
+$success-background:  #dff0d8 !default;
+$success-border:      #d6e9c6 !default;
+
+$state-name:    disabled         info         alert         warning         error         success        !default;
+$state-code:   $disabled-color  $info-color  $alert-color  $warning-color  $error-color  $success-color  !default;
+$state-text:   $white           $white       $white        $white          $white        $white          !default;
+
+// modifier colors
+$green:               #2ecc71 !default;
+$blue:                #3498db !default;
+$purple:              #9b59b6 !default;
+$yellow:              #f1c40f !default;
+$orange:              #e67e22 !default;
+$red:                 #e74c3c !default;
+$pink:                #f02475 !default;
+$turquoise:           #1abc9c !default;
+$asphalt:             #34495e !default;
+
+$modifier-name:    green     blue     purple     yellow     orange     red     pink     turquoise     asphalt  !default;
+$modifier-code:   $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt  !default;
+$modifier-text:   $white    $white   $white     $white     $white     $white  $white   $white        $white    !default;
+
+// rounded corners
+$radius:              4px !default;
+
+
+
+///////////////////////
+//   reset elements  //
+///////////////////////
+
+// elements that will be reset (trim this to include only the elements that are used in your markup)
+$reset: true !default;
+$reset-elements:  html body
+                  div span header footer aside nav menu section article details
+                  h1 h2 h3 h4 h5 h6 p
+                  ol ul li dl dt dd
+                  em small big strong b u i
+                  blockquote cite pre code time address
+                  a img center hr
+                  form fieldset legend label input textarea select button
+                  table caption tbody thead tfoot tr th td
+                  iframe object canvas audio video !default;
+
+
+
+///////////////////////
+//     web fonts     //
+///////////////////////
+
+// font names (no spaces or special characters, these are used to build selectors)
+$web-font-names:      AverageSans,
+                      AmericanTypewriter !default;
+// font files (must all be named the same as listed below and include .eot, .woff and .ttf file types)
+$web-font-files:      average-sans-webfont,
+                      americantypewriterstd-bold !default;

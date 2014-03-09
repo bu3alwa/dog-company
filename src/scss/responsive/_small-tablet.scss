@@ -1,0 +1,196 @@
+// ===================================
+//            Small Tablet
+// ===================================
+
+
+
+
+@mixin small-tablet {
+  @media only screen and (max-width:767px) {
+    // responsive grid
+    @include grid-responsive();
+    // conditional helpers
+    .small-tablet-only { display:inline-block !important; }
+    .hide-on-small-tablet { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-small-tablet { @include helper_reset(); }
+    .no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+
+///////////////////////
+//    small tablet   //
+///////////////////////
+@include small-tablet {
+  %nav-not-pagination {
+    width:100%;
+    ul, ul.row {
+      li {
+        display:block;
+        width:100% !important;
+        &:first-child {
+          > a {
+            @include rounded($radius $radius 0 0);
+          }
+        }
+        &:last-child {
+          > a {
+            @include rounded(0 0 $radius $radius);
+          }
+        }
+        &:only-child {
+          > a {
+            @include rounded($radius);
+          }
+        }
+        a {
+          border:none;
+          border-top:1px solid $button-active !important;
+        }
+        ul {
+          position:static !important;
+          li {
+            a {
+              @include rounded(0);
+            }
+            &:first-child,
+            &:last-child,
+            &:only-child {
+              a {
+                @include rounded(0);
+              }
+            }
+          }
+        }
+        &:first-child {
+          a {
+            @include rounded($radius $radius 0 0);
+          }
+        }
+        &:last-child {
+          a {
+            @include rounded(0 0 $radius $radius);
+          }
+          ul {
+            li {
+              &:last-child {
+                a {
+                  @include rounded(0 0 $radius $radius);
+                }
+              }
+            }
+          }
+        }
+        &:only-child {
+          a {
+            @include rounded($radius);
+          }
+        }
+      }
+    }
+  }
+  // hamburger menus
+  %nav-menu-not-pagination {
+    display:block;
+    float:none;
+    &:before {
+      content:attr(data-label);
+      float:left;
+      color:$button-text;
+      line-height:2.2;
+    }
+    background-color:$button-color;
+    padding:$gutter;
+    padding-bottom:0;
+    @include rounded($radius);
+    .menu-toggle {
+      display:inline-block !important;
+      float:right;
+      margin-bottom:$gutter;
+    }
+    > ul, > ul.row {
+      display:block !important;
+      overflow:hidden;
+      max-height:0;
+      width:auto;
+      margin:0 (-$gutter);
+      clear:both;
+      @include transition(all 0.2s ease);
+      li {
+        a {
+          border:none;
+          border-top:1px solid $button-active;
+          &:first-child, &:last-child {
+            @include rounded(0);
+          }
+          &:hover, &:focus {
+            border:none;
+            border-top:1px solid $button-active;
+          }
+        }
+        &:last-child {
+          a {
+            @include rounded(0 0 $radius $radius !important);
+          }
+        }
+        ul {
+          position:static;
+        }
+      }
+    }
+    &.on {
+      > ul {
+        max-height:1000px;
+      }
+    }
+  }
+  %normal-tabs {
+    > ul {
+      li {
+        float:none;
+        width:100%;
+        margin:0;
+        a {
+          @include rounded(0);
+          border-bottom:none;
+          &:before, &:after {
+            display:none !important;
+          }
+        }
+        &:first-child a {
+          @include rounded($radius $radius 0 0);
+        }
+      }
+    }
+  }
+
+  @if $tags {
+    nav:not(.pagination) {
+      @extend %nav-not-pagination;
+    }
+
+    @if $classes {
+      nav.inline {
+        @extend %nav-not-pagination;
+      }
+      nav.menu {
+        @extend %nav-menu-not-pagination;
+      }
+    }
+  }
+  @if $classes {
+    .nav, .nav.inline {
+      @extend %nav-not-pagination;
+    }
+    .nav.menu {
+      @extend %nav-menu-not-pagination;
+    }
+    .tabs:not(.small-tablet):not(.mobile):not(.vertical) {
+      @extend %normal-tabs;
+    }
+  }
+}

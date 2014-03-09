@@ -1,0 +1,26 @@
+// ===================================
+//             Desktop
+// ===================================
+
+
+
+
+@mixin desktop {
+  @media only screen and (min-width:1025px) {
+    // conditional helpers
+    .hide-on-desktop { display:none !important; }
+    // spacer overrides
+    .zero-desktop { @include helper_reset(); }
+    .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+
+///////////////////////
+//      desktop      //
+///////////////////////
+@include desktop {
+  // do not remove -- required for desktop helpers
+}

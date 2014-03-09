@@ -1,0 +1,47 @@
+$root_path: '../../';
+@import "../../../src/scss/core/all";
+@import "../../../src/scss/base/all";
+@import "../../../src/scss/type/all";
+@import "../../../src/scss/nav/all";
+// @import "../../../src/scss/ui/all";
+// @import "../../../src/scss/form/all";
+// @import "../../../src/scss/misc/all";
+
+@import "demo";
+
+
+.extend-button {
+  @extend %button;
+
+  $types: info alert warning error success green blue purple yellow orange red asphalt;
+  @for $i from 1 through length($types) {
+    &.extend-#{nth($types, $i)} {
+      @extend %button-#{nth($types , $i)};
+    }
+  }
+
+  $states: active disabled;
+  @for $i from 1 through length($states) {
+    &.extend-#{nth($states, $i)} {
+      @extend %button-#{nth($states , $i)};
+    }
+  }
+
+  $sizes: small large;
+  @for $i from 1 through length($sizes) {
+    &.extend-#{nth($sizes, $i)} {
+      @extend %button-#{nth($sizes , $i)};
+    }
+  }
+
+  $styles: square round block;
+  @for $i from 1 through length($styles) {
+    &.extend-#{nth($styles, $i)} {
+      @extend %button-#{nth($styles , $i)};
+    }
+  }
+}
+
+// dropdown
+
+// button list

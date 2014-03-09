@@ -1,0 +1,142 @@
+// ===================================
+//             Tables
+// ===================================
+
+
+
+
+%table {
+  border:1px solid $border-color;
+  width:100%;
+  max-width:100%;
+  padding:0;
+  margin:0;
+  font-size:1em;
+}
+
+%center-table {
+  th, td {
+    text-align:center;
+  }
+}
+
+%responsive-table {
+  table-layout:fixed;
+}
+
+%table-cells {
+  padding:$gutter;
+  background:darken(white, 1%);
+  white-space:normal;
+  word-wrap:break-word;
+  text-align:left;
+}
+
+%table-cell {
+  font-size:0.9em;
+}
+
+%even-cells {
+  background:darken(white, 5%);
+}
+
+%table-head-th {
+  font-size:1.1em;
+  font-weight:bold;
+}
+
+%table-head-cells {
+  background:$button-color;
+  color:$button-text;
+}
+
+@for $i from 1 through length($modifier-name) {
+  %table-#{nth($modifier-name, $i)} {
+    %table-head-cells {
+      background:#{nth($modifier-code, $i)};
+      color:#{nth($modifier-text, $i)};
+    }
+  }
+}
+
+%table-head-cell {
+  font-weight:normal;
+}
+
+%table-body-th {
+  font-size:0.9em;
+}
+
+%table-foot-th {
+  font-size:1em;
+}
+
+%table-foot-cell {
+  background:lighten(gray, 37.5%);
+  color:darken(gray, 15%);
+  font-size:0.8em;
+}
+
+@if $tags {
+  table {
+    @extend %table;
+    th, td {
+      @extend %table-cells;
+    }
+    td {
+      @extend %table-cell;
+    }
+    tr:nth-child(even) {
+      th, td {
+        @extend %even-cells;
+      }
+    }
+    thead {
+      tr {
+        th {
+          @extend %table-head-th;
+        }
+        th, td {
+          @extend %table-head-cells;
+        }
+        td {
+          @extend %table-head-cell;
+        }
+      }
+    }
+    tbody {
+      tr {
+        th {
+          @extend %table-body-th;
+        }
+      }
+    }
+    tfoot {
+      tr {
+        th {
+          @extend %table-foot-th;
+        }
+        td {
+          @extend %table-foot-cell;
+        }
+      }
+    }
+
+    @if $classes {
+      &.align-center {
+        th, td {
+          @extend %center-table;
+        }
+      }
+      &.responsive {
+        @extend %responsive-table;
+      }
+      // modifier colors
+      @for $i from 1 through length($modifier-name) {
+        &.#{nth($modifier-name, $i)} {
+          @extend %table-#{nth($modifier-name, $i)};
+        }
+      }
+    }
+  }
+}

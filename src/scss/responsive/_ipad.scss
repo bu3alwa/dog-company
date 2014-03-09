@@ -1,0 +1,28 @@
+// ===================================
+//               iPad
+// ===================================
+
+
+
+
+@mixin ipad {
+  @media only screen and (min-width:768px) and (max-width:1024px) {
+    // conditional helpers
+    .ipad-only { display:inline-block !important; }
+    .hide-on-ipad { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-ipad { @include helper_reset(); }
+    .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+
+///////////////////////
+//       ipad        //
+///////////////////////
+@include ipad {
+  // do not remove -- required for ipad helpers
+}

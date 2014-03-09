@@ -1,0 +1,81 @@
+// =============================================
+//                  CSS Reset
+//          Last Updated:2013-4-24
+// =============================================
+
+
+
+
+// =======================================================
+//               the better box model
+// =======================================================
+//
+//
+//     E   L   E   M   E   N   T      W   I   D   T   H
+//  |----------------------------------------------------|
+//  |                  B  O  R  D  E  R                  |
+//  |   |--------------------------------------------|   |
+//  | B |               P A D D I N G                | B |
+//  |   |   |------------------------------------|   |   |
+//  | O | P |                                    | P | O |
+//  |   | A |                                    | A |   |
+//  | R | D |                                    | D | R |
+//  |   | D |           C O N T E N T            | D |   |
+//  | D | I |                                    | I | D |
+//  |   | N |                                    | N |   |
+//  | E | G |                                    | G | E |
+//  |   |   |------------------------------------|   |   |
+//  | R |               P A D D I N G                | R |
+//  |   |--------------------------------------------|   |
+//  |                  B  O  R  D  E  R                  |
+//  | ---------------------------------------------------|
+//
+//  NOTE: Padding and border are calculated within an
+//        element's specified width instead of its total
+//        width being increased by these properties
+//
+//
+// =======================================================
+
+
+%everything {
+  @include box-sizing(border-box);
+  *behavior: url($boxsizing_path);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+}
+
+%document {
+  -webkit-text-size-adjust:none;
+}
+
+%html5-elements {
+  margin:0;
+  padding:0;
+  border: 0;
+  font:inherit;
+  vertical-align:baseline;
+}
+
+%block-elements {
+  display:block;
+}
+
+%table-elements {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+@if $reset {
+  *, *:after, *:before {
+    @extend %everything;
+  }
+  // reset all $reset-elements (configured in _variables.scss)
+  @for $i from 1 through length($reset-elements) {
+    #{nth($reset-elements, $i)} { @extend %html5-elements; }
+  }
+  header, footer, aside, menu, nav, section, article, details {
+    @extend %block-elements;
+  }
+  table {
+    @extend %table-elements;
+  }
+}

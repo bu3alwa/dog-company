@@ -1,0 +1,48 @@
+// =============================================
+//                  Modals
+//          Last Updated:2013-5-21
+// =============================================
+
+
+
+
+.mfp-container {
+  @include inner-shadow(#000000, 200px, 0, 0);
+  @include gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.7));
+}
+
+.mfp-title {
+  word-break: break-word;
+}
+
+.mfp-content {
+  max-width: $max-width;
+  @include rounded($radius);
+}
+
+.mfp-iframe {
+  @include rounded($radius);
+}
+
+.mfp-iframe-holder {
+  .mfp-content {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+.inline-modal {
+  .mfp-content {
+    width: auto;
+    position: relative;
+    padding: ($gutter*2.5);
+    background: #fff;
+  }
+  .mfp-close {
+    width: 25px;
+    height: 25px;
+    line-height: 30px;
+    font-size: 28px;
+  }
+}

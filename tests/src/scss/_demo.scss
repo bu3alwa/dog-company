@@ -1,0 +1,49 @@
+
+.headings > .one {
+  padding:$gutter;
+  font-size:1.5em;
+  text-align:center;
+  color:$button-text;
+  &:nth-child(1) { background:$asphalt; }
+  &:nth-child(2) { background:$blue; }
+  &:nth-child(3) { background:$purple; }
+  &:nth-child(4) { background:$yellow; }
+  &:nth-child(5) { background:$orange; }
+}
+
+.demo {
+  .row, %row {
+    background:lighten(gray, 48%);
+  }
+  .whole, 
+  .half, .halves, 
+  .third, .thirds, 
+  .fourth, .fourths, 
+  .fifth, .fifths, 
+  .sixth, .sixths, 
+  .seventh, .sevenths, 
+  .eighth, .eighths, 
+  .ninth, .ninths, 
+  .tenth, .tenths, 
+  .eleventh, .elevenths, 
+  .twelfth, .twelfths,
+  %whole, 
+  %half, %halves, 
+  %third, %thirds, 
+  %fourth, %fourths, 
+  %fifth, %fifths, 
+  %sixth, %sixths, 
+  %seventh, %sevenths, 
+  %eighth, %eighths, 
+  %ninth, %ninths, 
+  %tenth, %tenths, 
+  %eleventh, %elevenths, 
+  %twelfth, %twelfths {
+    min-height:1em;
+    padding:$gutter;
+    background:lighten(gray, 45%);
+    border:1px dashed lighten(gray, 35%);
+    margin-top:-1px;
+    @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
+  }
+}

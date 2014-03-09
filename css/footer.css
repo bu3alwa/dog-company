@@ -1,14 +1,14 @@
 /* Footer */
-
-footer, #wrapfooter {
-	width:100%;
+.footer-strip{
+	background-color: #3BA0CF;
+	height: 8px;
+}
+#wrapfooter{
+ 	width:100%;
 	min-height:300px;
 	background-color:#0F0F0F;
-	height: auto;
-}
-#wrapfooter {
 	color: white;
-	text-align: center;
+	position: relative;
 }
 #logo {
     text-align:center;
@@ -16,7 +16,7 @@ footer, #wrapfooter {
 #logo img {
 	display: inline-block;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
 	vertical-align: middle;
 	width: auto;
 	height: auto;

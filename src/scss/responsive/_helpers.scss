@@ -1,0 +1,16 @@
+///////////////////////
+//    conditionals   //
+///////////////////////
+
+// desktop helpers
+.desktop-only { display:block; }
+.hide-on-desktop {}
+// ipad helpers
+.ipad-only { display:none; }
+.hide-on-ipad {}
+// small tablet helpers
+.small-tablet-only { display:none; }
+.hide-on-small-tablet {}
+// mobile helpers
+.mobile-only { display:none; }
+.hide-on-mobile {}

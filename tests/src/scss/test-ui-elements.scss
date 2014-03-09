@@ -1,0 +1,25 @@
+$root_path: '../../';
+@import "../../../src/scss/core/all";
+@import "../../../src/scss/base/all";
+@import "../../../src/scss/type/all";
+// @import "../../../src/scss/nav/all";
+@import "../../../src/scss/ui/all";
+// @import "../../../src/scss/form/all";
+// @import "../../../src/scss/misc/all";
+
+@import "demo";
+
+
+$elements: message callout;
+$modifiers: small large info alert warning error success square round disabled dismissible;
+
+@for $el from 1 through length($elements) {
+  .extend-#{nth($elements, $el)} {
+    @extend %#{nth($elements, $el)};
+    @for $i from 1 through length($modifiers) {
+      &.extend-#{nth($modifiers, $i)} {
+        @extend %#{nth($elements, $el)}-#{nth($modifiers , $i)};
+      }
+    }
+  }
+}

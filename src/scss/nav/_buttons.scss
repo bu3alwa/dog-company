@@ -1,0 +1,334 @@
+// =============================================
+//                  Buttons
+//          Last Updated:2013-4-24
+// =============================================
+
+
+
+
+%button {
+  display:inline-block;
+  word-wrap:break-word;
+  padding:0.25em 1em;
+  background:$button-color;
+  border:1px solid $button-active;
+  color:$button-text;
+  font-family:$font-family;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+  line-height:1.5;
+  width:auto;
+  height:auto;
+  text-align:center;
+  @include transition(background-color 0.25s ease-out);
+  @include rounded($radius);
+  &:hover, &:focus {
+    background:$button-active;
+    text-decoration:none;
+    color:$button-active-text;
+  }
+}
+
+%button-on {
+  background:$button-active;
+  text-decoration:none;
+  color:$button-active-text;
+}
+
+%button-active, %button-active:hover, %button-active:focus {
+  background:$button-active;
+  color:$button-active-text;
+}
+
+%button-small     { @extend %small; }
+%button-large     { @extend %large; }
+%button-square    { @extend %square; }
+%button-round     { @extend %round; }
+%button-disabled  { @include state(disabled,normal,desaturate($button-color,20%)); }
+
+@for $i from 1 through length($modifier-name) {
+  %button-#{nth($modifier-name, $i)} {
+    background-color:#{nth($modifier-code, $i)};
+    color:#{nth($modifier-text, $i)};
+    border-color:darken(nth($modifier-code, $i), 5%);
+    &%active, &:hover, &:focus {
+      background:darken(nth($modifier-code, $i), 5%);
+      border-color:darken(nth($modifier-code, $i), 10%);
+    }
+    &%button-disabled {
+      @include state(disabled,normal,desaturate(nth($modifier-code, $i),20%));
+    }
+  }
+}
+
+%button-info {
+  background-color:darken($info-background, 40%);
+  color:$button-text;
+  border-color:darken($info-border, 40%);
+  &%active, &:hover, &:focus {
+    background:darken($info-background, 49%);
+  }
+  &%button-disabled {
+    @include state(disabled,normal,desaturate($info-color,20%));
+  }
+}
+
+%button-alert {
+  background-color:darken($alert-background, 40%);
+  color:$button-text;
+  border-color:darken($alert-border, 25%);
+  &%active, &:hover, &:focus {
+    background:darken($alert-background, 45%);
+  }
+  &%button-disabled {
+    @include state(disabled,normal,desaturate($alert-color,20%));
+  }
+}
+
+%button-warning {
+  background-color:darken($warning-background, 40%);
+  color:$button-text;
+  border-color:darken($warning-border, 40%);
+  &%active, &:hover, &:focus {
+    background:darken($warning-background, 45%);
+  }
+  &%button-disabled {
+    @include state(disabled,normal,desaturate($warning-color,20%));
+  }
+}
+
+%button-error {
+  background-color:darken($error-background, 40%);
+  color:$button-text;
+  border-color:darken($error-border, 40%);
+  &%active, &:hover, &:focus {
+    background:darken($error-background, 49%);
+  }
+  &%button-disabled {
+    @include state(disabled,normal,desaturate($error-color,20%));
+  }
+}
+
+%button-success {
+  background-color:darken($success-background, 40%);
+  color:$button-text;
+  border-color:darken($success-border, 40%);
+  &%active, &:hover, &:focus {
+    background:darken($success-background, 49%);
+  }
+  &%button-disabled {
+    @include state(disabled,normal,desaturate($success-color,20%));
+  }
+}
+
+%button-block {
+  display:block;
+  width:100%;
+}
+
+%dropdown-holder {
+	position: relative;
+	display: inline-block;
+}
+
+%dropdown-button {
+  position:relative;
+  padding-right:2em;
+  &:after {
+    content:'...';
+    position:absolute;
+    right:1em;
+    bottom:0.25em;
+  }
+}
+
+%dropdown-list {
+  text-align:left;
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:none;
+  background:white;
+  border:1px solid $border-color;
+  position:absolute;
+  left:0;
+  width:100%;
+  z-index:10;
+  @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
+  @include rounded(0 0 $radius $radius);
+}
+
+%dropdown-list-item {
+  display:block;
+  %dropdown-menu-item {
+    display:block;
+    padding:0.5em 1em;
+    border:none;
+    color:$font-color;
+    text-shadow:none;
+    text-decoration:none;
+    &:hover, &:focus {
+      background:#efefef;
+    }
+    &%disabled {
+      @include state(disabled,textOnly);
+    }
+  }
+  &:last-child {
+    @include rounded(0 0 $radius $radius);
+  }
+}
+
+%dropdown-divider {
+  margin:0;
+  border-color:#ececec;
+}
+
+%button-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  &:after {
+    content:'';
+    display:block;
+    clear:both;
+  }
+  li {
+    display:block;
+    float:left;
+    margin:0;
+    border-radius:0;
+    &:first-child a {
+      border-radius:$radius 0 0 $radius;
+    }
+    &:last-child a {
+      border-radius:0 $radius $radius 0;
+    }
+    a {
+      display:block;
+      word-wrap:break-word;
+      padding:0.25em 1em;
+      background:$button-color;
+      border:1px solid $button-active;
+      color:$button-text;
+      font-weight:bold;
+      text-decoration:none;
+      cursor:pointer;
+      line-height:1.5;
+      @include transition(background-color 0.25s ease-out);
+      &:hover, &:focus {
+        background:$button-active;
+        text-decoration:none;
+        color:$button-active-text;
+        border:1px solid $button-active;
+      }
+      &%active, &%active:hover, &%active:focus {
+        background:$button-active;
+        color:$button-active-text;
+      }
+      &%disabled {
+        @include state(disabled,normal,desaturate($button-color,20%));
+      }
+    }
+  }
+}
+
+@mixin button_modifiers() {
+  $modifiers: small large on active disabled info alert warning error success square round block;
+  @for $i from 1 through length($modifiers) {
+    &.#{nth($modifiers, $i)} {
+      @extend %button-#{nth($modifiers, $i)};
+    }
+  }
+  // modifier colors
+  @for $i from 1 through length($modifier-name) {
+    &.#{nth($modifier-name, $i)} {
+      @extend %button-#{nth($modifier-name, $i)};
+    }
+  }
+}
+
+@if $tags {
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset] {
+    @extend %button;
+
+    @if $classes {
+      @include button_modifiers;
+    }
+  }
+
+	.dropdown {
+		@extend %dropdown-holder;
+		&.on ul {
+			@extend %block;
+		}
+		button {
+			@extend %dropdown-button;
+		}
+		ul {
+			@extend %dropdown-list;
+			li {
+				@extend %dropdown-list-item;
+                a, a:visited {
+					@extend %dropdown-menu-item;
+				}
+			}
+		}
+		hr {
+			@extend %dropdown-divider;
+		}
+	}
+}
+
+@if $classes {
+  .button,
+  a.button,
+  a.button:visited {
+    @extend %button;
+    @include button_modifiers;
+	}
+	.dropdown {
+		@extend %dropdown-holder;
+		&.on ul {
+			@extend %block;
+		}
+		.button {
+			@extend %dropdown-button;
+		}
+		ul {
+			@extend %dropdown-list;
+			li {
+				@extend %dropdown-list-item;
+                a, a:visited {
+					@extend %dropdown-menu-item;
+				}
+			}
+		}
+		hr {
+			@extend %dropdown-divider; 
+		}
+	}
+  ul.button-list,
+  ol.button-list {
+    @extend %button-list;
+    li {
+      a {
+        @include button_modifiers;
+      }
+    }
+  }
+}
+
+@if $aria {
+  [role~=button] {
+    @extend %button;
+
+    @if $classes {
+      @include button_modifiers;
+    }
+  }
+}

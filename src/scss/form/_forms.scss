@@ -1,0 +1,240 @@
+// =============================================
+//                   Forms
+//          Last Updated:2013-4-24
+// =============================================
+
+
+
+
+%fieldset {
+  border:1px solid $border-color;
+  padding:$gutter;
+}
+
+%legend {
+  font-weight:900;
+  color:darken($background-color, 35%);
+  margin-bottom:0;
+}
+
+%label {
+  display:block;
+  padding:0.4em 0.2em;
+}
+
+%field {
+  display:block;
+  width:100%;
+  margin:0;
+  padding:0.4em;
+  font-family:monospace;
+  line-height:1.5;
+  height:2.25em;
+  background:white;
+  border:1px solid $border-color;
+  @include rounded($radius);
+  &[size] {
+    height:auto;
+  }
+}
+
+%input {
+  @extend %field;
+  &[size] {
+    height:auto;
+  }
+  &[type=checkbox], &[type=radio] {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    margin:0 0 0 0.2em;
+    background:white;
+    border:1px solid $border-color;
+    @include rounded($radius);
+  }
+}
+
+%textarea {
+  height:10em;
+}
+
+%error-block {
+  background:$error-background;
+  color:$error-color;
+  border-color:$error-border;
+}
+
+%error-block-prefix, %error-block-suffix {
+  color:lighten($error-color, 62%);;
+  background:$error-color;
+  border-color:$error-color;
+}
+
+%success-block {
+  background:$success-background;
+  color:$success-color;
+  border-color:$success-border;
+}
+
+%success-block-prefix, %success-block-suffix {
+  color:lighten($success-color, 62%);;
+  background:$success-color;
+  border-color:$success-color;
+}
+
+%select-wrap {
+  display:block;
+  color:gray;
+  background:white;
+  border:1px solid $border-color;
+  position:relative;
+  @include rounded($radius);
+  &:after {
+    content:'...';
+    display:block;
+    width:1.5em;
+    text-align:center;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    font-size:1.5em;
+    line-height:1.25;
+    top:0;
+    right:0;
+    background:darken(white, 12.5%);
+  }
+}
+
+%custom-select {
+  -ms-appearance:none;
+  -o-appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance:none;
+  border:none;
+  background:none;
+  padding:0.4em;
+  font-family:monospace;
+  line-height:1.5;
+  height:2.25em;
+  padding-right:2.5em;
+  position:relative;
+  z-index:2;
+  &.unselected {
+    color:#999;
+  }
+}
+
+%radio-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+%prefix, %suffix {
+  display:block;
+  position:relative;
+  z-index:1;
+  width:100%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  margin:0;
+  padding:0.4em;
+  font-family:monospace;
+  line-height:1.25;
+  height:2.25em;
+  text-align:center;
+  color:gray;
+  background:darken(white, 12.5%);
+  border:1px solid darken(white, 17.5%);
+}
+
+%prefix {
+  left:2px;
+  @include rounded($radius 0 0 $radius);
+}
+
+%suffix {
+  left:-2px;
+  @include rounded(0 $radius $radius 0);
+}
+
+@if $tags {
+  $elements: fieldset legend label input select textarea;
+	@for $i from 1 through length($elements) {
+		$element: nth($elements, $i);
+		@if not index($tag-elements, $element) == false {
+			#{$element} {
+				@extend %#{$element};
+				@if $element == input or $element == select or $element == textarea {
+					@extend %field;
+				}
+				@if $element == textarea {
+					@extend %textarea;
+				}
+			}
+		}
+	}
+
+  @if $classes {
+    .select-wrap {
+      @extend %select-wrap;
+      select {
+        @extend %custom-select;
+      }
+    }
+  }
+}
+
+@if $classes {
+  .error, .invalid {
+    input, select, textarea {
+      @extend %error-block;
+    }
+    .prefix, .suffix {
+      @extend %error-block-prefix;
+    }
+  }
+  .success, .valid {
+    input, select, textarea {
+      @extend %success-block;
+    }
+    .prefix, .suffix {
+      @extend %success-block-prefix;
+    }
+  }
+  .fieldset {
+    @extend %fieldset;
+  }
+  .legend {
+    @extend %legend;
+  }
+  .label {
+    @extend %label;
+  }
+  .input, .select, .textarea {
+    @extend %field;
+  }
+  .input {
+    @extend %input;
+  }
+  .textarea {
+    @extend %textarea;
+  }
+  .select-wrap {
+    @extend %select-wrap;
+    .select {
+      @extend %custom-select;
+    }
+  }
+  .radio-list {
+    @extend %radio-list;
+  }
+  .prefix {
+    @extend %prefix;
+  }
+  .suffix {
+    @extend %suffix;
+  }
+}

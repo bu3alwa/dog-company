@@ -1,0 +1,22 @@
+/* =============================================
+ *       GroundworkCSS by Gary Hepting
+ *          Last Updated:2013-4-24
+ * ===========================================*/
+
+
+// custom settings
+@import "settings";         // customizable settings
+
+// core (required)
+@import "core/all";         // constants, defaults, mixins
+@import "base/all";         // reset, globals, grid, helpers, animations
+
+// components
+@import "type/all";         // typography, font awesome, web fonts
+@import "nav/all";          // buttons, navigation, tabs
+@import "ui/all";           // messages, callouts, tables, tooltips, popovers, modals
+@import "form/all";         // forms, tiles
+@import "misc/all";         // social icons
+
+// responsive adjustments
+@import "responsive/all";   // responsive navigation, tabs
