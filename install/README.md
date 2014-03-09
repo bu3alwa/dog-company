@@ -1,6 +1,7 @@
 Release Protocol
 --------------------------------------------------------------------------------------------------
 WORDPRESS
+
   header.php
   - update correct urls
 
@@ -8,6 +9,7 @@ WORDPRESS
 
 
 PHPBB
+
   overall_header.php
   - update correct urls
 
