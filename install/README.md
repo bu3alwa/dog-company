@@ -2,7 +2,7 @@ Release Protocol
 --------------------------------------------------------------------------------------------------
 WORDPRESS
 
-  header.php
+header.php
   - update correct urls
 
 
@@ -10,9 +10,9 @@ WORDPRESS
 
 PHPBB
 
-  overall_header.php
+overall_header.php
   - update correct urls
 
-  Mods:
+Mods:
   - Social Networking Site Buttons Mod 
     - Must update database via social_networking_buttons.php
