@@ -1,0 +1,205 @@
+/*
+	Author: Adrian Agao
+	Date: November 13, 2013
+	Modified: Michael "Moc"
+	Date: November 25, 2013
+*/
+@charset 'UTF-8';
+
+
+html { 
+	background: url(images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+body {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+header.title {
+	padding: 5px;
+	padding-bottom: 0px;
+	height: auto;
+	border-bottom: 1px solid grey;
+}
+#window {
+	background-color: white;
+	border-radius: 20px;
+
+	width: 400px;
+	height: auto;
+	margin: auto;
+	box-shadow: 0px 0px 20px #888888;
+	
+	top: 50%;
+	left: 50%;
+	margin-top: -240px;
+    margin-left: -200px;
+	position: absolute;
+}
+footer {
+	font-size: 10px;
+	font-weight: bold;
+	
+	padding: 5px;
+}
+
+/* Text */
+header {
+	text-align: center;
+	padding: 40px;
+	text-transform: uppercase;
+	background-color: white;
+}
+#window h1 {
+	margin: 0;
+	padding: 10px;
+}
+#window h4 {
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+/* Nav */
+.nav,
+.nav ul,
+.nav li,
+.nav a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  color: #000;
+  font-size: ;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  
+}
+.nav {
+  width: auto;
+}
+.nav > ul > li > a {
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  background: ;
+  color: grey;
+  border-bottom: 1px solid grey;
+  text-transform: uppercase;
+}
+.nav > ul > li.has-sub > a {
+	/* background: color position size repeat origin clip attachment image; */
+	background: url('images/black_arrow.png') no-repeat right center;
+}
+.nav > ul > li.has-sub > a:hover {
+	background: black url('images/white_arrow.png') no-repeat right center;
+}
+.nav > ul > li.has-sub.active > a {
+	/* background: color position size repeat origin clip attachment image; */
+	background: url('images/black_arrow2.png') no-repeat right center;
+}
+.nav > ul > li.has-sub.active > a:hover {
+	background: black url('images/white_arrow2.png') no-repeat right center;
+}
+.nav > ul > li > a:hover {
+	text-decoration: none;
+	background: black;
+	color: white;
+}
+.nav img {
+	display: block-inline;
+	float: right;
+}
+
+/* Sub menu */
+.nav ul ul {
+	display: none;
+}
+.nav ul ul li {
+	border: 1px solid #e0e0e0;
+	border-top: 0;
+}
+.nav ul ul a {
+	padding: 8px;
+	display: block;
+	color: black;
+	background: #d8d8d8;
+	font-size: 16px;
+	border-bottom: 1px dotted black;
+}
+.nav ul ul a span {
+	padding: 3px;
+	display: block;
+	font-size: ;
+	font-size: 12px;
+	font-weight: 300;
+}
+.nav ul ul a:hover {
+	background: black;
+	color: white;
+}
+.nav ul ul li.odd {
+	background: #f4f4f4;
+}
+.nav ul ul li.even {
+	background: #fff;
+}
+
+
+/* Misc. */
+hr {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	background: #adadad;
+}
+
+.fade-in {
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	   -moz-animation: fadeIn ease-in 1;
+			animation: fadeIn ease-in 1;
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+			animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+	-webkit-animation-delay: 0.5s;
+	   -moz-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+		opacity: 0.8;
+    }
+}
