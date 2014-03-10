@@ -1,5 +1,7 @@
 Release Protocol
 --------------------------------------------------------------------------------------------------
+Upload temp splash screen while building the new site in the new web space.
+
 WORDPRESS
 
 header.php
