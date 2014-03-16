@@ -24,6 +24,7 @@ li.event {
 	float: left;
 	margin: 0;
 	font-family: NeouBold;
+	position: relative;
 }
 
 .event-list .multi-date {
@@ -72,24 +73,58 @@ li.event {
 	padding-bottom: 0.3em;
 }
 
+.event-info {
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+}
+
 .multi-day {
-	margin: 0.7em 0 0 7.5em; /* Top, Right, Bottom, Left */
+	/* margin: 0.7em 0 0 7.5em; *//* Top, Right, Bottom, Left */
+	overflow: hidden;
 }
 
 .single-day {
-	margin: 0.7em 0 0 3.8em; /* Top, Right, Bottom, Left */
+	/* margin: 0.7em 0 0 3.8em; *//* Top, Right, Bottom, Left */
+	overflow: hidden;
 }
 
 .event-title h3 {
 	/*font-size: 13px !important;*/
 	clear: none;
 	margin: 0 !important;
-	padding: 0;
 	font-family: NeouBold;
+	font-weight: 500;
+	line-height: 20px;
 }
 
+/* max-width - when the font drops & min-width: when the font rises */
+/*
+@media screen and (max-width: 930px) and (min-width: 768px) {
+	.event-title h3 {
+		font-size: 16px !important;
+		font-weight: 500;
+	}
+}
+/* max-width - when the font drops & min-width: when the font rises */
+/*
+@media screen and (max-width: 930px) and (min-width: 768px) {
+	.event-title h3 {
+		font-size: 14px !important;
+		font-weight: 500;
+	}
+}
+/* max-width - when the font drops & min-width: when the font rises */
+/*
+@media screen and (max-width: 930px) and (min-width: 768px) {
+	.event-title h3 {
+		font-size: 14px !important;
+		font-weight: 500;
+	}
+}
+*/
 .event-time {
-	font-weight: bold;
+	font-weight: 300;
 	padding-right: 0.8em;
 	font-family: NeouBold;
 }

@@ -106,9 +106,9 @@
 	</table>
 	
 <!-- BEGIN postrow -->
-	<table class="tablebg" width="100%">
+	<table class="madmanSucksTable tablebg" width="100%">
 	
-	<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucks-even"><!-- ELSE --><tr class="madmanSucks-odd"><!-- ENDIF -->
+	<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucksBorder madmanSucks-even"><!-- ELSE --><tr class="madmanSucksBottomBorder madmanSucks-odd"><!-- ENDIF -->
 
 	<!-- IF postrow.S_IGNORE_POST -->
 			<td class="gensmall v_middle" colspan="2" height="25"><!-- IF postrow.S_FIRST_UNREAD --><a name="unread"></a><!-- ENDIF --><a name="p{postrow.POST_ID}"></a>{postrow.L_IGNORE_POST}</td>
@@ -130,7 +130,7 @@
 			</td>
 		</tr>
 
-		<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucks-even-noborder"><!-- ELSE --><tr class="madmanSucks-odd-noborder"><!-- ENDIF -->
+		<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucks-even"><!-- ELSE --><tr class="madmanSucks-odd"><!-- ENDIF -->
 
 			<td class="profile v_top w_180">
 				<table class="v_middle w_150">
@@ -209,7 +209,7 @@
 						</tr>
 						<!-- BEGIN attachment -->
 							<tr class="noborder">
-								<!-- IF postrow.attachment.S_ROW_COUNT is even --><td class="madmanSucks-even-noborder"><!-- ELSE --><td class="madmanSucks-odd-noborder"><!-- ENDIF -->{postrow.attachment.DISPLAY_ATTACHMENT}</td>
+								<!-- IF postrow.attachment.S_ROW_COUNT is even --><td class="madmanSucks-even"><!-- ELSE --><td class="madmanSucks-odd"><!-- ENDIF -->{postrow.attachment.DISPLAY_ATTACHMENT}</td>
 							</tr>
 						<!-- END attachment -->
 						</table>
@@ -250,26 +250,18 @@
 			</td>
 		</tr>
 
-		<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucks-even-noborder noborder"><!-- ELSE --><tr class="madmanSucks-odd-noborder noborder"><!-- ENDIF -->
+		<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucks-even noborder"><!-- ELSE --><tr class="madmanSucks-odd noborder"><!-- ENDIF -->
 
 			<td class="profile"><strong><a href="#wrapheader">{L_BACK_TO_TOP}</a></strong></td>
 			<td>
-				<div class="gensmall float_l">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{PROFILE_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a><!-- ENDIF --><!-- IF postrow.U_STEAM --><a href="{postrow.U_STEAM}">{STEAM_IMG}</a><!-- ENDIF --><!-- IF postrow.U_YOUTUBE --><a href="{postrow.U_YOUTUBE}">{YOUTUBE_IMG}</a><!-- ENDIF --><!-- IF postrow.U_TWITCH --><a href="{postrow.U_TWITCH}">{TWITCH_IMG}</a><!-- ENDIF --><!-- IF postrow.U_XBOX --><a href="{postrow.U_XBOX}">{XBOX_IMG}</a><!-- ENDIF -->&nbsp;</div>
+				<div class="gensmall float_l">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{PROFILE_IMG}</a><!-- ENDIF --><!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a><!-- ENDIF --><!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a><!-- ENDIF --><!-- IF postrow.U_STEAM_SN --><a href="{postrow.U_STEAM}">{STEAM_IMG}</a><!-- ENDIF --><!-- IF postrow.U_YOUTUBE_SN --><a href="{postrow.U_YOUTUBE}">{YOUTUBE_IMG}</a><!-- ENDIF --><!-- IF postrow.U_TWITCH_SN --><a href="{postrow.U_TWITCH}">{TWITCH_IMG}</a><!-- ENDIF --><!-- IF postrow.U_XBOX_SN --><a href="{postrow.U_XBOX}">{XBOX_IMG}</a><!-- ENDIF -->&nbsp;</div>
 				<div class="gensmall float_r">
 					<!-- IF not S_IS_BOT -->
-						<!-- IF postrow.U_EDIT -->
-							<a href="{postrow.U_EDIT}">{EDIT_IMG}</a>
-						<!-- ENDIF -->
-						<!-- IF postrow.U_QUOTE -->
-							<a href="{postrow.U_QUOTE}">{QUOTE_IMG}</a>
-						<!-- ENDIF -->
+						<!-- IF postrow.U_EDIT --><a href="{postrow.U_EDIT}">{EDIT_IMG}</a><!-- ENDIF --><!-- IF postrow.U_QUOTE --><a href="{postrow.U_QUOTE}">{QUOTE_IMG}</a><!-- ENDIF -->
 					<!-- ENDIF -->&nbsp;
 				<!-- IF not S_IS_BOT -->
 					&nbsp;
-					<!-- IF postrow.U_REPORT --><a href="{postrow.U_REPORT}">{REPORT_IMG}</a> <!-- ENDIF --> 
-					<!-- IF postrow.U_INFO --><a href="{postrow.U_INFO}">{INFO_IMG}</a> <!-- ENDIF --> 
-					<!-- IF postrow.U_WARN --><a href="{postrow.U_WARN}">{WARN_IMG}</a> <!-- ENDIF --> 
-					<!-- IF postrow.U_DELETE --><a href="{postrow.U_DELETE}">{DELETE_IMG}</a> <!-- ENDIF -->
+					<!-- IF postrow.U_REPORT --><a href="{postrow.U_REPORT}">{REPORT_IMG}</a><!-- ENDIF --><!-- IF postrow.U_INFO --><a href="{postrow.U_INFO}">{INFO_IMG}</a><!-- ENDIF --><!-- IF postrow.U_WARN --><a href="{postrow.U_WARN}">{WARN_IMG}</a><!-- ENDIF --><!-- IF postrow.U_DELETE --><a href="{postrow.U_DELETE}">{DELETE_IMG}</a><!-- ENDIF -->
 				<!-- ENDIF -->	
 				</div>
 			</td>
