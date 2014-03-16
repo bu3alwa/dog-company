@@ -94,6 +94,7 @@ li.event {
 	clear: none;
 	margin: 0 !important;
 	font-family: NeouBold;
+<<<<<<< HEAD
 	font-weight: 500;
 	line-height: 20px;
 }
@@ -123,6 +124,16 @@ li.event {
 	}
 }
 */
+=======
+}
+
+@media screen and (max-device-width: 930px) and (min-device-width: 768px) {
+	.event-title h3 {
+		font-size: 16px !important;
+	}
+}
+
+>>>>>>> d7378b72c4c371365362e33116922b6d3dbcda86
 .event-time {
 	font-weight: 300;
 	padding-right: 0.8em;

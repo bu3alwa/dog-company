@@ -13,6 +13,7 @@
 @import url("../../../../wp-content/themes/dog-company/css/header.css");
 @import url("../../../../wp-content/themes/dog-company/css/fonts.css");
 @import url("../../../../wp-content/themes/dog-company/css/footer.css");
+@import url("social_networking_buttons.css");
 
 
 /*-------------------------
@@ -724,38 +725,32 @@ td.relative {
 
 /* madmanSucks adds dashed lines to the post of a topic */
 .madmanSucks-even {
-	border: solid;
-	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
-	border-width: 1px;
-	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
-
     background-color: transparent;
 	padding: 4px !important;
 }
-.madmanSucks-even:first-child {
-	border-style: none hidden dashed hidden; /* Top, Right, Bottom, Left */
-}
 .madmanSucks-odd {
-	border: solid;
-	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
-	border-width: 1px;
-	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
-	
     background-color: #E3E3E3; /* adds the alternating colors */
 	padding: 4px !important;
 }
-.madmanSucks-even-noborder {
-	border: none;
-	
-    background-color: transparent;
-	padding: 4px !important;
+
+.madmanSucksTopBorder {
+	border: solid;
+	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
+	border-width: 1px;
+	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
+	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
 }
-.madmanSucks-odd-noborder {
-	border: none;
-	
-    background-color: #E3E3E3;
-	padding: 4px !important;
+.madmanSucksTopBorder:first-child {
+	border-style: hidden hidden dashed hidden; /* Top, Right, Bottom, Left */
 }
+.madmanSucksBottomBorder {
+	border: solid;
+	border-style: hidden hidden dashed hidden; /* Top, Right, Bottom, Left */
+	border-width: 1px;
+	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
+	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
+}
+
 
 .spacer {
 	background-color: white;
@@ -786,7 +781,7 @@ hr {
 /* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
 /* See http://www.phpbb.com/bugs/phpbb3/59685 */
 a:link, a:visited {
-	color: black;
+	color: #484848;
 	text-decoration: none;
 }
 a:hover, a:active {
@@ -1186,16 +1181,5 @@ dd {
 	padding: 10px;
 	background-color: #E3E3E3;
 	font-size: 1.2em;
-}
-.bg2 {
-	background: #1878A8;
-	background: -moz-linear-gradient(left,  rgba(24,120,168,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(24,120,168,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(24,120,168,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(24,120,168,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(24,120,168,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(24,120,168,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1878a8', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-	
 }
  /*-----End of CAPTCHA-----*/
