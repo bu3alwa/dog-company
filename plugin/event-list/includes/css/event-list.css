@@ -88,6 +88,12 @@ li.event {
 	font-family: NeouBold;
 }
 
+@media screen and (max-device-width: 930px) and (min-device-width: 768px) {
+	.event-title h3 {
+		font-size: 16px !important;
+	}
+}
+
 .event-time {
 	font-weight: bold;
 	padding-right: 0.8em;
