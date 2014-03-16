@@ -225,7 +225,7 @@
 								<li id="login-navbar"><a href=<?php echo wpu_phpbb_profile_link(); ?> >Profile</a></li>
 								<li><?php integ_logout_uri();?></li>
 						<?php else: ?>
-								<li id="login-navbar" class="dropdown"><a href="javascript:void(0)" data-dropdown="#dropdown-1">Login</a>
+								<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Login</a>
 								<ul id="login-dropdown" class="align-center" >
 								<li>
 									<?php include(TEMPLATEPATH.'/login.php'); ?>

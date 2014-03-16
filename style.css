@@ -11,9 +11,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size: 100%;
 	vertical-align: baseline;
 }
-/*html, body{
-	min-width: 385px;
-}*/
+html, body{
+	min-width: 324px;
+}
 body {
 	line-height: 1;
 }
@@ -134,6 +134,7 @@ h3 { /* Sub Heading formatting */
 	height:auto;
 	width:auto;
 }
+
 #tags{
 	 padding: 10px 0;
 	 overflow:hidden;
@@ -496,51 +497,52 @@ article.sticky .featured-post {
 #entry h6,
 .comment-content h6 {
 	margin: 24px 0;
-	margin: 1.714285714rem 0;
-	line-height: 1.714285714;
+	margin: 1.214285714rem 0 !important;
+	line-height: 1.5;
 }
-#entry h1:hover,
-#entry h2:hover,
-#entry h3:hover,
-#entry h4:hover,
-#entry h5:hover,
-#entry h6:hover {
+#entry h1,
+#entry h2,
+#entry h3,
+#entry h4,
+#entry h5,
+#entry h6{
 	color:black !important;
+	padding: 2px  0px!important;
 }
 #entry h1,
 .comment-content h1 {
-	font-size: 21px;
+	font-size: 24px!important;
 	font-size: 1.5rem;
-	line-height: 1.5;
+	line-height: 1.846153846;
 }
 #entry h2,
 .comment-content h2,
 .mu_register h2 {
-	font-size: 18px;
+	font-size: 20px!important;
 	font-size: 1.285714286rem;
-	line-height: 1.6;
+	line-height: 1.846153846;
 }
 #entry h3,
 .comment-content h3 {
-	font-size: 16px;
+	font-size: 16px!important;
 	font-size: 1.142857143rem;
 	line-height: 1.846153846;
 }
 #entry h4,
 .comment-content h4 {
-	font-size: 14px;
+	font-size: 14px!important;
 	font-size: 1rem;
 	line-height: 1.846153846;
 }
 #entry h5,
 .comment-content h5 {
-	font-size: 13px;
+	font-size: 13px !important;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
 #entry h6,
 .comment-content h6 {
-	font-size: 12px;
+	font-size: 12px!important;
 	font-size: 0.857142857rem;
 	line-height: 1.846153846;
 }
@@ -808,8 +810,9 @@ img.alignleft {
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 
-/* Sidebar Plug ins */
-/* Recent Comment Plug in*/
+/* = Sidebar Plug ins 
+/* Recent Comment Plug in
+-------------------------------------------------------------- */
 .recent-comment{
 	border-style: dashed hidden hidden hidden;
 	border-width: 1px;
@@ -852,5 +855,10 @@ img.alignleft {
 }
 .recent-comment{
 	padding: 8px 7px;
+}
+/* Social media*/
+
+#acurax_si_simple a{
+	padding: 10px;
 }
 
