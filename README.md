@@ -256,3 +256,8 @@ What must work in new theme:
 
 - Finished Roster page
 - Fix few minor issues
+
+=============================== Update 03/16 ===================================
+
+- More final changes
+- WEB SITE RELEASED!
