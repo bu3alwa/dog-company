@@ -8,9 +8,9 @@
 						</article>
 						<article id="copyright">
 						<br>
-						Designed by Brad "Gumby" Doyle, Created by the Dog Company Team.
+						Designed and developed by Michael "Moc" Letcher & Ali "Manmanali93" Ali. Art by Eric "DragonboySX" & Brad "Gumby" Doyle.
 						<br>
-						<i>Copyright 2013 by Dog Company. All Rights Reserved.</i>
+						<i>© Copyright 2014 by Dog Company. All Rights Reserved.</i>
 						</article>
 					</article>
 				</div>
