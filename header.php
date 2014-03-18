@@ -11,7 +11,7 @@
 		<link rel="apple-touch-icon" href="/images/icon.png" sizes="128x128" type="image/x-icon"/>
 		<!-- Modernizr -->
 		<script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
-		<!-- Googel Analytics -->
+		<!-- Google Analytics -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
