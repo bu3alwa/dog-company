@@ -108,7 +108,7 @@
 <!-- BEGIN postrow -->
 	<table class="madmanSucksTable tablebg" width="100%">
 	
-	<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucksBorder madmanSucks-even"><!-- ELSE --><tr class="madmanSucksBottomBorder madmanSucks-odd"><!-- ENDIF -->
+	<!-- IF postrow.S_ROW_COUNT is even --><tr class="madmanSucksBorder madmanSucks-even"><!-- ELSE --><tr class="madmanSucksBorder madmanSucks-odd"><!-- ENDIF -->
 
 	<!-- IF postrow.S_IGNORE_POST -->
 			<td class="gensmall v_middle" colspan="2" height="25"><!-- IF postrow.S_FIRST_UNREAD --><a name="unread"></a><!-- ENDIF --><a name="p{postrow.POST_ID}"></a>{postrow.L_IGNORE_POST}</td>
@@ -219,7 +219,7 @@
 						<span class="gensmall error"><br/><br/>{L_DOWNLOAD_NOTICE}</span>
 					<!-- ENDIF -->
 					<!-- IF postrow.SIGNATURE -->
-						<div id="sig{postrow.POST_ID}" class="postbody sig"><br/><hr/><br/>{postrow.SIGNATURE}</div>
+						<div class="postbody sig"><br/><hr/><br/>{postrow.SIGNATURE}</div>
 					<!-- ENDIF -->
 
 					<!-- IF postrow.EDITED_MESSAGE or postrow.EDIT_REASON -->
