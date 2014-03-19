@@ -261,3 +261,7 @@ What must work in new theme:
 
 - More final changes
 - WEB SITE RELEASED!
+
+=============================== Update 03/19 ===================================
+
+- Google Analytics set
