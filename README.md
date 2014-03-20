@@ -265,3 +265,8 @@ What must work in new theme:
 =============================== Update 03/19 ===================================
 
 - Google Analytics set
+
+=============================== Update 03/20 ===================================
+
+- Changed nav fonts
+- Made small edits to navigation
