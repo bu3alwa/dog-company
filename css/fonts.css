@@ -1,47 +1,29 @@
-
-@font-face 
-{
-    font-family: 'DevilBreeze';
-    src: url('../font/devilbreeze_demi.eot');
-    src: url('../font/devilbreeze_demi.eot') format('embedded-opentype'),
-         url('../font/devilbreeze_demi.woff') format('woff'),
-         url('../font/devilbreeze_demi.ttf') format('truetype'),
-         url('../font/devilbreeze_demi.svg#DevilBreeze') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face
+/* Fonts */
+@font-face /* sidebar & counter text */
 {
     font-family: 'NeouBold';
     src: url('../font/neou-bold.eot');
     src: url('../font/neou-bold.eot') format('embedded-opentype'),
          url('../font/neou-bold.woff') format('woff'),
          url('../font/neou-bold.ttf') format('truetype'),
-         url('../font/neou-bold.svg#DevilBreeze') format('svg');
+         url('../font/neou-bold.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-@font-face
+
+@font-face /* Not currently used*/
 {
     font-family: 'NeouThin';
     src: url('../font/neou-thin.eot');
     src: url('../font/neou-thin.eot') format('embedded-opentype'),
          url('../font/neou-thin.woff') format('woff'),
          url('../font/neou-thin.ttf') format('truetype'),
-         url('../font/neou-thin.svg#DevilBreeze') format('svg');
+         url('../font/neou-thin.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-/*@font-face 
-{
-    font-family: 'Expressway';
-    src: url('../font/expressway.eot');
-    src: url('../font/expressway.eot') format('embedded-opentype'),
-         url('../font/expressway.woff') format('woff'),
-         url('../font/expressway.ttf') format('truetype'),
-         url('../font/expressway.svg#Expressway') format('svg');
-}*/
-@font-face 
+
+@font-face /* Slider */
 {
     font-family: 'CicleFina';
     src: url('../font/CicleFina.eot');
@@ -50,3 +32,39 @@
          url('../font/CicleFina.ttf') format('truetype'),
          url('../font/CicleFina.svg') format('svg');
 
+}
+
+@font-face /* Main header */
+{
+    font-family: 'Bebas';
+    src: url('../font/bebas___.eot');
+    src: url('../font/bebas___.eot') format('embedded-opentype'),
+         url('../font/bebas___.woff') format('woff'),
+         url('../font/bebas___.ttf') format('truetype'),
+         url('../font/bebas___.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face /* Nav bar */
+{
+    font-family: 'din';
+    src: url('../font/osp-din-webfont.eot');
+    src: url('../font/osp-din-webfont.eot') format('embedded-opentype'),
+         url('../font/osp-din-webfont.woff') format('woff'),
+         url('../font/osp-din-webfont.ttf') format('truetype'),
+         url('../font/osp-din-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face /* Header of comments */
+{
+    font-family: 'ubuntu-c';
+    src: url('../font/ubuntu-c.eot');
+    src: url('../font/ubuntu-c.eot') format('embedded-opentype'),
+         url('../font/ubuntu-c.woff') format('woff'),
+         url('../font/ubuntu-c.ttf') format('truetype'),
+         url('../font/ubuntu-c.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
