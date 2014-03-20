@@ -1,7 +1,8 @@
 /* Header */
-html, body{
+html, body
+{
 	position: relative;
-	}
+}
 
 header{
     width:100%;
@@ -12,22 +13,35 @@ header{
 #head{
 	overflow:hidden;
 }
-header h3 {
+#head h1
+{
+	font-size: 50px;
+	font-family: din;
+	color: white !important;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+header h3{
 	font-family: 'NeouBold';
 	text-align: center;
 	color: white;
 	font-weight: 500 !important;
 }
-dropdown-open{
-	display:block;
-}
+
 nav{
 	width:100%;
-	font-family: DevilBreeze !important;
-	font-size: 20px;
+	font-family: 'din' !important;
 	list-style-type:none;
 	position: absolute;
 	bottom: 0;
+}
+#left-nav li a
+{
+	margin-right: 5px;
+}
+#right-nav li a
+{
+	margin-right: 5px;
 }
 nav ul{
 	list-style-type:none !important;
@@ -40,6 +54,10 @@ nav ul li{
 nav ul li a{
 	display:block;
 	height:33px;
+	font-size: 23px !important;
+	letter-spacing: 2px;
+	font-weight: 100;
+	text-transform: uppercase;
 }
 
 nav a, nav a:visited  {
@@ -80,7 +98,6 @@ nav a:hover, nav a:focus, nav a:active {
     z-index: 8900;
 	list-style-type: none;
 	display: none;
-	font-family: Helvetica !important;
 	width: 150px;
 	height:auto;
 }
@@ -100,7 +117,9 @@ nav a:hover, nav a:focus, nav a:active {
 #info-dropdown li a{
 	padding-left: 8px;
 	color:white !important;
-	height:40px;	
+	height:40px;
+	font-size: 22px !important;
+	margin: 0;
 }
 #info-dropdown li a:hover{
 	color:white;
@@ -137,7 +156,7 @@ nav a:hover, nav a:focus, nav a:active {
 }
 .wpuloginsubmit:hover{
 	color: #489ac1 !important;
-	border: 1px solid #E4E4E4  !important;
+	border: 1px solid #489ac1  !important;
 }
 .wpuloginsubmit input{
 	border-radius: 2px 2px 2px 2px;
@@ -162,7 +181,7 @@ nav a:hover, nav a:focus, nav a:active {
 	display:none;
 	background-color:#161616;
 	right:0;
-	font-family: NeouBold !important;
+	font-family: 'NeouBold' !important;
 	padding-left: 20px;
 	padding-right: 10px;
 }
@@ -192,7 +211,6 @@ nav a:hover, nav a:focus, nav a:active {
 	text-align: left;
 	text-transform: uppercase;
 	line-height:2.422857em;
-
 }
 #login-dropdown label{
 	text-align: left;
@@ -200,15 +218,19 @@ nav a:hover, nav a:focus, nav a:active {
 	font-size: 18px!important;
 	font-family: Helvetica;
 	line-height: 1em;
+	padding-top: 0.1em;
+	padding-left: 0em;
+	padding-right: 0em;
+	padding-bottom: 0.4em;
 }
 #login-dropdown a{
 	text-align: left;
 	text-transform: uppercase;
 	font-size: 13px!important;
-	font-family: Helvetica;
+	font-family: 'Helvetica';
 	line-height:1.3em;
 	height: auto;
-	padding: 2px 0;
+
 }
 #form-wrapper{
 	margin-bottom: 10px;
@@ -218,7 +240,7 @@ nav a:hover, nav a:focus, nav a:active {
     position:relative;
 }
 h3{
-	font-family: NeouThin;
+	font-family: 'NeouThin';
 	font-size: 13px!important;
 	color: white;
 	margin: 0 !important;
