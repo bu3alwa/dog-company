@@ -175,14 +175,15 @@ h3 { /* Sub Heading formatting */
 	margin-top: 0;
 }
 .sidebar h3{ 
-    font-family: Helvetica;
-	font-size: 22px !important;
+    font-family: 'Bebas';
+	font-size: 21px !important;
 	text-decoration: none;
 	text-align:left;
     color: black !important;
 	text-transform: uppercase;
 	margin-bottom: 5px!important;
-
+	font-weight: 100;
+	letter-spacing: 1px;
 }
 .sidebar ul{
 	list-style-type:none;
@@ -210,17 +211,18 @@ h3 { /* Sub Heading formatting */
 	position: absolute;
 	width: 100%;
 	z-index: 50;
-	color:white!important;
+	color: white!important;
 	background-color:rgba(0,0,0,0.75);
-	line-height: 1.2em;
+	line-height: 1.4em;
 	padding: 5px;
 	left: 0px;
 	bottom: 0px;
 	text-align:left!important;
 	text-transform:uppercase;
-	font-size:13px;
-	font-family: arial;
-	font-weight: 700;
+	font-size: 15px;
+	font-family: 'Bebas';
+	font-weight: 100;
+	letter-spacing: 1px;
 }
 #youtube-sidebar-widget ul{
 	margin-left: 0px;
@@ -408,10 +410,10 @@ input[type="color"] {
 }
 
 .postmetadata{
-background-color: #1878a8;
-color: white;
-padding: 4px;
-clear:both;
+	background-color: #1878a8;
+	color: white;
+	padding: 4px;
+	clear:both;
 }
 .date{
 	font-size: 11px;
@@ -419,13 +421,20 @@ clear:both;
 	padding: 5px;
 }
 .postmetadata a{
-color:white !important;
+	color:white !important;
 }
 .postmetadata a:link{
-color:white !important;
+	color:white !important;
 }
 .post h2{
-padding: 10px 0px!important;
+	padding: 10px 0px!important;
+	word-spacing: 6px;
+}
+.post h2 a
+{
+	font-family: 'bebas';
+	font-weight: 100;
+	letter-spacing: 1px;
 }
 .entry-meta {
 	clear: both;
@@ -837,8 +846,8 @@ img.alignleft {
 }
 .recent-comment-title a{
 	color: #489ac1;
-	font-size: 18.5px;
-	font-weight: bold;
+	font-size: 20px;
+	font-family: 'ubuntu-c';
 }
 
 .recent-comment-author{
@@ -861,4 +870,3 @@ img.alignleft {
 #acurax_si_simple a{
 	padding: 10px;
 }
-
