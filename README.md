@@ -12,49 +12,22 @@ Resources:
   - #505a2b :Green
 
 Website Content and Design Requirements:
-- Homepage login connected to phpBB
-	- UNDERWAY //United will be able to sort this.
-- Color palette
-	- COMPLETE //White, Dark Grey and Blue
-- Layout designs
-	- COMPLETE //Only small details are left to complete
 - Working calendar that allows for members to sign up to events via a button
 	- INCOMPLETE //Has been difficault to find what is required for this.
-- A countdown till the next operation
-	- COMPLETE //Still some bugs to iron out.
-- Link the blog to the front page
-	- REMOVED //Will move the bog to the website.
-- Add a sliding DC advert image slider
-	- COMPLETE
-- A squad roster
-	- INCOMPLETE //Will begin when this is a bigger priority
-- Line that seperates each post (Homepage)
-	- COMPLETE
-- Look at rasing the min Avatar size from 6.0Kb to something higher
-	- COMPLETE
+
 
 Site Layout - Menu //Check the Issues section of GitHub for a new proposed design (27/11/13)
 - Home
 - Forums
 - Info
   - About Us (History + contacts)
-  - Roster (will list what trainning has been completed)
+  - Roster
   - Arma XML
   - Blog
   - FAQ
 - Media
   - Youtube
   - Recent Ops
-
-What must work in new theme:
-- Look up via letter (members search)
-	- COMPLETE
-- Text editor (List, h1 function is broken)
-	- COMPLETE //ABBC3 fixes this
-- Image sizes (don't resize when posted) 
-	- COMPLETE //ABBC3 fixes this
-- Allow youtube videos to be embed into posts
-	- COMPLETE //ABBC3 fixes this
 
 =============================== Update 06/8 ====================================
 
