@@ -243,3 +243,8 @@ Site Layout - Menu //Check the Issues section of GitHub for a new proposed desig
 
 - Changed nav fonts
 - Made small edits to navigation
+
+=============================== Update 03/23 ===================================
+
+- Font changes (added BebasNeue)
+- Small moddifications made
