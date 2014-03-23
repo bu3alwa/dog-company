@@ -1,20 +1,9 @@
 dog-company
 ===========
-Resources:
-- Devil Breeze Font = http://www.dafont.com/devil-breeze.font
-- Neou Font = http://www.dafont.com/neou.font
-
-- Font converting website = http://convertfonts.com/
-  - Use this to convert the multiple files.
-
-- Color Codes:
-  - #1878a8 :Blue
-  - #505a2b :Green
 
 Website Content and Design Requirements:
 - Working calendar that allows for members to sign up to events via a button
 	- INCOMPLETE //Has been difficault to find what is required for this.
-
 
 Site Layout - Menu //Check the Issues section of GitHub for a new proposed design (27/11/13)
 - Home
