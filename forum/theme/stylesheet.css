@@ -208,7 +208,6 @@ ul li, ol li, ul.list > li, ol.list > li {
 .v-align  img{
     vertical-align: middle;
     display: inline-block;
-    height: 100%;
 }
 .v_top { /* valign="top" */
 	vertical-align: top;
@@ -226,8 +225,8 @@ ul li, ol li, ul.list > li, ol.list > li {
 .w_100p {
 	width: 100%;
 }
-td.w_180 { /* Used for profile info on posts*/
-	min-width: 180x;
+td.w_180 { /* Used for profile info on posts */
+	min-width: 180px;
 }
 td.w_150 {
 	width: 150px;
@@ -733,24 +732,16 @@ td.relative {
 	padding: 4px !important;
 }
 
-.madmanSucksTopBorder {
+.madmanSucksBorder {
 	border: solid;
 	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
 	border-width: 1px;
 	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
-	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
-}
-.madmanSucksTopBorder:first-child {
-	border-style: hidden hidden dashed hidden; /* Top, Right, Bottom, Left */
-}
-.madmanSucksBottomBorder {
-	border: solid;
-	border-style: hidden hidden dashed hidden; /* Top, Right, Bottom, Left */
-	border-width: 1px;
-	border-color: #B9B9B9 transparent #B9B9B9 transparent; /* Top, Right, Bottom, Left */
-	border-style: dashed hidden dashed hidden; /* Top, Right, Bottom, Left */
 }
 
+table.madmanSucksTable:nth-child(3) .madmanSucksBorder {
+	border-style: hidden hidden dashed hidden; /* Top, Right, Bottom, Left */
+}
 
 .spacer {
 	background-color: white;
@@ -785,6 +776,36 @@ a:link, a:visited {
 	text-decoration: none;
 }
 a:hover, a:active {
+	color: #489ac1; /* Light blue */
+	text-decoration: none;
+}
+
+/* Breadcrumbs */
+.breadcrumbs a:link, .breadcrumbs a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.breadcrumbs a:hover, .breadcrumbs a:active {
+	color: #489ac1; /* Light blue */
+	text-decoration: none;
+}
+
+/* New Topic */
+.nav.genbig.FLOW_BEGIN.v_middle.nowrap a:link, .nav.genbig.FLOW_BEGIN.v_middle.nowrap a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.nav.genbig.FLOW_BEGIN.v_middle.nowrap a:hover, .nav.genbig.FLOW_BEGIN.v_middle.nowrap a:active {
+	color: #489ac1; /* Light blue */
+	text-decoration: none;
+}
+
+/* New Topic / Post Reply */
+.genbig.v_middle.FLOW_BEGIN.nowrap a:link, .genbig.v_middle.FLOW_BEGIN.nowrap a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.genbig.v_middle.FLOW_BEGIN.nowrap a:hover, .genbig.v_middle.FLOW_BEGIN.nowrap a:active {
 	color: #489ac1; /* Light blue */
 	text-decoration: none;
 }
@@ -885,7 +906,7 @@ form {
 input {
 	color: #333333;
 	font-family: Verdana Helvetica, sans-serif;
-	font-size: 1.1em;
+	font-size: 1.4em;
 	font-weight: normal;
 	padding: 1px;
 	border: 1px solid #A9B8C2;
@@ -1026,7 +1047,7 @@ textarea[name*="interests"] {
 	border-color: #737373;
 	color: #FFFFFF;
 	background-color: #737373;
-	font-size: 0.85em;
+	font-size: 0.9em;
 	font-weight: bold;
 }
 
@@ -1057,25 +1078,25 @@ textarea[name*="interests"] {
 	padding: 2px 4px;
 	border-width: 1px 1px 0 1px;
 	border-style: solid;
-	border-color: #A9B8C2;
-	color: #333333;
-	background-color: #A9B8C2;
+	border-color: #737373;
+	color: #FFFFFF;
+	background-color: #737373;
 	font-family: Verdana Helvetica, Arial, sans-serif;
-	font-size: 0.8em;
+	font-size: 0.9em;
 }
 
 .codecontent {
 	direction: ltr;
 	margin: 0 5px 10px 5px;
 	padding: 5px;
-	border-color: #A9B8C2;
+	border-color: #737373;
 	border-width: 0 1px 1px 1px;
 	border-style: solid;
 	font-weight: normal;
-	color: #006600;
+	color: #FFFFFF;
 	font-size: 0.85em;
 	font-family: Monaco, 'Courier New', monospace;
-	background-color: #FAFAFA;
+	background-color: #999999;
 }
 
 .syntaxbg {
