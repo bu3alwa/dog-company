@@ -5,18 +5,29 @@ Website Content and Design Requirements:
 - Working calendar that allows for members to sign up to events via a button
 	- INCOMPLETE //Has been difficault to find what is required for this.
 
-Site Layout - Menu //Check the Issues section of GitHub for a new proposed design (27/11/13)
-- Home
-- Forums
-- Info
-  - About Us (History + contacts)
-  - Roster
-  - Arma XML
-  - Blog
-  - FAQ
-- Media
-  - Youtube
-  - Recent Ops
+Wordpress Mods:
+- WP United
+- Nivo Slider for WordPress
+	- Size 1200*400
+	- Image quality 100%
+- TinyMCE Advanced
+- ...
+
+PHPbb Mods:
+- WP-United
+- Sortables CAPTCHA Plugin 1.0.4
+- Advanced BBCode Box 3
+- Profile Fields Control MOD 1.0
+- Gravatar Integration 1.0.0
+- Social Networking Site Buttons 2.1.0.0 (Modded by Moc)
+
+Instalation Information:
+Wordpress
+PHPbb
+- Avatar
+	- Max file size: 512000kb
+	- Max diamensions: 168*228
+- Social Networking Mod required Moc's modds
 
 =============================== Update 06/8 ====================================
 
