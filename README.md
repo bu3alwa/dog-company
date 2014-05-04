@@ -20,6 +20,7 @@ PHPbb Mods:
 - Profile Fields Control MOD 1.0
 - Gravatar Integration 1.0.0
 - Social Networking Site Buttons 2.1.0.0 (Modded by Moc)
+- UMIL 1.0.5
 
 Instalation Information:
 Wordpress
