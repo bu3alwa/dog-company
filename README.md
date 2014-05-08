@@ -8,7 +8,7 @@ Website Content and Design Requirements:
 Wordpress Mods:
 - WP United
 - Nivo Slider for WordPress
-	- Size 1200*400
+	- Size 1200*450
 	- Image quality 100%
 - TinyMCE Advanced
 - ...
