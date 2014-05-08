@@ -164,9 +164,8 @@ PHPbb
 		- Bodoni Std (suggested)
 	- Header text
 		- Helvetica (suggested)
-	- Use http://www.adobe.com/type/fontfinder/ to help find correct fonts.
-	 
-	
+	- Use http://www.adobe.com/type/fontfinder/ to help find correct fonts
+
 =============================== Update 12/13 ===================================
 
 - Header size shrinked 20 px less
@@ -249,3 +248,9 @@ PHPbb
 
 - Font changes (added BebasNeue)
 - Small moddifications made
+
+=============================== Update 05/08 ===================================
+
+- Moved to Derisotre's server (about a week ago)
+- PHPbb mods need reworking due to installation issues
+- More work to be done on some small style issues within the forums
