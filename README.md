@@ -251,6 +251,12 @@ PHPbb
 
 =============================== Update 05/08 ===================================
 
+
 - Moved to Derisotre's server (about a week ago)
 - PHPbb mods need reworking due to installation issues
 - More work done on some small style issues within the forums
+
+=============================== Update 06/03 ===================================
+- Fixed footer
+	> edited overall_footer.html, overall_header.html, stylesheet.css, footer.css
+	> will stick to the bottom unless pushed down by content
