@@ -1,9 +1,10 @@
 /*  phpBB3 Style Sheet
     --------------------------------------------------------------
-	Style name:			Dog-Company
+	Style name:			dog-company
 	Based on style:		subsilver2 (the default phpBB 3.0.x style)
 	Original author:	phpBB Group ( http://www.phpbb.com/ )
-	Modified by:		Dog Company ( http://dog-company.com/ ) 
+	Modified by:		Dog Company ( http://dog-company.com/ )
+	Last Update:		06/09/2014 (Moc)
     --------------------------------------------------------------
 */
 
@@ -13,8 +14,6 @@
 @import url("../../../../wp-content/themes/dog-company/css/header.css");
 @import url("../../../../wp-content/themes/dog-company/css/fonts.css");
 @import url("../../../../wp-content/themes/dog-company/css/footer.css");
-@import url("social_networking_buttons.css");
-
 
 /*-------------------------
 	Layout - GROUNDWORK
@@ -265,6 +264,9 @@ td.h_25 {
 .white {
 	color: white !important;
 }
+.block {
+	display: block;
+}
 /*-----------
 	Layout
 ------------*/
@@ -277,8 +279,9 @@ td.h_25 {
 	box-sizing: border-box;
 }
 
-html {
+html, body {
 	font-size: 100%;
+	height: 100%;
 }
 
 body {
@@ -289,15 +292,19 @@ body {
 	margin: 0;
 }
 
-#wrapcentre {
-	margin-top: 15px;
+.footer-fix {
+	min-height: 100%;
+	margin-bottom: -266px;
+	padding-bottom: 266px;
+}
+
+#content-wrapper {
 	margin-bottom: 15px;
+	padding-top: 5px;
 	-moz-box-shadow: 0px 0px 10px 1px #C8C8C8;
 	-webkit-box-shadow: 0px 0px 10px 1px #C8C8C8;
 	box-shadow: 0px 0px 10px 1px #C8C8C8;
 	background-color: #FFFFFF;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 #wrapnav {
@@ -772,7 +779,7 @@ hr {
 /* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
 /* See http://www.phpbb.com/bugs/phpbb3/59685 */
 a:link, a:visited {
-	color: #484848;
+	color: #222222;
 	text-decoration: none;
 }
 a:hover, a:active {
@@ -838,6 +845,7 @@ breadcrumbs a:hover, breadcrumbs a:focus {
 	color: black;
 	text-decoration: none;
 }
+
 /* Post heading Links */
 a.titles, a:visited.titles {
 	color: white;
@@ -847,15 +855,12 @@ a:hover.titles, a:focus.titles {
 	color: white;
 	text-decoration: underline;
 }
-/* Footer Links */
-#wrapfooter a, #wrapfooter a:visited  {
-	color: white;
-	text-decoration: none;
+
+/* Post Body Links */
+.postlink {
+	font-weight: 700;
 }
-#wrapfooter a:hover, #wrapfooter a:focus {
-	color: #489ac1;
-	text-decoration: none;
-}
+
 /* Topic Links */
 a.forumlink {
 	color: black;
@@ -867,31 +872,55 @@ a:hover.forumlink, a:focus.forumlink {
 	color: #489ac1 !important;
 	text-decoration: none !important;
 }
-
 a.topictitle {
 	margin: 1px 0;
 	font-family: BodoniStdRoman, Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
 }
-
 a.topictitle:hover {
 	color: #484848 !important; /* Dark grey */
 	text-decoration: none;
 }
-
 th a, th a:visited {
 	color: white !important; /* Light blue */
 	text-decoration: none;
 }
-
 th a:hover {
 	text-decoration: underline;
 }
-
 th#blue {
 	color: white !important; /* Light blue */
 	text-decoration: none;
+}
+
+/* UCP Option Menu */
+.section-name {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 4px;
+}
+.option-on {
+	background-color: #E3E3E3;
+}
+.option-off {
+	background-color: #BDBDBD;
+}
+.selected {
+	height: 26px; 
+}
+.nav li a, .option-on a, .option-off a {
+	display: block;
+	padding: 4px;
+}
+.nav li a:hover {
+	background
+}
+ul.nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	line-height: 175%;
 }
 
 /*-------------------
@@ -987,8 +1016,7 @@ textarea[name*="interests"] {
 
 .post {
 	background-color: white;
-	border-style: solid;
-	border-width: 1px;
+	border: 2px solid #F5F5F5;
 }
 
 .btnbbcode {
@@ -1007,6 +1035,7 @@ textarea[name*="interests"] {
 	color: white;
 	cursor: pointer;
 	padding: 2px 5px;
+	margin: 2px;
 	font-size: 1.3em;
 }
 
@@ -1018,6 +1047,10 @@ textarea[name*="interests"] {
 	cursor: pointer;
 	padding: 2px 5px;
 	font-size: 1.3em;
+}
+
+.btnlite:hover, .btnmain:hover {
+	background-color: #3BA0CF;
 }
 
 .btnfile {
@@ -1152,12 +1185,10 @@ img {
 
 .avatar img {
 	padding: 1px;
-	border-style: solid;
-	border-width: 1px; 
 }
 
 .colorPalette { /* Color palette spacing */
-	border: 1px solid #DCDCDC;
+	border: 1px solid #BDBDBD;
 }
 
 .sep {
