@@ -1,19 +1,14 @@
 /* Footer */
-.footer-strip{
-	background-color: #3BA0CF;
-	height: 8px;
-}
-#wrapfooter{
- 	width:100%;
-	min-height:300px;
+.footer-wrapper{
+ 	width: 100%;
+	border-top: 8px solid #3BA0CF;
 	background-color:#0F0F0F;
+}
+.footer-content {
+	text-align: center;
 	color: white;
-	position: relative;
 }
-#logo {
-    text-align:center;
-}
-#logo img {
+.logo img {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto; 
@@ -22,8 +17,6 @@
 	height: auto;
 }
 #copyright {
-	color: white;
-	text-align: center;
-	font-size: 10px !important;
+	font-size: 10px;
 	font-family: Arial;
 }
