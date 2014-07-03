@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- IF WP_DTD -->{WP_DTD}<!-- ELSE --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><!-- ENDIF -->
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">
 <head>
 <meta http-equiv="content-type" content="text/html"; charset="{S_CONTENT_ENCODING}" />
@@ -9,11 +9,12 @@
 <meta name="distribution" content="global" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/images/dcicon.ico" type="image/x-icon"/>
 <link rel="apple-touch-icon" href="/images/icon.png" sizes="128x128" type="image/x-icon"/>
 
 {META}
 <title>{SITENAME} | <!-- IF S_IN_MCP -->{L_MCP} | <!-- ELSEIF S_IN_UCP -->{L_UCP} | <!-- ENDIF -->{PAGE_TITLE}</title>
+<!-- IF PHPBB_BASE --><base href="{PHPBB_BASE}" /><!-- ENDIF -->
 
 <!-- IF S_ENABLE_FEEDS -->
 	<!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
@@ -45,100 +46,88 @@
 </script>
 <!-- NAV -->
 <script type="text/javascript">
-	//center top nav
-	function fix_top_bar(){
-		var barWidth = $('.nav-fixed').width();
-		$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-		}
-	function centerNav(){
-		var barWidth = $('nav').width();
-		$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-	}
-	function openLog(){
-		$('#info-dropdown').hide();
-		$('#login-dropdown').toggle();
-		return false;
-	}
-	function openMenu(){
-		$('#login-dropdown').hide();
-		$('#info-dropdown').toggle();
-		return false;
-	}
-	function counterHide(){
-		var browserWidth = $(window).width();
-		if (browserWidth < 743){
-			$('#counter').hide();
-		}else {
-			$('#counter').show();
-		};}		
-	$('document').ready(function() {
-		//center nav
-		$(window).load('',centerNav());
-		$(window).resize(function(){
-		var barWidth = $('nav').width();
-		$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-	});
-		//fix navbar to top when scroll
-		$(window).scroll(function() {
-				var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
-				if (scrollTop > 112) {
-				$('nav').addClass('nav-fixed');
-				fix_top_bar();								
-				}else{
-				$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
-				$('nav').removeClass('nav-fixed');
-				centerNav();
+	
+			function openLog(){
+				jQuery('#info-dropdown').hide();
+				jQuery('#login-dropdown').toggle();
+				return false;
+			}
+			function openMenu(){
+				jQuery('#login-dropdown').hide();
+				jQuery('#info-dropdown').toggle();
+				return false;
+			}
+			jQuery('document').ready(function($) {
+			//center top nav
+			function fix_top_bar(){
+				var barWidth = $('.nav-fixed').width();
+				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 				}
+			function centerNav(){
+				var barWidth = $('nav').width();
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+			}
+			function counterHide(){
+				var browserWidth = $(window).width();
+				if (browserWidth < 743){
+					$('#counter').hide();
+				}else {
+					$('#counter').show();
+				};
+			}	
+			
+				
+				//center nav
+				$(window).load('',centerNav());
+				$(window).resize(function(){
+				var barWidth = $('nav').width();
+				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+			});
+				//fix navbar to top when scroll
+				$(window).scroll(function() {
+						var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
+						if (scrollTop > 112) {
+						$('nav').addClass('nav-fixed');
+						fix_top_bar();								
+						}else{
+						$('.nav-fixed').css({ 'left' : '', 'margin-left' : ''});
+						$('nav').removeClass('nav-fixed');
+						centerNav();
+						}
+						});
+				//run function to resize top bar
+				fix_top_bar();
+					$(window).resize(function(){
+						  fix_top_bar();  
 				});
-		//run function to resize top bar
-		fix_top_bar();
-			$(window).resize(function(){
-				  fix_top_bar();  
-		});
-		//menu drop-down
-		function openInfo() {
-				$('#login-dropdown').hide();
-				$('#info-dropdown').show();
-		}
-		function openLogin() {
-				$('#info-dropdown').hide();
-				$('#login-dropdown').show();
-		}
-		function closeInfo() {
-				$('#info-dropdown').hide();
-		}
-		function closeLogin() {
-				$('#login-dropdown').hide();
-		}
-		//hoverIntent config
-		var configInfo = {
-			interval:100,
-			over: openInfo,
-			timeout: 500,
-			out:closeInfo	
-		}
-		var configLogin = {
-			interval:100,
-			over: openLogin,
-			over: openLogin,
-			timeout: 500,
-			out:closeLogin
-		}
-		//run hoverIntent
-		$('#info-navbar').hoverIntent(configInfo);
-		$('#login-navbar').hoverIntent(configLogin);
-		
-		//show and hide counter on certain width
-		$('#countdown').load('',counterHide());
-		$(window).resize(function(){
-		var browserWidth = $(window).width();
-		if (browserWidth < 743){
-			$('#counter').hide();
-		}else {
-			$('#counter').show();
-		};});
-	});//end document ready function
+				//menu drop-down
+				function openInfo() {
+						$('#login-dropdown').hide();
+						$('#info-dropdown').show();
+				}
+				function openLogin() {
+						$('#info-dropdown').hide();
+						$('#login-dropdown').show();
+				}
+				function closeInfo() {
+						$('#info-dropdown').hide();
+				}
+				function closeLogin() {
+						$('#login-dropdown').hide();
+				}
+				//show and hide counter on certain width
+				$('#countdown').load('',counterHide());
+				//$('#countdown').on('load',counterHide());
+				$(window).resize(function(){
+				var browserWidth = $(window).width();
+				if (browserWidth < 743){
+					$('#counter').hide();
+				}else {
+					$('#counter').show();
+				};});
+			});//end document ready function
 </script>
+<!-- IF WP_HEADERINFO_EARLY -->{WP_HEADERINFO_EARLY}<!-- ENDIF -->
 <!-- PHPbb -->
 <script type="text/javascript">
 // <![CDATA[
@@ -256,8 +245,11 @@ function marklist(id, name, state)
 <!-- MOD : MSSTI ABBC3 (v{S_ABBC3_VERSION}) - Start //-->
 <!-- INCLUDE ./../../abbcode/abbcode_header.html -->
 <!-- MOD : MSSTI ABBC3 (v{S_ABBC3_VERSION}) - End //-->
+<!-- IF WP_HEADERINFO_LATE -->{WP_HEADERINFO_LATE}<!-- ENDIF -->
 </head>
+
 <body class="{S_CONTENT_DIRECTION}">
+<div class="footer-fix">
 	<header>
 		<div id="head" class="container centered double padded ">
 			<a href="http://dog-company.com"><img src="/images/header.png" title="" alt="dog company head img"></img></a>
@@ -290,65 +282,112 @@ function marklist(id, name, state)
 				<h3>Next Operation</h3>
 			</div>
 		<script language="javascript" type="text/javascript">
-				jQuery(document).ready(function(){
-				var today = new Date();
-				var currDay = today.getUTCDay();
-				var saturdayTest = currDay - 6;
-				var wednesdayTest = currDay - 3;
-				var currHour = today.getUTCHours();
-				if (wednesdayTest > saturdayTest && wednesdayTest <= 0 && currHour < 22){
-				//run wednesday script
-				var thisWed = -(wednesdayTest) + today.getUTCDate();
-				var thisYear = today.getUTCFullYear();
-				var thisMonth = today.getUTCMonth() + 1;
-				$('#countdown_dashboard').countDown({
-						targetDate: {
-							'day': 		thisWed,
-							'month': 	thisMonth,
-							'year': 	thisYear,
-							'hour': 	21,
-							'min': 		0,
-							'sec': 		0,
-							'utc':      true
-						},
-						omitWeeks: true
-					});
-				} else {
-				//run saturday script
-				var thisSat = -(saturdayTest) + today.getUTCDate();
-				var thisYear = today.getUTCFullYear();
-				var thisMonth = today.getUTCMonth() + 1;
-				$('#countdown_dashboard').countDown({
-						targetDate: {
-							'day': 		thisSat,
-							'month': 	thisMonth,
-							'year': 	thisYear,
-							'hour': 	21,
-							'min': 		0,
-							'sec': 		0,
-							'utc':      true
-						},
-						omitWeeks: true
-						});
-				};
-				});
+				jQuery(document).ready(function($){
+							var today = new Date();
+							var currDay = today.getUTCDay();
+							var saturdayTest = currDay - 6;
+							var wednesdayTest = currDay - 3;
+							var currHour = today.getUTCHours();
+							if (wednesdayTest > saturdayTest && wednesdayTest <= 0)
+							{
+								if(wednesdayTest == 0 && currHour >= 21)
+								{
+									//run saturday script
+									var thisSat = -(saturdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisSat,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									}); 
+								}
+								else
+								{
+									//run wednesday script
+									var thisWed = -(wednesdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisWed,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
+							} 
+							else
+							{
+								if((saturdayTest == 0 && currHour >= 21) || (saturdayTest > 0))
+								{
+									//run next wednesday script
+									var nextWed = -(wednesdayTest) + today.getUTCDate() + 7;
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': nextWed,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
+								else
+								{
+									//run saturday script
+									var thisSat = -(saturdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisSat,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
+							};
+							});
 		</script>
 		</div>
 		<nav class="row container " >
-			<ul class="pull-left double pad-left" style="height: 33px">
+			<ul class="pull-left double pad-left" id="nav-left" style="height: 33px">
 				<li class="nav-li" title="click to go 'Home'"><a href="/">hoMe</a></li>
 				<li class="nav-li" title="click to go 'Forums'"><a href="./">Forums</a></li>
 				<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
 					<ul id="info-dropdown" >
-						<li title="click to go 'About Us'"><a href="/?page_id=5">About Us</a></li>
-						<li title="click to go 'Roster'"><a href="/?page_id=7">Roster</a></li>
+						<li title="click to go 'About Us'"><a href="/?page_id=4">About Us</a></li>
+						<li title="click to go 'Roster'"><a href="/?page_id=11">Roster</a></li>
 						<li title="click to go 'Arma XML'"><a href="/squad/squadXML.php">Arma XML</a></li>
-						<li title="click to go 'FAQ'"><a href="/?page_id=2">FAQ</a></li>
+						<li title="click to go 'FAQ'"><a href="/?page_id=7">FAQ</a></li>
 					</ul>
 				</li>
-				<li class="nav-li" title="click to go 'Media'"><a href="#">Media</a></li>
+				<li class="nav-li" title="click to go 'Media'"><a href="/?page_id=9">Media</a></li>
 			</ul>
-			<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
+			<ul class="pull-right double pad-right" id="nav-right" style="height: 33px; position:relative;">
 				<!-- IF S_USER_LOGGED_IN -->
 				<li id="login-navbar" title="click to go 'Profile'"><a href="{ROOT_PATH}memberlist.php?mode=viewprofile&un={S_USERNAME}">Profile</a></li>
 				<li title="click to Logout"><a href="{U_LOGIN_LOGOUT}">Logout</a></li>
@@ -394,9 +433,12 @@ function marklist(id, name, state)
 						<!-- IF S_DISPLAY_PM --><a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}<!-- IF PRIVATE_MESSAGE_INFO_UNREAD --> | {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a><!-- ENDIF -->
 					<!-- ENDIF -->
 				<!-- ENDIF -->
+				<!-- IF U_MCP --><span class="gensmall"> | <a href="{U_MCP}">{L_MCP}</a></span><!-- ENDIF -->
+				<!-- IF U_ACP --><span class="gensmall"> | <a href="{U_ACP}">{L_ACP}</a></span><br/><!-- ENDIF -->
 			</td>
 			<td class="genmed" align="{S_CONTENT_FLOW_END}">
 				<a href="{U_FAQ}">{L_FAQ}</a> |
+				<!-- IF S_BLOG --><a href="{U_BLOG}" title="{L_BLOG}">{L_BLOG}</a> | <!-- ENDIF -->
 				<!-- IF S_DISPLAY_SEARCH --><a href="{U_SEARCH}">{L_SEARCH}</a><!-- ENDIF -->
 				<!-- IF not S_IS_BOT -->
 					<!-- IF S_DISPLAY_MEMBERLIST --> | <a href="{U_MEMBERLIST}">{L_MEMBERLIST}</a><!-- ENDIF -->
@@ -407,7 +449,7 @@ function marklist(id, name, state)
 		</table>
 	</div>
 
-	<div id="wrapcentre" class="container centered whole pad-right pad-left double">
+	<div id="content-wrapper" class="container centered whole pad-right pad-left double">
 
 		<!-- IF S_DISPLAY_SEARCH -->
 		<p class="searchbar">
