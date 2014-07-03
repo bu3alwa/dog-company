@@ -1,8 +1,7 @@
 			<!-- start footer -->
 			<footer class="row">
-			<div class="footer-strip" ></div>
-				<div id="wrapfooter">
-					<article id="footer-content" class="container centered padded">
+				<div class="footer-wrapper">
+					<article class="footer-content container centered padded">
 						<article id="logo">
 						<img src="/images/footer.png" title="" alt="dog company footer img"></img>
 						</article>
@@ -17,6 +16,10 @@
 			</footer>
 			<!-- end footer -->
 		</div><!-- end container -->
-		<div id="wp-footer"><?php wp_footer(); ?></div>
+		<!-- WP footer not required <div id="wp-footer"><?php wp_footer(); ?></div> -->
+	<!-- Resize Event Title Text JS -->
+		<script type="text/javascript">
+			$('.event-title').fitText(1.2,{ minFontSize: '15.5px', maxFontSize: '26px' }, 1, {minLineHeight: '16px', maxLineHeight: '26px'});
+		</script>
 	</body>
 </html>
