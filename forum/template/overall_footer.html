@@ -1,24 +1,16 @@
-		<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+	<!-- IF DEBUG_OUTPUT --><bdo dir="ltr">[ {DEBUG_OUTPUT} ]</bdo><!-- ENDIF -->
+	<!-- IF TRANSLATION_INFO --><span class="gensmall">{TRANSLATION_INFO}</span><!-- ENDIF -->
 	</div>
-	<div class="footer-strip"></div>
-	<div id="wrapfooter" class="padded">
-		<div class="container FLOW_MIDDLE">
-			<!-- IF U_MCP --><span class="gensmall">[ <a href="{U_MCP}">{L_MCP}</a> ]</span><!-- ENDIF -->
-			<!-- IF U_ACP --><span class="gensmall">[ <a href="{U_ACP}">{L_ACP}</a> ]</span><br /><br /><!-- ENDIF -->
-			<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
-			<!-- IF DEBUG_OUTPUT --><br /><bdo dir="ltr">[ {DEBUG_OUTPUT} ]</bdo><!-- ENDIF -->
-		</div>
-		<div class="container">
-			<article id="logo">
-				<img src="/images/footer.png" title="" alt="dog company footer img"></img>
-			</article>
-			<article id="copyright">
-				<br>
-				Designed and developed by Michael "Moc" Letcher & Ali "Madmanali93" Ali. Art by Eric "DragonboySX" & Brad "Gumby" Doyle.
-				<br>
-				<i>© Copyright 2014 by Dog Company. All Rights Reserved.
-				<br>
-			</article>
+</div>	
+	<div class="footer-wrapper padded">
+		<div class="footer-content FLOW_MIDDLE">
+				<img class="logo pad" src="/images/footer.png" title="" alt="dog company footer img"></img>
+				<article id="copyright">
+					Designed and developed by Michael "Moc" Letcher &amp; Ali "Madmanali93" Ali. Art by Eric "DragonboySX" &amp; Brad "Gumby" Doyle.
+					<br>
+					<i>© Copyright 2014 by Dog Company. All Rights Reserved.</i>
+				</article>
 		</div>
 	</div>
 </body>
