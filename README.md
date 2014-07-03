@@ -258,5 +258,5 @@ PHPbb
 
 =============================== Update 06/03 ===================================
 - Fixed footer
-	> edited overall_footer.html, overall_header.html, stylesheet.css, footer.css
-	> will stick to the bottom unless pushed down by content
+	- edited overall_footer.html, overall_header.html, stylesheet.css, footer.css
+	- will stick to the bottom unless pushed down by content
