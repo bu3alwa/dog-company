@@ -260,3 +260,6 @@ PHPbb
 - Fixed footer
 	- edited overall_footer.html, overall_header.html, stylesheet.css, footer.css
 	- will stick to the bottom unless pushed down by content
+
+=============================== Update 07/08 ===================================
+- Realigned navbar in scroll()
