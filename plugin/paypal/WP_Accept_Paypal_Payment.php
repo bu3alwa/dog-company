@@ -93,7 +93,7 @@ function Paypal_payment_accept()
     $output .= "<input type=\"hidden\" name=\"business\" value=\"$paypal_email\" />";
     $output .= "<input type=\"hidden\" name=\"item_name\" value=\"$paypal_subject\" />";
     $output .= "<input type=\"hidden\" name=\"currency_code\" value=\"$payment_currency\" />";
-    $output .= "<span style=\"font-size:10.0pt\"><strong> $paypal_subject</strong></span><br /><br />";
+    $output .= "<span class=\"paypal_text\">Help keep our servers running!</span><br /><br />";
     $output .= '<select id="amount" name="amount" class="">';
     $output .= "<option value=\"$value1\">$itemName1</option>";
     if($value2 != 0)
@@ -122,20 +122,19 @@ function Paypal_payment_accept()
 	// Show other amount text box
 	if ($wp_pp_show_other_amount == '1')
 	{
-    	$output .= '<br /><strong>Custom Amount:</strong>';
+    	$output .= '<br /><span class="paypal_text">Custom Amount:</span>';
     	$output .= '<br /><input type="text" name="amount" size="10" title="Other donate" value="" />';
 	}
 	
 	// Show the reference text box
 	if ($wp_pp_show_ref_box == '1')
 	{
-		$output .= "<br /><br /><strong> $wp_pp_ref_title :</strong>";
+		$output .= "<br /><span class=\"paypal_text\"> $wp_pp_ref_title :</span>";
     	$output .= '<input type="hidden" name="on0" value="Reference" />';
-    	$output .= '<br /><input type="text" name="os0" maxlength="60" />';
+    	$output .= '<br /><input type="text" name="os0" maxlength="60" required/>';
 	}
     
     $output .= '
-        <br />
         <input type="hidden" name="no_shipping" value="0" />
         <input type="hidden" name="no_note" value="1" />
         <input type="hidden" name="mrb" value="3FWGC6LFTMTUG" />
@@ -151,7 +150,7 @@ function Paypal_payment_accept()
 	}
 		
     $output .= "<input id=\"paypal\" type=\"image\" src=\"http://dog-company.com/images/paypal.jpg\" name=\"submit\" alt=\"Make payments with payPal - it's fast, free and secure!\" />";
-    $output .= '</form>';
+    $output .= '<br/></form>';
     $output .= '</div>';
     /* = end of paypal form = */
     return $output;
