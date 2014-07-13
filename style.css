@@ -869,6 +869,11 @@ img.alignleft {
 
 /* Paypal */
 #paypal {
-	width: auto;
-	height: 75px;
+	margin: auto;
+	margin-top: 5px;
+	height: 60px;
+	width: 75%;
+}
+.paypal_text {
+	font-family: NeouBold;
 }
