@@ -266,3 +266,6 @@ PHPbb
 
 =============================== Update 07/14 ===================================
 - Added Paypal widget to sidebar
+
+=============================== Update 07/14 ===================================
+- Updated UCP menu redsigned (more work to be done) 
