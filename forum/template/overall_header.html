@@ -58,31 +58,29 @@
 				return false;
 			}
 			jQuery('document').ready(function($) {
-			//center top nav
-			function fix_top_bar(){
-				var barWidth = $('.nav-fixed').width();
-				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+				//center top nav
+				function fix_top_bar(){
+					var barWidth = $('.nav-fixed').width();
+					$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+					}
+				function centerNav(){
+					var barWidth = $('nav').width();
+					$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 				}
-			function centerNav(){
-				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-			}
-			function counterHide(){
-				var browserWidth = $(window).width();
-				if (browserWidth < 743){
-					$('#counter').hide();
-				}else {
-					$('#counter').show();
-				};
-			}	
-			
-				
+				function counterHide(){
+					var browserWidth = $(window).width();
+					if (browserWidth < 743){
+						$('#counter').hide();
+					}else {
+						$('#counter').show();
+					};
+				}	
 				//center nav
 				$(window).load('',centerNav());
 				$(window).resize(function(){
-				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-			});
+					var barWidth = $('nav').width();
+					$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+				});
 				//fix navbar to top when scroll
 				$(window).scroll(function() {
 						var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
@@ -126,6 +124,22 @@
 					$('#counter').show();
 				};});
 			});//end document ready function
+			//Navbar +/- changer
+			var dropIcon = false;
+			function dropDownIcon() {
+				if(dropIcon) {
+					var str = document.getElementById("info-navbar").innerHTML; 
+					var res = str.replace("-", "+");
+					document.getElementById("info-navbar").innerHTML = res;
+					dropIcon = false;
+				}
+				else {
+					var str = document.getElementById("info-navbar").innerHTML; 
+					var res = str.replace("+", "-");
+					document.getElementById("info-navbar").innerHTML = res;
+					dropIcon = true;
+				}
+			}
 </script>
 <!-- IF WP_HEADERINFO_EARLY -->{WP_HEADERINFO_EARLY}<!-- ENDIF -->
 <!-- PHPbb -->
@@ -377,10 +391,11 @@ function marklist(id, name, state)
 			<ul class="pull-left double pad-left" id="nav-left" style="height: 33px">
 				<li class="nav-li" title="click to go 'Home'"><a href="/">hoMe</a></li>
 				<li class="nav-li" title="click to go 'Forums'"><a href="./">Forums</a></li>
-				<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
+				<li title="click to go 'About Us'"><a href="/?page_id=4">About Us</a></li>
+				<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu();dropDownIcon();">Info+</a>
 					<ul id="info-dropdown" >
-						<li title="click to go 'About Us'"><a href="/?page_id=4">About Us</a></li>
-						<li title="click to go 'Roster'"><a href="/?page_id=11">Roster</a></li>
+						<li title="click to go 'Organisation & Roster'"><a href="/?page_id=11">Organisation</a></li>
+						<li title="click to go 'Training & Doctrine'"><a href="/?page_id=471">Doctrine</a></li>
 						<li title="click to go 'Arma XML'"><a href="/squad/squadXML.php">Arma XML</a></li>
 						<li title="click to go 'FAQ'"><a href="/?page_id=7">FAQ</a></li>
 					</ul>
