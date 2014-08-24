@@ -269,3 +269,7 @@ PHPbb
 
 =============================== Update 07/14 ===================================
 - Updated UCP menu redesigned (more work to be done) 
+
+=============================== Update 08/25 ===================================
+- Added new buttons to nav bar
+- Added new +/- feature to dropdown
