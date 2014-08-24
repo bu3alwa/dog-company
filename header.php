@@ -7,11 +7,11 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="/images/dcicon.ico" type="image/x-icon"/>
 		<link rel="apple-touch-icon" href="/images/icon.png" sizes="128x128" type="image/x-icon"/>
 		<!-- Modernizr -->
 		<script src="./wp-content/themes/dog-company/js/libs/modernizr-2.6.2.min.js"></script>
-		<!-- Google Analytics -->
+		<!-- Googel Analytics -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -43,7 +43,6 @@
 		<link type="text/css" rel="stylesheet" href="./wp-content/themes/dog-company/css/font-awesome-ie7.min.css">
 		<![endif]-->
 		<script type="text/javascript">
-	
 			function openLog(){
 				jQuery('#info-dropdown').hide();
 				jQuery('#login-dropdown').toggle();
@@ -55,31 +54,29 @@
 				return false;
 			}
 			jQuery('document').ready(function($) {
-			//center top nav
-			function fix_top_bar(){
-				var barWidth = $('.nav-fixed').width();
-				$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+				//center top nav
+				function fix_top_bar(){
+					var barWidth = $('.nav-fixed').width();
+					$('.nav-fixed').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+					}
+				function centerNav(){
+					var barWidth = $('nav').width();
+					$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
 				}
-			function centerNav(){
-				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-			}
-			function counterHide(){
-				var browserWidth = $(window).width();
-				if (browserWidth < 743){
-					$('#counter').hide();
-				}else {
-					$('#counter').show();
-				};
-			}	
-			
-				
+				function counterHide(){
+					var browserWidth = $(window).width();
+					if (browserWidth < 743){
+						$('#counter').hide();
+					}else {
+						$('#counter').show();
+					};
+				}
 				//center nav
 				$(window).load('',centerNav());
 				$(window).resize(function(){
-				var barWidth = $('nav').width();
-				$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
-			});
+					var barWidth = $('nav').width();
+					$('nav').css({ 'left' : '50%', 'margin-left' : '-' + (barWidth/2) + 'px' });
+				});
 				//fix navbar to top when scroll
 				$(window).scroll(function() {
 						var scrollTop = Math.max($('body').scrollTop(), $('html').scrollTop());
@@ -116,13 +113,29 @@
 				$('#countdown').load('',counterHide());
 				//$('#countdown').on('load',counterHide());
 				$(window).resize(function(){
-				var browserWidth = $(window).width();
-				if (browserWidth < 743){
-					$('#counter').hide();
-				}else {
-					$('#counter').show();
-				};});
+					var browserWidth = $(window).width();
+					if (browserWidth < 743){
+						$('#counter').hide();
+					}else {
+						$('#counter').show();
+					};
+				});
 			});//end document ready function
+			//Navbar +/- changer
+			var dropIcon = false;
+			function dropDownIcon() {
+				if(dropIcon) {
+					var str = document.getElementById("info-navbar").innerHTML; 
+					var res = str.replace("-", "+");
+					document.getElementById("info-navbar").innerHTML = res;
+					dropIcon = false;
+				}else {
+					var str = document.getElementById("info-navbar").innerHTML; 
+					var res = str.replace("+", "-");
+					document.getElementById("info-navbar").innerHTML = res;
+					dropIcon = true;
+				}
+			}
 	</script>
 	</head>
 	<body>
@@ -166,80 +179,129 @@
 							var saturdayTest = currDay - 6;
 							var wednesdayTest = currDay - 3;
 							var currHour = today.getUTCHours();
-							if (wednesdayTest > saturdayTest && wednesdayTest <= 0 && currHour < 22){
-								//run wednesday script
-								var thisWed = -(wednesdayTest) + today.getUTCDate();
-								var thisYear = today.getUTCFullYear();
-								var thisMonth = today.getUTCMonth() + 1;
-								$('#countdown_dashboard').countDown({
-								targetDate: {
-								'day': thisWed,
-								'month': thisMonth,
-								'year': thisYear,
-								'hour': 21,
-								'min': 0,
-								'sec': 0,
-								'utc': true
-								},
-								omitWeeks: true
-								});
-							} else {
-								//run saturday script
-								var thisSat = -(saturdayTest) + today.getUTCDate();
-								var thisYear = today.getUTCFullYear();
-								var thisMonth = today.getUTCMonth() + 1;
-								$('#countdown_dashboard').countDown({
-								targetDate: {
-								'day': thisSat,
-								'month': thisMonth,
-								'year': thisYear,
-								'hour': 21,
-								'min': 0,
-								'sec': 0,
-								'utc': true
-								},
-								omitWeeks: true
-								});
+							if (wednesdayTest > saturdayTest && wednesdayTest <= 0)
+							{
+								if(wednesdayTest == 0 && currHour >= 21)
+								{
+									//run saturday script
+									var thisSat = -(saturdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisSat,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									}); 
+								}
+								else
+								{
+									//run wednesday script
+									var thisWed = -(wednesdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisWed,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
+							} 
+							else
+							{
+								if((saturdayTest == 0 && currHour >= 21) || (saturdayTest > 0))
+								{
+									//run next wednesday script
+									var nextWed = -(wednesdayTest) + today.getUTCDate() + 7;
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': nextWed,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
+								else
+								{
+									//run saturday script
+									var thisSat = -(saturdayTest) + today.getUTCDate();
+									var thisYear = today.getUTCFullYear();
+									var thisMonth = today.getUTCMonth() + 1;
+									$('#countdown_dashboard').countDown({
+									targetDate: {
+									'day': thisSat,
+									'month': thisMonth,
+									'year': thisYear,
+									'hour': 21,
+									'min': 0,
+									'sec': 0,
+									'utc': true
+									},
+									omitWeeks: true
+									});
+								}
 							};
 							});
 						</script>
 				
 				</div>
 				<nav id="main-nav" class="row container" >
-					<ul class="pull-left double pad-left" style="height: 33px">
-						<li class="nav-li"><a href="./" rel="load">hoMe</a></li>
-						<li class="nav-li"><a href="./forum" >Forums</a></li>
-						<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu()">Info</a>
+					<ul id="nav-left" class="pull-left double pad-left" style="height: 33px">
+						<li class="nav-li"><a href="./" rel="load">HOME</a></li>
+						<li class="nav-li"><a href="./forum" >FORUMS</a></li>
+						<li title="click to go 'About Us'"><a href="/?page_id=4">About Us</a></li>
+						<li class="nav-li" id="info-navbar"><a href="javascript:void(0)" onclick="openMenu();dropDownIcon();">INFO+</a>
 							<ul id="info-dropdown" class="container">
-								<li><a href="/?page_id=53" rel="load">About Us</a></li>
-								<li><a href="/?page_id=7">Roster</a></li>
-								<li><a href="/squad/squadXML.php">Arma XML</a></li>
-								<li><a href="/?page_id=2" rel="load">FAQ</a></li>
+								<li title="click to go 'Organisation & Roster'"><a href="/?page_id=11">Organisation</a></li>
+								<li title="click to go 'Training & Doctrine'"><a href="/?page_id=471">Doctrine</a></li>
+								<li title="click to go 'Arma XML'"><a href="/squad/squadXML.php">Arma XML</a></li>
+								<li title="click to go 'FAQ'"><a href="/?page_id=7">FAQ</a></li>
 							</ul>
 						</li>
-						<li class="nav-li"><a href="/?page_id=135">Media</a></li>
-						</ul>
-					<ul class="pull-right double pad-right" style="height: 33px; position:relative;">
+						<li class="nav-li" title="click to go 'Media'"><a href="/?page_id=9">Media</a></li>
+					</ul>
+					<ul id="nav-right" class="pull-right double pad-right" style="height: 33px; position:relative;">
 						<?php global $phpbbForum; if ($phpbbForum->user_logged_in()): ?> 
 							<?php admin_button(); ?>
-								<li id="login-navbar"><a href=<?php echo wpu_phpbb_profile_link(); ?> >Profile</a></li>
+								<li id="login-navbar"><a href=<?php echo wpu_phpbb_profile_link(); ?> >PROFILE</a></li>
 								<li><?php integ_logout_uri();?></li>
 						<?php else: ?>
-								<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">Login</a>
+								<li id="login-navbar"><a href="javascript:void(0)" onclick="openLog()">LOGIN</a>
 								<ul id="login-dropdown" class="align-center" >
 								<li>
 									<?php include(TEMPLATEPATH.'/login.php'); ?>
 								</li>
 								</ul>
 								</li>
-								<li><a href=<?php call_register();?>>register</a></li>
+								<li><a href=<?php call_register();?>>REGISTER</a></li>
 						<?php endif; ?>
 					</ul>
 				</nav>
-					<!-- resize menu text -->
+	<!-- resize menu text -->
  	<script src="./wp-content/themes/dog-company/fit-text/jquery.fittext.js"></script>
 	<script type="text/javascript">
 		$('nav').fitText(4,{ minFontSize: '10px', maxFontSize: '18px' });
+		$('.event-title h3').fitText(4,{ minFontSize: '16px', maxFontSize: '26px' });
 	</script>
 
 			</header>
