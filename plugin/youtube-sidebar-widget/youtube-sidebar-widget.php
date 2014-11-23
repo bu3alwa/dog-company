@@ -97,7 +97,7 @@
 								if($i <= $num) {
 									$link = explode("/watch?v=", $item->link);
 									$hash = explode("&", $link[1]);
-									$img = ssl() . "://i2.ytimg.com/vi/$hash[0]/0.jpg";
+									$img = ssl() . "://img.youtube.com/vi/$hash[0]/mqdefault.jpg";
 
 									if($titles == "yes") {
 										$output .= "<li id='$hash[0]' data-autoplay='$autoplay'><img src='$img' alt='$item->title' desc='" . strip_tags($item->description) . "' style='width:" . $width . "px;' /><div class='play_arrow' style='width:" . $width . "px; height: " . $height . "px; margin-top: -" . $height . "px;'></div>\n\r<a href='$item->link' style='width: " . $width . "px;'>$item->title</a>";
@@ -114,7 +114,7 @@
 							if($i <= $num) {
 								$link = explode("/watch?v=", $item->link);
 								$hash = explode("&", $link[1]);
-								$img = ssl() . "://i2.ytimg.com/vi/$hash[0]/0.jpg";
+								$img = ssl() . "://img.youtube.com/vi/$hash[0]/mqdefault.jpg";
 
 								if($titles == "yes") {
 									$output .= "<li id='$hash[0]' data-autoplay='$autoplay'><img src='$img' alt='$item->title' desc='" . strip_tags($item->description) . "' style='width:" . $width . "px;' /><div class='play_arrow' style='width:" . $width . "px; height: " . $height . "px; margin-top: -" . $height . "px;'></div>\n\r<a href='$item->uri' style='width: " . $width . "px;'>$item->title</a>";
@@ -153,7 +153,7 @@
 
 						$link = explode("watch?v=", $item->link['href']);
 						$hash = explode("&", $link[1]);
-						$img = ssl() . "://i2.ytimg.com/vi/$hash[0]/0.jpg";
+						$img = ssl() . "://img.youtube.com/vi/$hash[0]/mqdefault.jpg";
 
 						if($titles == "yes") {
 							$output .= "<li id='$hash[0]' data-autoplay='$autoplay'><img src='$img' alt='$item->title' desc='" . strip_tags($item->description) . "' style='width:" . $width . "px;' /><div class='play_arrow' style='width:" . $width . "px; height: " . $height . "px; margin-top: -" . $height . "px;'></div>\n\r<a href='$item->link' style='width: " . $width . "px;'>$item->title</a>";
@@ -186,7 +186,7 @@
 								if($i <= $num) {
 								$link = explode("/watch?v=", $link_url['href']);
 								$hash = explode("&", $link[1]);
-								$img = ssl() . "://i2.ytimg.com/vi/$hash[0]/0.jpg";
+								$img = ssl() . "://img.youtube.com/vi/$hash[0]/mqdefault.jpg";
 
 								if($titles == "yes") {
 									$output .= "<li id='$hash[0]' data-autoplay='$autoplay'><img src='$img' alt='$item->title' desc='$item->title' style='width:" . $width . "px;' /><div class='play_arrow' style='width:" . $width . "px; height: " . $height . "px; margin-top: -" . $height . "px;'></div>\n\r<a href='$item->link' style='width: " . $width . "px;'>$item->title</a>";
