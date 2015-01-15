@@ -277,6 +277,7 @@ PHPbb
 =============================== Update 01/14 ===================================
 - Moved website to new server
 - Fixed Youtube sidebar
+
 =============================== Update 01/15 ===================================
 - Fixed event-list and Paypal styles
 - Add click function to Youtube widget
