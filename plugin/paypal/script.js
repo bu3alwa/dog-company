@@ -37,6 +37,12 @@
 			});
 			return false;
 		});
+	
+		overlay.click(function(){
+			viewer.prev().hide().remove();
+			viewer.hide().remove();
+			return false;
+		});
 
 		$(window).resize(function() {
 			var win = $(window);
